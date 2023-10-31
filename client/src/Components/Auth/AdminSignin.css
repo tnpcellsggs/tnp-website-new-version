@@ -1,0 +1,79 @@
+.suheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.sutext {
+  font-family: var(--anek);
+  font-size: 24px;
+}
+
+.sucontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.logincontainer {
+  margin: 40px;
+  width: 30%;
+  padding: 16px;
+  border: solid 1px #aaa;
+  border-radius: 8px;
+  box-shadow: 0px 2px 12px #aaa;
+}
+
+.logincontainer label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.logincontainer input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.logincontainer a {
+  font-size: 12px;
+}
+
+.formsubmitbtn {
+  background-color: var(--primary-blue);
+  width: 100%;
+  color: #fff;
+  margin-bottom: 4px;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+}
+
+.formsubmitbtn:hover {
+  background-color: #05e;
+}
+
+.susuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.susuccess .blankbtn {
+  border: 2px solid #05e;
+  color: #000;
+  background-color: #fff;
+}
+
+.susuccess button:hover {
+  background-color: #05e;
+  color: #fff;
+}
+
+.sufooter {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sufooter p {
+  margin: 0 auto;
+}

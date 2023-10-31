@@ -1,0 +1,254 @@
+/* NAVBAR */
+.admin-navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-blue);
+}
+
+.admin-navbar img {
+  margin: 8px;
+  width: 75px;
+}
+
+.admin-navbar .title {
+  flex: 1;
+  margin-left: 20px;
+  font-family: var(--muli);
+  font-size: 30px;
+  color: #fff;
+}
+
+.admin-navbar .subtitle {
+  margin: 8px;
+  margin-right: 0;
+  padding: 8px;
+  padding-left: 16px;
+  background-color: #222;
+  color: var(--primary-blue);
+  border-top-left-radius: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.admin-sticky {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+
+.admin-sticky .backbtn {
+  padding: 6px;
+  font-family: var(--rlwy);
+  color: #000;
+  height: 100%;
+  transition: 0.3s all;
+}
+
+.admin-sticky .backbtn:hover {
+  padding: 6px 12px;
+  color: var(--primary-blue);
+}
+
+.admin-sticky ul {
+  flex: 1;
+  display: flex;
+  background-color: rgb(58, 55, 55);
+  font-family: var(--muli);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #fff;
+  padding: 6px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.admin-sticky ul li {
+  padding-left: 8px;
+  padding-right: 8px;
+  border-right: 2px solid #fff;
+  transition: 0.1s all;
+}
+
+.admin-sticky ul li:hover {
+  text-shadow: 0px 0px 8px #000;
+}
+
+.admin-sticky ul li:first-child {
+  margin-left: 4px;
+}
+
+/* HOME */
+.admin-home-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.admin-home-container p {
+  margin: 0 auto;
+  font-family: var(--anek);
+  font-size: 40px;
+}
+
+.admin-home-container p span {
+  font-family: var(--rlwy);
+  font-size: 50px;
+  color: var(--primary-blue);
+}
+
+/* EVENTS */
+.event-list td {
+  overflow: hidden;
+  max-width: 75ch;
+}
+
+.event-add {
+  margin: 20px;
+  margin-left: 80px;
+}
+
+.event-add form {
+  margin-left: 20px;
+}
+
+.event-add label {
+  line-height: 40px;
+}
+
+.event-add textarea {
+  height: 100px;
+  width: 250px;
+}
+
+.event-add p {
+  color: #f00;
+}
+
+.event-add button {
+  border: none;
+  padding: 4px 12px;
+  background-color: var(--primary-blue);
+  font-family: var(--rlwy);
+  color: #fff;
+}
+
+.event-add button:hover {
+  background-color: #04f;
+}
+
+/* CERT */
+.cert-list {
+  margin: 20px;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.cert-list table {
+  width: 70%;
+  background-color: #eee;
+  border-bottom: 2px solid var(--primary-blue);
+}
+.cert-list table th,
+td {
+  padding: 4px 0px;
+  text-align: center;
+}
+.cert-list table th {
+  color: #fff;
+  font-family: var(--rlwy);
+  background-color: var(--primary-blue);
+}
+.cert-list td {
+  font-family: var(--anek);
+  border: 2px solid #fff;
+}
+
+.cert-list button {
+  width: 70%;
+  font-family: var(--rlwy);
+  color: #fff;
+  background-color: var(--primary-blue);
+  border: none;
+  padding: 4px;
+}
+.cert-list button:hover {
+  background-color: #04f;
+}
+
+.cert-create {
+  margin: 40px;
+}
+.cert-create label {
+  margin-bottom: 8px;
+}
+.cert-create input {
+  width: 200px;
+}
+.cert-create button {
+  border: none;
+  padding: 4px 12px;
+  background-color: var(--primary-blue);
+  font-family: var(--rlwy);
+  color: #fff;
+}
+.cert-create button:hover {
+  background-color: #04f;
+}
+
+/* VERIFY CERT */
+.minimalnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--muli);
+  font-size: 10px;
+  padding: 8px;
+}
+
+.minimalnav img {
+  width: 75px;
+}
+
+.minimalsubnav {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 6px 6px #ccc;
+}
+
+.verifycert-container {
+  display: flex;
+  width: 100%;
+  min-height: 90vh;
+}
+
+.verifycert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: fit-content;
+  margin: 24px auto;
+  padding: 16px 16px;
+  border: 1px solid #000;
+  border-radius: 12px;
+  box-shadow: 0px 0px 8px #ccc;
+}
+
+.verifycert-card .response {
+  font-size: 30px;
+}
+
+.verifycert-card .text-green {
+  color: #0a0;
+}
+.verifycert-card .text-red {
+  color: #a00;
+}
+
+.verifycert-card div {
+  text-align: center;
+}
