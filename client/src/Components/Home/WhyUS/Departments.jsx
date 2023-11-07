@@ -7,7 +7,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 
 
 const DepartmentCards = (props) => {
-  const { icon, name, link, info, head } = props.depts;
+  const { icon, name, link, info, head ,imageLink} = props.depts;
   // const index = props.index;
   return (
     <>
@@ -37,7 +37,7 @@ const DepartmentCards = (props) => {
         <div className={`flex justify-center flex-col w-full h-full items-center`}>
           <h3 className='text-2xl font-bold text-center '><a className='text-center text-black' target='_blank' href={link}>{name}</a></h3>
           {/* <img src={imageLink} alt="" className="w-[40%] rounded-full sm:w-[20%] m-4"/> */}
-          <img src={`https://tnp.iiitbh.ac.in/assets/institute.jpg`} alt="" className="w-[40%] rounded-xl w-[80%] mt-4 ml-4 m-r mb-1" />
+          <img src={imageLink} alt="department" className="w-[40%] rounded-xl w-[80%] mt-4 ml-4 m-r mb-1" />
           <p className="text-center text-secondary ">HOD: {head}</p>
         </div>
 
@@ -69,7 +69,7 @@ const Departments = () => {
         <Container>
           <Row>
             <div className="w-[80%] mx-auto text-center flex flex-col justify-center items-center">
-              <h2 className="text-3xl text-center">Our Departments</h2>
+              <h1 className="text-3xl text-center">Our Departments</h1>
               <h3 className="p-4 m-4 text-2xl text-center border-2 rounded-lg nav-light-shadows w-[100%]">&ldquo;Get to Know Our Academic Divisions&ldquo;</h3>
             </div>
             <VerticalTimeline>

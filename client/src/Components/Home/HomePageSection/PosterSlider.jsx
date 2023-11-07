@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 export default function PosterSlider() {
   return (
     <>
-      <Carousel autoPlay={true} infiniteLoop={true} interval={3500} className='rounded-xl '>
+      <Carousel autoPlay={true} infiniteLoop={true} interval={3500} className='rounded-xl ' showThumbs={false}>
         {
           imageSlider.map((items, index) => {
             return (

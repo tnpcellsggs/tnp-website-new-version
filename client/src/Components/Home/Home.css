@@ -1,3 +1,4 @@
+
 .homepage-headings {
   margin: 20px;
   /* margin-left: 40px; */
@@ -288,6 +289,9 @@
 .rfm-child{
   width:30%;
 }
+
+/* News */
+
 /* --var-color_purple: #8B5CF6; */
 /* -color-pink: #EC4899;
 $color-gray: #9CA3AF;
@@ -687,6 +691,9 @@ $card-size: 23rem; */
   color: var(--primary-blue);
 }
 
+.vertical-timeline::before{
+  background: #161616 !important;
+}
 /* PLACEMENTS */
 .p-graph-container {
   width: 100%;
@@ -1553,23 +1560,19 @@ td {
 }
 
 .about-social {
-  background: white;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  color: black;
 }
 
 .about-social a {
   margin: 0 auto;
   font-size: 25px;
-  filter: grayscale(1);
-  color: black;
 }
 
 .about-social a svg {
   filter: grayscale(1);
-  color: black;
+  color: rgb(254, 254, 254);
 }
 
 .f-ql ul {
@@ -1847,10 +1850,10 @@ td {
   left: 0;
   width: 100%;
   height: 200px;
-  background-image: url('../../img/HatkarSir.jpg');
+  background-image: url('../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(25px);
+  filter: blur(55px);
   transition: 0.5s;
 }
 
@@ -1870,10 +1873,11 @@ td {
   left: 0;
   width: 100%;
   height: 200px;
-  background-image: url('../../img/ishwar-sir.jpg');
+  background-image: url('../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg');
+  /* background-image: url('../../img/ishwar-sir.jpg'); */
   background-size: cover;
   background-position: center;
-  filter: blur(25px);
+  filter: blur(55px);
   transition: 0.5s;
 }
 

@@ -15,7 +15,7 @@ const SectionWrapper = (Component, idName) =>
                     whileInView='show'
                     viewport={{ once: true, amount: 0.25 }}
                     className={`mx-auto relative z-0  py-2 my-2 w-[95%]`}
-                    style={style}
+                    // style={style}
                 >
                     <Component />
                 </motion.section>

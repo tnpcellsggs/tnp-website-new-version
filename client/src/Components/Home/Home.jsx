@@ -1,35 +1,36 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
-import { Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
-import LoadingBar from 'react-top-loading-bar';
+import axios from "axios";
 import { AdminContext } from "../../App";
+import { Routes, Route } from "react-router-dom";
+import LoadingBar from 'react-top-loading-bar';
+import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Navbar from "./Navbar";  // Navbar
 
 import Hero from "./HomePageSection/Hero"; // Home
-import News_Events from './HomePageSection/NewsEvents';   // Events
-import CompanySlider from "./HomePageSection/CompanySlider"; // PosterSlider
-import AboutInfo from "./HomePageSection/AboutInfo"; //About
-import Director from "./HomePageSection/Director";  // Director
 import TPO from "./HomePageSection/Tpo";    // Tpo
+import Director from "./HomePageSection/Director";  // Director
+import AboutInfo from "./HomePageSection/AboutInfo"; //About
+import NewsEvents from './HomePageSection/NewsEvents';   // Events
+import CompanySlider from "./HomePageSection/CompanySlider"; // PosterSlider
 
-import SpecialFacilities from "./WhyUS/SpecialFacilities";  // Special Facilities
 import Departments from "./WhyUS/Departments";  // Departments
+import SpecialFacilities from "./WhyUS/SpecialFacilities";  // Special Facilities
 
-import Past_Recruiters from "./ForRecruiters/Past_Recruiters";  // Past_Recruiters
 import Placements from "./Placements/Placements"; // Placements
-import Recruitment_Procedures from "./ForRecruiters/Recruitment_Procedures";  // Recruitment_Procedures
+import JAF from "./ForRecruiters/JAF";  // Past_Recruiters
+import PastRecruiters from "./ForRecruiters/PastRecruiters";  // Past_Recruiters
+import RecruitmentProcedures from "./ForRecruiters/RecruitmentProcedures";  // Recruitment_Procedures
 
+import Footer from "./Footer";    // Footer
+import { Blank } from "./Blank";
 import { OurTeam } from "./OurTeam";    // OurTeam
 import { ContactUsPage } from "./ContactUsPage";  // ContactUsPage
 import OldTeamTab from "../Home/OldTeams/oldTeamsTab"; //old team
-import Footer from "./Footer";    // Footer
-import { Blank } from "./Blank";
 
-import { Company_Interest, Researches } from "../../constants/Comps";
+import { CompanyInterest, Researches } from "../../constants/Comps";
 
 const scrollBehavior = { top: "0", left: "0", behavior: "smooth" };
 
@@ -58,7 +59,7 @@ const Homepage = () => {
       <Hero />
 
       {/* 2) News and Events */}
-      <News_Events />
+      <NewsEvents />
       {/* 3) Past Recuriters Slider */}
       <CompanySlider />
 
@@ -132,10 +133,10 @@ export default function Home() {
         <Route path="/special_facilities" element={<SpecialFacilities />} />
         <Route path="/departments" element={<Departments />} />
         <Route path="/researches" element={<Researches />} />
-        <Route path="/past_recruiters" element={<Past_Recruiters />} />
-        <Route path="/recruitment_procedures" element={<Recruitment_Procedures />} />
-        <Route path="/company_interest" element={<Company_Interest />} />
-        <Route path="/jaf_recuriment" element={<Blank />} />
+        <Route path="/past_recruiters" element={<PastRecruiters />} />
+        <Route path="/recruitment_procedures" element={<RecruitmentProcedures />} />
+        <Route path="/company_interest" element={<CompanyInterest />} />
+        <Route path="/jaf_recuriment" element={<JAF />} />
         <Route path="/jaf_internship" element={<Blank />} />
         <Route path="/studentSection" element={<Blank />} />
         <Route path="/ourTeam" element={<OurTeam />} />

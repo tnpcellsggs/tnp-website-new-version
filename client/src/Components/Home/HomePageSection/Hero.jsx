@@ -15,14 +15,14 @@ const Hero = () => {
         {/* left section */}
         <div className="sm:w-[60%] w-[100%] h-full flex flex-col p-2">
           <div className="flex flex-col justify-center items-left">
-            <h3 className="my-2 text-lg text-gray-700">Welcome To</h3>
-            <h2 className="my-2 text-3xl">
+            <h1 className="my-2 text-lg text-gray-700">Welcome To</h1>
+            <h3 className="my-2 text-3xl">
               Training & Placement Cell <br />
               Shri Guru Gobind Singhji Institute Of
               Engineering & Technology
-            </h2>
+            </h3>
             <p>
-              The training and placement cell is responsible for all the placement activities of all the departments of the institute.
+              &ldquo;Our Training and Placement Cell Is For The Students And By The Students.&ldquo;
             </p>
           </div>
 
@@ -31,9 +31,9 @@ const Hero = () => {
               <h2 className="m-2 text-base sm:text-2xl">Recruiters</h2>
               <h3 className="m-2 text-base sm:text-2xl">Interested in Recruiting from SGGSIE&T</h3>
             </div>
-            <div className="p-4">
-              <p className="p-2 text-xl bg-orange-300 border-2 rounded-xl hover:cursor-pointer"><Link to='/jaf_recuriment' className="font-bold">Fill JNF</Link></p>
-              <p className="p-2 text-xl bg-orange-300 border-2 rounded-xl hover:cursor-pointer"><Link to='/contactus' className="font-bold">Contact</Link></p>
+            <div className="flex items-center justify-start p-4">
+              <Link to='/jaf_recuriment' className="w-full font-bold"><p className="p-2 text-xl text-center bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Fill JAF</p></Link>
+              <Link to='/contactus' className="w-full font-bold"><p className="p-2 text-xl text-center bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Contact Us</p></Link>
             </div>
           </div>
         </div>
@@ -43,9 +43,9 @@ const Hero = () => {
           <div>
             <PosterSlider />
           </div>
-          <div className="flex flex-col items-center justify-center sm:flex-row ">
+          <div className="flex flex-col items-center justify-center sm:flex-row m-[12px] ">
             <div className="m-2 nav-light-shadows sm:w-[50%] w-[90%] h-[100%] rounded-xl flex flex-col items-center justify-center">
-              <h2 className="text-xl sm:text-sm">Placement Summary(Last Year)</h2>
+              <h2 className="text-sm ">Placement Summary(Last Year)</h2>
               <img src={Summary} alt='summary' className="w-[20%]" />
               <ul className="p-1 mt-2 space-y-2 list-disc">
                 <li className="text-xs">Total Offers: 485</li>
@@ -54,8 +54,8 @@ const Hero = () => {
               </ul>
             </div>
             <div className="m-2 nav-light-shadows sm:w-[50%] w-[90%] h-[100%] rounded-xl flex flex-col items-center justify-center">
-              <h2 className="text-xl sm:text-sm">Placement Stats 23-24</h2>
-              <img src={Stats} alt='summary' className="w-[20%]" />
+              <h2 className="text-sm ">Placement Stats 23-24</h2>
+              <img src={Stats} alt='stats' className="w-[20%]" />
               <ul className="p-1 mt-2 space-y-2 list-disc">
                 <li className="text-xs">Total Offers: 9+</li>
                 <li className="text-xs">Top Package: 12 LPA</li>
