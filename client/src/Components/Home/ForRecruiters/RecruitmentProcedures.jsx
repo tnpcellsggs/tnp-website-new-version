@@ -4,7 +4,7 @@ import { recruitment_procedures_list } from '../../../constants/index';
 import SectionWrapper from "../../../Higher_Order_Components/SectionWrapper";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const DepartmentCards = (props) => {
   const { icon, name, link, info } = props.depts;
@@ -36,11 +36,10 @@ const DepartmentCards = (props) => {
       >
         <div className={`flex justify-center flex-col w-full h-full items-center`}>
           <h3 className='text-3xl font-bold text-center '>{name}</h3>
-          <img src={icon} alt="" className="w-[40%] rounded-xl mt-4 ml-4 m-r mb-1 text-center" />
-          <p className="text-center text-secondary "></p>
+          <img src={icon} alt="image" className="w-[40%] sm:w-[20%] rounded-xl mt-4 text-center" />
         </div>
 
-        <ul className='flex items-center justify-center p-4 mt-1 text-center'>
+        <ul className='flex items-center justify-center p-4 text-center'>
           {
             info.map((point, index) => {
               return (
@@ -56,7 +55,7 @@ const DepartmentCards = (props) => {
   )
 }
 
-const Recruitment_Procedures = () => {
+const RecruitmentProcedures = () => {
   useEffect(() => {
     document.title = "Recruitment Procedures | SGGS Training & Placement";
     window.scrollTo(0, 0);
@@ -68,9 +67,13 @@ const Recruitment_Procedures = () => {
         <Container>
           <Row>
             <div className="w-[80%] mx-auto text-center flex flex-col justify-center items-center">
-              <h2 className="my-2 text-4xl text-center">Our Recruitment Procedures</h2>
-              <h3 className="p-4 my-2 text-xl text-left text-center border-2 rounded-lg nav-light-shadows ">The very first step for Recruitment Procedure is to Fill the JNF Direct Recruitment or Internship JNF/JAF Form. <br />
-                &ldquo;Company needs to fill JNF form in order to recruit from SGGSIE&T.&ldquo; </h3>
+              <h1 className="my-2 text-3xl text-center">Our Recruitment Procedures</h1>
+              <div className="p-4 my-2 text-xl text-left text-center border-2 rounded-lg nav-light-shadows ">
+                <h3 >The very first step for Recruitment Procedure is to Fill the JNF Direct Recruitment or Internship JNF/JAF Form.
+                </h3>
+                <h3>
+                  &ldquo;Company needs to fill JNF form in order to recruit from SGGSIE&T.&ldquo; </h3>
+              </div>
             </div>
             <VerticalTimeline layout='1-column-left'>
               {
@@ -88,4 +91,4 @@ const Recruitment_Procedures = () => {
   );
 }
 
-export default SectionWrapper(Recruitment_Procedures, "");
+export default SectionWrapper(RecruitmentProcedures, "");

@@ -1,4 +1,4 @@
-// Department images
+// Department icons
 import cse from '../img/Departments/cse.png';
 import it from '../img/Departments/it.jpg';
 import mech from '../img/Departments/mech.jpg';
@@ -10,25 +10,36 @@ import civil from '../img/Departments/civil.jpg';
 import extc from '../img/Departments/extc.png';
 import production from '../img/Departments/production.png';
 
+// Department images
+import CSE from '../img/Departments/CSE_img.jpg';
+import IT from '../img/Departments/INFO_img.jpg';
+import MECH from '../img/Departments/Mechanical_Img.jpg';
+import CHEMICAL from '../img/Departments/Chemical_img.jpg';
+import ISNTRU from '../img/Departments/Instru_img.jpg';
+import ELEC from '../img/Departments/Electrical_img.jpg';
+import TEXT from '../img/Departments/Textile_img.jpg';
+import CIVIL from '../img/Departments/civil_img.jpg';
+import EXTC from '../img/Departments/EXTC_img.jpg';
+import PROD from '../img/Departments/Production_Img.jpg';
+
 // Placement Posters
-import Amazon_poster from "../img/Posters_23_24/Amazon.jpg";
-import Bitwise_poster from "../img/Posters_23_24/BITWISE.jpg";
-import CERN_poster from "../img/Posters_23_24/cern.jpg";
-import Centiro_poster from "../img/Posters_23_24/Centiro.jpg";
-import Cognologix_poster from "../img/Posters_23_24/COGNOLOGIX.jpg";
-import Elastik_poster from "../img/Posters_23_24/ELASTIK.jpg";
-import Iauro_poster from "../img/Posters_23_24/iauro.jpg";
-import Kratin_poster from "../img/Posters_23_24/KRATIN.jpg";
-import Microsoft_poster from "../img/Posters_23_24/MICROSOFT.jpg";
-import RSL1_poster from "../img/Posters_23_24/RSL1.jpg";
-import RSL2_poster from "../img/Posters_23_24/RSL2.jpg";
-import Sarvaha_poster from "../img/Posters_23_24/Sarvaha.jpg";
-import TCS_poster from "../img/Posters_23_24/TCSDIGITAL.jpg";
-import Tejas_poster from "../img/Posters_23_24/TEJASNETWORK.jpg";
-import Trident2_poster from "../img/Posters_23_24/TRIDENT.jpg";
-import Trident_poster from "../img/Posters_23_24/TridentGroup.jpg";
-import Trident_23_24_12LPA_poster from "../img/Posters_23_24/trident_12Lpa.jpg";
-import sarvaha_7_5LPA_poster from "../img/Posters_23_24/sarvaha_7_5LPA.jpg";
+import Amazon_45_lpa from "../img/Posters_23_24/Amazon_45_lpa.jpg";
+import cern_60_lpa from "../img/Posters_23_24/cern_60_lpa.jpg";
+import COGNOLOGIX_7_lpa from "../img/Posters_23_24/COGNOLOGIX_7_lpa.jpg";
+import iauro_8_lpa from "../img/Posters_23_24/iauro_8_lpa.jpg";
+import MICROSOFT_52_lpa from "../img/Posters_23_24/MICROSOFT_52_lpa.jpg";
+import RSL1_7_lpa from "../img/Posters_23_24/RSL1_7_lpa.jpg";
+import RSL2_7_lpa from "../img/Posters_23_24/RSL2_7_lpa.jpg";
+import sarvaha_7_5LPA from "../img/Posters_23_24/sarvaha_7_5LPA.jpg";
+import Sarvaha_7_lpa from "../img/Posters_23_24/Sarvaha_7_lpa.jpg";
+import TCSDIGITAL_7_lpa from "../img/Posters_23_24/TCSDIGITAL_7_lpa.jpg";
+import TEJASNETWORK_10_lpa from "../img/Posters_23_24/TEJASNETWORK_10_lpa.jpg";
+import TIAA_10_lpa from "../img/Posters_23_24/TIAA_10_lpa.jpg";
+import trident_1_12_lpa from "../img/Posters_23_24/trident_1_12_lpa.jpg";
+import trident_2_12_lpa from "../img/Posters_23_24/trident_2_12_lpa.jpg";
+import trident_12Lpa from "../img/Posters_23_24/trident_12Lpa.jpg";
+import TRIDENT_18_lpa from "../img/Posters_23_24/TRIDENT_18_lpa.jpg";
+import TridentGroup_9_lpa from "../img/Posters_23_24/TridentGroup_9_lpa.jpg";
 
 // Special Facilities images
 import AICTE from "../img/Gallary/aicte.jpg";
@@ -56,6 +67,7 @@ import AdaniGroup from "../img/tnpsite-logo/newCompanies/adani-group.jpg";
 import AkerSolutions from "../img/tnpsite-logo/newCompanies/aker-solutions.jpg";
 import Altimetrik from "../img/tnpsite-logo/newCompanies/altimetrik.jpg";
 import AnalyzerCAE from "../img/tnpsite-logo/newCompanies/analyzer-cae.jpg";
+import Attica from "../img/tnpsite-logo/newCompanies/attica.jpg";
 import BanswaraSyntex from "../img/tnpsite-logo/newCompanies/banswara-syntex.jpg";
 import Bosch from "../img/tnpsite-logo/newCompanies/bosch.jpg";
 import BurnsMcDonnell from "../img/tnpsite-logo/newCompanies/burns-and-mcdonnell.jpg";
@@ -65,7 +77,6 @@ import CCTech from "../img/tnpsite-logo/newCompanies/cctech.jpg";
 import Centiro from "../img/tnpsite-logo/newCompanies/centiro.jpg";
 import Coditas from "../img/tnpsite-logo/newCompanies/coditas.jpg";
 import Cognizant from "../img/tnpsite-logo/newCompanies/cognizant.jpg";
-import Cognologix from "../img/tnpsite-logo/newCompanies/cognologix.jpg";
 import ConsultAdd from "../img/tnpsite-logo/newCompanies/consultadd.jpg";
 import CSSCorp from "../img/tnpsite-logo/newCompanies/css-corp.jpg";
 import Dassault from "../img/tnpsite-logo/newCompanies/dassault.jpg";
@@ -84,12 +95,15 @@ import Iauro from "../img/tnpsite-logo/newCompanies/iauro.jpg";
 import Inexture from "../img/tnpsite-logo/newCompanies/inexture.jpg";
 import Infosys from "../img/tnpsite-logo/newCompanies/infosys.jpg";
 import Intellipaat from "../img/tnpsite-logo/newCompanies/intellipaat.jpg";
+import ipac from "../img/tnpsite-logo/newCompanies/ipac.jpg";
 import JohnsonControl from "../img/tnpsite-logo/newCompanies/johnson-controls.jpg";
 import Kifs from "../img/tnpsite-logo/newCompanies/kifs-trade.jpg";
 import KnorrBremse from "../img/tnpsite-logo/newCompanies/knorr-bremse.jpg";
 import Lennox from "../img/tnpsite-logo/newCompanies/lennox-india.jpg";
 import LnT from "../img/tnpsite-logo/newCompanies/lnt-technologies.jpg";
 import LTI from "../img/tnpsite-logo/newCompanies/lti.jpg";
+import Mavenberg from "../img/tnpsite-logo/newCompanies/mavenberg.jpg";
+import Microsoft from "../img/tnpsite-logo/newCompanies/microsoft.jpg";
 import MountBlue from "../img/tnpsite-logo/newCompanies/mountblue.jpg";
 import MindBowser from "../img/tnpsite-logo/newCompanies/mindbowser.jpg";
 import Mindstix from "../img/tnpsite-logo/newCompanies/mindstix.jpg";
@@ -108,6 +122,7 @@ import Raja from "../img/tnpsite-logo/newCompanies/raja.jpg";
 import Reliance from "../img/tnpsite-logo/newCompanies/reliance.jpg";
 import ResearchWire from "../img/tnpsite-logo/newCompanies/researchwire.jpg";
 import RSJ from "../img/tnpsite-logo/newCompanies/rsj-inspection.jpg";
+import Scandid from "../img/tnpsite-logo/newCompanies/sandid.jpg";
 import Sarvaha from "../img/tnpsite-logo/newCompanies/sarvaha.jpg";
 import Selldo from "../img/tnpsite-logo/newCompanies/selldotdo.jpg";
 import Siemens from "../img/tnpsite-logo/newCompanies/siemens.jpg";
@@ -117,9 +132,50 @@ import TechMahindra from "../img/tnpsite-logo/newCompanies/tech-mahindra.jpg";
 import Thermax from "../img/tnpsite-logo/newCompanies/thermax.jpg";
 import TIAA from "../img/tnpsite-logo/newCompanies/tiaa.jpg";
 import TietoEvry from "../img/tnpsite-logo/newCompanies/tieto-evry.jpg";
+import TridentGroup from "../img/tnpsite-logo/newCompanies/trident-group.jpg";
 import Welspun from "../img/tnpsite-logo/newCompanies/welspun.jpg";
 import Wipro from "../img/tnpsite-logo/newCompanies/wipro.jpg";
 import Zensar from "../img/tnpsite-logo/newCompanies/zensar.jpg";
+
+// old companies logo
+import alfa_laval from "../img/tnpsite-logo/old_companies/alfa_laval.jpg";
+import analogic from "../img/tnpsite-logo/old_companies/analogic.jpg";
+import atos_syntel_vector_logo from "../img/tnpsite-logo/old_companies/atos-syntel-vector-logo.jpg";
+import bharatforge from "../img/tnpsite-logo/old_companies/bharatforge.jpg";
+import darkhorse from "../img/tnpsite-logo/old_companies/darkhorse.jpg";
+import eleation from "../img/tnpsite-logo/old_companies/eleation.jpg";
+import Geometric_Company_Logo from "../img/tnpsite-logo/old_companies/Geometric-Company-Logo.jpg";
+import grifeo from "../img/tnpsite-logo/old_companies/grifeo.jpg";
+import hcl from "../img/tnpsite-logo/old_companies/hcl.jpg";
+import honeywell from "../img/tnpsite-logo/old_companies/honeywell.jpg";
+import hpenterprise from "../img/tnpsite-logo/old_companies/hpenterprise.jpg";
+import iauro from "../img/tnpsite-logo/old_companies/iauro.jpg";
+import ibm from "../img/tnpsite-logo/old_companies/ibm.jpg";
+import index from "../img/tnpsite-logo/old_companies/index.jpg";
+import jacobs_jfif from "../img/tnpsite-logo/old_companies/jacobs_jfif.jpg";
+import jonhson_control from "../img/tnpsite-logo/old_companies/jonhson_control.jpg";
+import kpitcummins from "../img/tnpsite-logo/old_companies/kpitcummins.jpg";
+import kratin from "../img/tnpsite-logo/old_companies/kratin.jpg";
+import l_t_infotech from "../img/tnpsite-logo/old_companies/l_t_infotech.jpg";
+import laurus from "../img/tnpsite-logo/old_companies/laurus.jpg";
+import mahindra from "../img/tnpsite-logo/old_companies/mahindra.jpg";
+import neml from "../img/tnpsite-logo/old_companies/neml.jpg";
+import neologic from "../img/tnpsite-logo/old_companies/neologic.jpg";
+import netcracker from "../img/tnpsite-logo/old_companies/netcracker.jpg";
+import nivida from "../img/tnpsite-logo/old_companies/nivida.jpg";
+import persistent from "../img/tnpsite-logo/old_companies/persistent.jpg";
+import rcf from "../img/tnpsite-logo/old_companies/rcf.jpg";
+import routerabbit from "../img/tnpsite-logo/old_companies/routerabbit.jpg";
+import sandriver from "../img/tnpsite-logo/old_companies/sandriver.jpg";
+import sch_invensys from "../img/tnpsite-logo/old_companies/sch-invensys.jpg";
+import syntel from "../img/tnpsite-logo/old_companies/syntel.jpg";
+import tata_motors from "../img/tnpsite-logo/old_companies/tata_motors.jpg";
+import tataconsulting from "../img/tnpsite-logo/old_companies/tataconsulting.jpg";
+import texasins from "../img/tnpsite-logo/old_companies/texasins.jpg";
+import thermax from "../img/tnpsite-logo/old_companies/thermax.jpg";
+import toyoeg from "../img/tnpsite-logo/old_companies/toyoeg.jpg";
+import tpl_logo from "../img/tnpsite-logo/old_companies/tpl_logo.jpg";
+import yokogawa from "../img/tnpsite-logo/old_companies/yokogawa.jpg";
 
 // team 2023-24
 import SharvariS from "../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
@@ -152,10 +208,10 @@ import TriveniC from "../img/team2023_2024/_2_2TRIVENI-CHANDRAKANT-CHAUDHARI.jpg
 const departmentDetails = [
     {
         icon: cse,
-        imageLink: '',
+        imageLink: CSE,
         link: 'https://www.sggs.ac.in/home/page/department-of-computer-science-and-engineering',
         name: 'Computer Science And Engineering',
-        head: 'Dr.J.M.Waghmare (Mrs) Ph. D.',
+        head: 'Mrs. S. M. Bansode',
         dates: '1986',
         info: [
             'Established in 1986, the department has groomed many professionals.',
@@ -166,7 +222,7 @@ const departmentDetails = [
     },
     {
         icon: chemical,
-        imageLink: '',
+        imageLink:CHEMICAL,
         head: 'Dr. P.G. Jadhav',
         link: 'https://www.sggs.ac.in/home/page/department-of-chemical-engineering',
         name: 'Chemical Engineering',
@@ -180,7 +236,7 @@ const departmentDetails = [
     },
     {
         icon: civil,
-        imageLink: '',
+        imageLink: CIVIL,
         head: 'Dr.P.B.Ullagaddi',
         link: 'https://www.sggs.ac.in/home/page/department-of-civil-engineering',
         name: 'Civil Engineering',
@@ -194,7 +250,7 @@ const departmentDetails = [
     },
     {
         icon: extc,
-        imageLink: '',
+        imageLink: EXTC,
         head: 'Dr. M. V. Bhalerao (Ph.D.)',
         link: "https://www.sggs.ac.in/home/page/electronics-and-telecommunication-engineering",
         name: 'Electronics And Telecommunication Engineering',
@@ -208,7 +264,7 @@ const departmentDetails = [
     },
     {
         icon: electrical,
-        imageLink: '',
+        imageLink: ELEC,
         head: '',
         link: 'https://www.sggs.ac.in/home/page/electrical-engineering',
         name: 'Electrical Engineering',
@@ -223,7 +279,7 @@ const departmentDetails = [
     },
     {
         icon: it,
-        imageLink: '',
+        imageLink: IT,
         head: 'Dr. G.K. Pakle',
         link: 'https://www.sggs.ac.in/home/page/information-technology',
         name: 'Information Technology',
@@ -237,7 +293,7 @@ const departmentDetails = [
     },
     {
         icon: instrumentation,
-        imageLink: '',
+        imageLink: ISNTRU,
         head: 'Dr. R. V. Sarwadnya(Mrs.)',
         link: 'https://www.sggs.ac.in/home/page/instrumentation-engineering',
         name: 'Instrumentation Engineering',
@@ -251,7 +307,7 @@ const departmentDetails = [
     },
     {
         icon: mech,
-        imageLink: '',
+        imageLink: MECH,
         head: 'Dr. R. D. Jilte',
         link: 'https://www.sggs.ac.in/home/page/mechanical-engineering',
         name: 'Mechanical Engineering',
@@ -265,7 +321,7 @@ const departmentDetails = [
     },
     {
         icon: textile,
-        imageLink: '',
+        imageLink: TEXT,
         head: 'Dr. Chakarabarti A.',
         link: 'https://www.sggs.ac.in/home/page/department-of-textile-technology-',
         name: 'Textile Technology',
@@ -279,7 +335,7 @@ const departmentDetails = [
     },
     {
         icon: production,
-        imageLink: '',
+        imageLink: PROD,
         head: 'Dr.L.N.Wankhade',
         link: 'https://www.sggs.ac.in/home/page/department-of-production-engineering',
         name: 'Production Engineering',
@@ -348,11 +404,12 @@ const recruitment_procedures_list = [
 const navDrops = [
     {
         title: "Why SGGSIE&T?",
-        links: [{ link: 'special_facilities', name: 'Special Facilities' }, { link: 'departments', name: 'Our Departments' }, { link: 'researches', name: 'Researches' }],
+        links: [{ link: 'special_facilities', name: 'Special Facilities' }, { link: 'departments', name: 'Our Departments' }]
+        // , { link: 'researches', name: 'Researches' }]
     },
     {
         title: "For Recruiters",
-        links: [{ link: 'past_recruiters', name: 'Past Recruiters' }, { link: 'placements', name: 'Placements' }, { link: 'recruitment_procedures', name: 'Recruitment Procedures' }, { link: 'company_interest', name: 'Company Interest Form' }],
+        links: [{ link: 'past_recruiters', name: 'Past Recruiters' }, { link: 'recruitment_procedures', name: 'Recruitment Procedures' }, { link: 'company_interest', name: 'Company Interest Form' }],
     },
     {
         title: '',
@@ -364,79 +421,71 @@ const navDrops = [
 const imageSlider = [
     {
         title: 'Placed At CERN',
-        imageLink: CERN_poster
-    },
-    {
-        title: 'Placed At Amazon',
-        imageLink: Amazon_poster
-    },
-    {
-        title: 'Placed At Bitwise',
-        imageLink: Bitwise_poster
-    },
-    {
-        title: 'Placed At Centiro',
-        imageLink: Centiro_poster
-    },
-    {
-        title: 'Placed At Cognologix',
-        imageLink: Cognologix_poster
-    },
-    {
-        title: 'Placed At Amazon',
-        imageLink: Amazon_poster
-    },
-    {
-        title: 'Placed At Elastik',
-        imageLink: Elastik_poster
-    },
-    {
-        title: 'Placed At Iauro',
-        imageLink: Iauro_poster
-    },
-    {
-        title: 'Placed At Kratin',
-        imageLink: Kratin_poster
+        imageLink: cern_60_lpa
     },
     {
         title: 'Placed At Microsoft',
-        imageLink: Microsoft_poster
+        imageLink: MICROSOFT_52_lpa
     },
     {
-        title: 'Placed At RSL 1',
-        imageLink: RSL1_poster
+        title: 'Placed At Amazon',
+        imageLink: Amazon_45_lpa
     },
     {
-        title: 'Placed At RSL 2',
-        imageLink: RSL2_poster
+        title: 'Placed At Trident',
+        imageLink: TRIDENT_18_lpa
+    },
+    {
+        title: 'Placed At Trident',
+        imageLink: trident_1_12_lpa
+    },
+    {
+        title: 'Placed At Trident',
+        imageLink: trident_2_12_lpa
+    },
+    {
+        title: 'Placed At Trident',
+        imageLink: trident_12Lpa
+    },
+    {
+        title: 'Placed At Tejas Network',
+        imageLink: TEJASNETWORK_10_lpa
+    },
+    {
+        title: 'Placed At TIAA',
+        imageLink: TIAA_10_lpa
+    },
+    {
+        title: 'Placed At Trident',
+        imageLink: TridentGroup_9_lpa
+    },
+    {
+        title: 'Placed At IAuro',
+        imageLink: iauro_8_lpa
     },
     {
         title: 'Placed At Sarvaha',
-        imageLink: sarvaha_7_5LPA_poster
+        imageLink: sarvaha_7_5LPA
     },
     {
         title: 'Placed At Sarvaha',
-        imageLink: Sarvaha_poster
+        imageLink: Sarvaha_7_lpa
     },
     {
-        title: 'Placed At TCS',
-        imageLink: TCS_poster
+        title: 'Placed At RSL',
+        imageLink: RSL1_7_lpa
     },
     {
-        title: 'Placed At Trident',
-        imageLink: Trident_poster
+        title: 'Placed At RSL',
+        imageLink: RSL2_7_lpa
     },
     {
-        title: 'Placed At Trident',
-        imageLink: Trident2_poster
+        title: 'Placed At Cognologix',
+        imageLink: COGNOLOGIX_7_lpa
     },
     {
-        title: 'Placed At Tejas',
-        imageLink: Tejas_poster
-    },
-    {
-        title: 'Placed At Trident',
-        imageLink: Trident_23_24_12LPA_poster
+        title: 'Placed At TCS Digital',
+        imageLink: TCSDIGITAL_7_lpa
     },
 ]
 
@@ -561,6 +610,10 @@ const past_recuriters_list = [
         imageLink: AnalyzerCAE
     },
     {
+        title: 'Attica',
+        imageLink: Attica
+    },
+    {
         title: 'Banswara Syntex',
         imageLink: BanswaraSyntex
     },
@@ -637,7 +690,7 @@ const past_recuriters_list = [
         imageLink: Faurecia
     },
     {
-        title: 'Fox',
+        title: 'Fox Solution',
         imageLink: Fox
     },
     {
@@ -669,6 +722,10 @@ const past_recuriters_list = [
         imageLink: Intellipaat
     },
     {
+        title: 'IPAC',
+        imageLink: ipac
+    },
+    {
         title: 'Johnson Control',
         imageLink: JohnsonControl
     },
@@ -691,6 +748,14 @@ const past_recuriters_list = [
     {
         title: 'LTI',
         imageLink: LTI
+    },
+    {
+        title: 'Mavenberg',
+        imageLink: Mavenberg
+    },
+    {
+        title: 'Microsoft',
+        imageLink: Microsoft
     },
     {
         title: 'MountBlue',
@@ -765,6 +830,10 @@ const past_recuriters_list = [
         imageLink: RSJ
     },
     {
+        title: 'Scandid',
+        imageLink: Scandid
+    },
+    {
         title: 'Sarvaha',
         imageLink: Sarvaha
     },
@@ -801,6 +870,10 @@ const past_recuriters_list = [
         imageLink: TietoEvry
     },
     {
+        title: 'Trident Group',
+        imageLink: TridentGroup
+    },
+    {
         title: 'Welspun',
         imageLink: Welspun
     },
@@ -812,6 +885,166 @@ const past_recuriters_list = [
         title: 'Zensar',
         imageLink: Zensar
     },
+    {
+        title: 'Alfa laval',
+        imageLink: alfa_laval
+    },
+    {
+        title: 'Analogic',
+        imageLink: analogic
+    },
+    {
+        title: 'Atos Syntel',
+        imageLink: atos_syntel_vector_logo
+    },
+    {
+        title: 'Bharat Forge',
+        imageLink: bharatforge
+    },
+    {
+        title: 'Darkhorse',
+        imageLink: darkhorse
+    },
+    {
+        title: 'Eleation',
+        imageLink: eleation
+    },
+    {
+        title: 'Geometric',
+        imageLink: Geometric_Company_Logo
+    },
+    {
+        title: 'Grifeo',
+        imageLink: grifeo
+    },
+    {
+        title: 'HCL',
+        imageLink: hcl
+    },
+    {
+        title: 'Honeywell',
+        imageLink: honeywell
+    },
+    {
+        title: 'HP Enterprise',
+        imageLink: hpenterprise
+    },
+    {
+        title: 'IAuro',
+        imageLink:iauro
+    },
+    {
+        title: 'IBM',
+        imageLink:ibm
+    },
+    {
+        title: 'Index',
+        imageLink:index
+    },
+    {
+        title: 'Jacobs Jfif',
+        imageLink:jacobs_jfif
+    },
+    {
+        title: 'Jonhson Control',
+        imageLink:jonhson_control
+    },
+    {
+        title: 'Kpitcummins',
+        imageLink: kpitcummins
+    },
+    {
+        title: 'Kratin',
+        imageLink: kratin
+    },
+    {
+        title: 'L&T Infotech',
+        imageLink: l_t_infotech
+    },
+    {
+        title: 'Laurus',
+        imageLink: laurus
+    },
+    {
+        title: 'Mahindra',
+        imageLink: mahindra
+    },
+    {
+        title: 'Neml',
+        imageLink: neml
+    },
+    {
+        title: 'Neologic',
+        imageLink: neologic
+    },
+    {
+        title: 'Netcracker',
+        imageLink: netcracker
+    },
+    {
+        title: 'Nivida',
+        imageLink: nivida
+    },
+    {
+        title: 'Persistent',
+        imageLink: persistent
+    },
+    {
+        title: 'RCF',
+        imageLink: rcf
+    },
+    {
+        title: 'Router Rabbit',
+        imageLink: routerabbit
+    },
+    {
+        title: 'Sand Driver',
+        imageLink: sandriver
+    },
+    {
+        title: 'Sch Invensys',
+        imageLink: sch_invensys
+    },
+    {
+        title: 'Syntel',
+        imageLink: syntel
+    },
+    {
+        title: 'Tata Motors',
+        imageLink: tata_motors
+    },
+    {
+        title: 'Tata Consulting',
+        imageLink: tataconsulting
+    },
+    {
+        title: 'Texasins',
+        imageLink: texasins
+    },
+    {
+        title: 'Thermax',
+        imageLink: thermax
+    },
+    {
+        title: 'Toyoeg',
+        imageLink: toyoeg
+    },
+    {
+        title: 'TPL',
+        imageLink: tpl_logo
+    },
+    {
+        title: 'yokogawa',
+        imageLink: yokogawa
+    },
+    {
+        title: 'Eratronics',
+        imageLink: Eratronics
+    },
+    {
+        title: 'Euronet',
+        imageLink: Euronet
+    }
 ]
 
 const team_23_24 = [
@@ -1060,20 +1293,20 @@ const team_23_24 = [
 // Temporary News Details
 const news_list = [
     {
+        title: 'Zoho Cooperation Campus Drive',
+        news: 'Zoho Cooperation',
+        dates: '07/11/2023'
+    },
+    {
+        title: 'Fox Solution Campus Drive',
+        news: 'Fox Solution Pool Campus Drive',
+        dates: '03/11/2023'
+    },
+    {
         title: 'Students got placed',
         news: 'Our 4 student placed in HoneyWell FTE 6.6 LPA',
         dates: ''
     },
-    {
-        title: 'Workshop',
-        news: 'Network Penetration Testing and Career Opportunities',
-        dates: '29/10/2023'
-    },
-    {
-        title: 'Campus Drive',
-        news: 'Fox Solution Pool Campus Drive',
-        dates: '30/10/2023'
-    }
 ]
 
 export { departmentDetails, navDrops, imageSlider, specialFacilities, recruitment_procedures_list, past_recuriters_list, team_23_24, news_list };

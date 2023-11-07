@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { OurTeam } from "./OurTeam";
 import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
@@ -6,6 +7,7 @@ import { fadeIn, } from '../../utils/motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import ContactUsIcon from "../../img/ContactUsIcon.png"
+import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
 
 const LocationPin = ({ text }) => (
   <div className="marker">
@@ -29,19 +31,23 @@ export const ContactUsPage = () => {
           <div className="flex flex-col items-center justify-between mx-2 mb-4 sm:flex-row">
             <div className="text-center w-[50%] flex flex-col items-center justify-center mt-4">
               <div>
-                <h2 className="p-2 text-2xl text-left sm:text-4xl sm:p-4">
-                  Looking to Hire from SGGSIT&T?<br />Fill the Job Notification Form today!!!
-                </h2>
+                <h1 className="p-2 text-2xl text-left sm:text-3xl sm:p-4">
+                  Looking to Hire from SGGSIT&T?<br />Fill the Job Announcement Form today!!!
+                </h1>
               </div>
               <div className="flex flex-col items-center justify-between sm:flex-row">
-                <button className="p-2 m-2 bg-white border-0 rounded-xl outline-0 hover:cursor-pointer">Fill JNF/JAF Direct Recruitment</button>
-                <button className="p-2 m-2 bg-gray-300 border-0 rounded-xl outline-0 hover:cursor-pointer">Fill JNF/JAF Internship</button>
+                <a href='https://docs.google.com/document/d/1auq7RC49WYZ_oQCxjm0BzgKaWAGP3G-A/edit?usp=sharing&ouid=106712804397345244222&rtpof=true&sd=true' target="_blank" className="p-2 m-2 bg-white border-0 rounded-xl outline-0 hover:cursor-pointer">
+                  <button >Fill JAF Direct Recruitment</button>
+                </a>
+                <a href='https://docs.google.com/document/d/1BD-oeS6kxzI19G-ylMq_4kNKLFrKR6s6/edit?usp=sharing&ouid=106712804397345244222&rtpof=true&sd=true' target="_blank" className="p-2 m-2 bg-gray-300 border-0 rounded-xl outline-0 hover:cursor-pointer">
+                  <button >Fill JAF Internship</button>
+                </a>
               </div>
             </div>
 
 
             <div className="sm:w-[40%] w-[80%] text-center flex justify-center items-center mt-4">
-              <img src={ContactUsIcon} alt="" className="sm:w-[80%] h-[100%] mb-4 mr-4 w-[100%] rounded-xl" />
+              <img src={ContactUsIcon} alt="contact" className="sm:w-[80%] h-[100%] mb-4 mr-4 w-[100%] rounded-xl" />
             </div>
           </div>
         </div>
@@ -56,18 +62,18 @@ export const ContactUsPage = () => {
           <div className="flex flex-col items-center justify-between mx-2 mb-4 ">
             {/* Heading  */}
             <div className="text-center w-[80%] flex flex-col items-start justify-start mt-4">
-              <h4 className="p-2 text-base text-center sm:text-xl sm:p-4">
+              <h2 className="p-2 text-base text-center sm:text-xl sm:p-4">
                 Get In Touch
-              </h4>
-              <h2 className="p-2 text-3xl text-center sm:text-4xl sm:p-4">
-                Contact Us.
               </h2>
+              <h3 className="p-2 text-3xl text-center sm:text-4xl sm:p-4">
+                Contact Us.
+              </h3>
             </div>
 
             {/* Contact Cards */}
             <div className="flex flex-col items-center justify-between w-4/5 text-center sm:flex-row">
               {/* Address */}
-              <Tilt className='xs:w-[250px] w-full my-4'>
+              <Tilt className='xs:w-[350px] w-full my-4'>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * 0, 0.75)}
                   className='w-full nav-light-shadows p-[1px] rounded-[20px] shadow-card'
@@ -97,7 +103,7 @@ export const ContactUsPage = () => {
                 </motion.div>
 
               </Tilt>
-              <Tilt className='xs:w-[250px] w-full my-4'>
+              <Tilt className='xs:w-[350px] w-full my-4'>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * 0, 0.75)}
                   className='w-full nav-light-shadows p-[1px] rounded-[20px] shadow-card'
@@ -130,7 +136,7 @@ export const ContactUsPage = () => {
                 </motion.div>
 
               </Tilt>
-              <Tilt className='xs:w-[250px] w-full my-4'>
+              <Tilt className='xs:w-[350px] w-full my-4'>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * 0, 0.75)}
                   className='w-full nav-light-shadows p-[1px] rounded-[20px] shadow-card'
@@ -150,15 +156,15 @@ export const ContactUsPage = () => {
                     <div className="flex flex-col items-center justify-center">
                       <div className="mt-2">
                         <h4>TPO: </h4>
-                        <p className="p-2 m-2 border-2 border-blue-400 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:02462-269181`}>02462-269181</a></p>
+                        <p className="p-2 m-2 border-2 border-blue-400 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91-2462-269182`}>+91-2462-269182 (Office)</a></p>
 
                       </div>
                       <div>
-                        <h4>Dean:</h4>
-                        <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91-2462-269182`} >+91-2462-269182 (Office)</a></p>
+                        <h4>TPO Dean:</h4>
+                        <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91 94218 68526`} >+919421868526</a></p>
                       </div>
                       <div>
-                        <h4>Assistant:</h4>
+                        <h4>TPO Assistant:</h4>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91 75078 77206`} >+91 75078 77206</a></p>
                       </div>
                     </div>

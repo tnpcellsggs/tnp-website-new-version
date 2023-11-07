@@ -15,6 +15,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import HatkarSir from "../../img/HatkarSir.jpg";
 import IGavakhore from "../../img/ishwar-sir.jpg";
+import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
 
 gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
 
@@ -53,18 +54,22 @@ const TeamCards = (props) => {
                                                     left: 0;
                                                     width: 100%;
                                                     height: 200px;
-                                                    background-image: url(${imageLink});
+                                                    background-image: url(${Secretary});
+                                                    filter: blur(55px);
                                                     background-size: cover;
                                                     background-position: center;
-                                                    filter: blur(25px);
                                                     transition: 0.5s;
                                             `}
+
+                                            // background-image: url(${imageLink});
+                                            //  filter: blur(25px);
+
                                                 className="flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"
                                             >
                                                 {/* div for intro  */}
                                                 {/* <IconDiamond className=" flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"> */}
                                                 <img src={imageLink} alt={name} className="w-[40%] rounded-full text-center absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
-                                                <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center">
+                                                <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center ">
                                                     <h3 className='w-full mx-4 text-xl font-bold text-center text-black'>{name}</h3>
                                                     <p className="text-center text-gray-600">{title}</p>
                                                 </div>
@@ -72,7 +77,7 @@ const TeamCards = (props) => {
                                             </div>
 
                                             {/* div for contacts */}
-                                            <div className="flex items-center justify-center w-full h-[50%]">
+                                            <div className="flex items-center justify-center w-full h-[50%] bg-[#eff6ff]">
                                                 <div className="flex-col items-center justify-center">
                                                     <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:${emailId}`} >{emailId} | <FontAwesomeIcon icon={faEnvelope} /></a></p>
                                                     <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:${phoneNo}`}>{phoneNo} | <FontAwesomeIcon icon={faPhone} /></a></p>

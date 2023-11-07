@@ -1,5 +1,4 @@
 import React from "react";
-import SggsCampus from "../../../img/SGGS_Campus.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { fadeIn } from '../../../utils/motion';
@@ -9,6 +8,8 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import SggsCampus from "../../../img/SGGS_Campus.jpg";
+import SggsCampus_2 from "../../../img/sggs_campus_2.png";
 
 const AboutInfo = () => {
 
@@ -34,22 +35,53 @@ const AboutInfo = () => {
             </ul>
           </div>
 
-          {/* below div */}
+          {/* Below div  */}
           <div className="flex flex-col items-center justify-center sm:flex-row-reverse">
-            <div className="sm:w-[50%] w-[80%] text-center flex justify-center flex-col items-center">
-              <img src={SggsCampus} alt="" className="sm:w-[80%] h-[100%] mb-2 w-[100%] rounded-xl" />
+            <div className="sm:w-[30%] w-[70%] text-center flex flex-col justify-center items-center">
+              <img src={SggsCampus_2} alt="sggscampus" className="sm:w-full h-[70%] mb-2 rounded-xl " />
               <p className="mb-2 text-center text-secondary">SGGS Campus</p>
             </div>
-            <p className="p-2.5 mx-2 text-lg font-normal w-[80%] sm:w-[50%]">Welcome to the Industry Liaison one-stop office which takes care of
-              (a) Institute-Industry Liaison, (b) Institute-Alumni Liaison, and (c)
-              Training and Placement activities.
-              <br /> We act as interface between institute and industry for Training
-              and Placement activities, Internships, Innovative Projects, Industry
-              Projects, Incubation, Startup, Hackathons, Alumni relations, etc.{" "}
-              Our aim is to realize the dreams of students, parents, and society in
-              general. The most important one is to make our students "engineers"
-              who would be able to contribute to the society.</p>
+
+            <div className="p-1 align-top sm:p-2.5 mx-1 sm:mx-2 text-lg text-justify font-normal w-[86%] sm:w-[65%]">
+
+              <p className="sm:p-2.5 p-1 mx-1 sm:mx-2 text-lg text-justify font-normal w-[90%] ">
+                Welcome to the Industry Liaison one-stop office which takes care of
+                (a) Institute-Industry Liaison, (b) Institute-Alumni Liaison, and (c)
+                Training and Placement activities.
+                We act as interface between institute and industry for Training
+                and Placement activities, Internships, Innovative Projects, Industry
+                Projects, Incubation, Startup, Hackathons, Alumni relations, etc.{" "}
+                Our aim is to realize the dreams of students, parents, and society in
+                general. The most important one is to make our students "engineers"
+                who would be able to contribute to the society.
+              </p>
+              <span className="sm:p-2.5 p-1 mx-1 sm:mx-2 text-lg text-justify font-normal w-full">
+              Our team has following functions and responsibilities:
+                <ul className='mt-2 ml-5 space-y-2 list-disc'>
+                  <li>
+
+                    Organizes industrial visits to foster Industry-Institute interaction.
+                  </li>
+                  <li>
+
+                    Facilitates in-plant training and projects aligning with industry needs.
+                  </li>
+                  <li>
+
+                    Channels feedback from visiting companies to enhance the curriculum.
+                  </li>
+                  <li>
+
+                    Provides individual expert counseling for career guidance.
+                  </li>
+
+                </ul>
+              </span>
+
+            </div>
           </div>
+
+
         </div>
       </motion.div>
     </>

@@ -72,7 +72,7 @@ export default function Placements() {
 
   return (
     <>
-      <h1 className="homepage-headings">Placement Records</h1>
+      <h1 className="text-3xl homepage-headings">Placement Records</h1>
       <PGraph />
       <PTable />
       <PList />

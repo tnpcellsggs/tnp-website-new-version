@@ -167,9 +167,9 @@ export default function Navbar() {
       <BSNavbar className="navbar" bg="light" sticky="top" >
         <Container>
           <BSNavbar.Brand id="navbar-brand" href="/">
-            <img className="logo-img" src={SGGSLogo} alt="" />
+            <img className="logo-img" src={SGGSLogo} alt="logo" />
             <span className="divider"></span>
-            <img className="logo-img logo-mobile" src={TNPLogo} alt="" />
+            <img className="logo-img logo-mobile" src={TNPLogo} alt="img-logo" />
             &nbsp;
             <span className="logo-text">
               SHRI GURU GOBIND SINGHJI INSTITUTE<br />
@@ -180,16 +180,17 @@ export default function Navbar() {
         <Container >
           <Nav className="desktop-navmenu ms-auto">
             <Link onClick={getProgress} className="navLink" to="/">Home</Link>
+            <Link onClick={getProgress} className="navLink" to="/placements">Placements</Link>
             <Drops getProgress={getProgress} items={navDrops[0]} className={`navDrop`} />
             <Drops getProgress={getProgress} items={navDrops[1]} className={`navDrop`} />
-            <Link onClick={getProgress} className="navLink" to="/ourTeam">Our Team</Link>
             <Link onClick={getProgress} className="navLink" to="/contactus">Contact Us</Link>
 
-            <div className="flex justify-center items-center text-[20px] hover:cursor-pointer">
-              {/* <FontAwesomeIcon icon={faBars} /> */}
+            {/* Hamburger containing the student section */}
+            {/* <div className="flex justify-center items-center text-[20px] hover:cursor-pointer">
               <HamburgerMenuTag />
-            </div>
+            </div> */}
           </Nav>
+
           {/* onClick={getProgress} <Link className="navLink" to="">
               <Translate />
             </Link> */}
@@ -202,11 +203,11 @@ export default function Navbar() {
           </div>
           <div className={`${!toggle ? 'hidden' : 'flex'} bg-white p-6 absolute top-20 right-0 left-0 z-10 rounded-x1 w-full scrollable-div flex flex-col  z-[5]`}>
             <MobileNavigation getTouch={getTouch} title='Home' to_='/' />
+            <MobileNavigation getTouch={getTouch} to_='placements' title='Placements' />
             <InnerDropDowns getTouch={getTouch} navDrops={navDrops[0]} title={'Why SGGSIE&T'} />
             <InnerDropDowns getTouch={getTouch} navDrops={navDrops[1]} title={'For Recruiters'} />
-            <MobileNavigation getTouch={getTouch} to_='ourTeam' title='Our Team' />
+            {/* <MobileNavigation getTouch={getTouch} to_='studentSection' title='Student Section' /> */}
             <MobileNavigation getTouch={getTouch} to_='contactus' title='Contact US' />
-            <MobileNavigation getTouch={getTouch} to_='studentSection' title='Student Section' />
           </div>
         </Container>
       </BSNavbar>

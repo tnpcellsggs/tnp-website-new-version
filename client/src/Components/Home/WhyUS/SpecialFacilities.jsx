@@ -18,9 +18,9 @@ const SpecialFacilitiesCards = (props) => {
   const index = props.index;
   return (
     <>
-      <div className="mx-4 my-14 nav-medium-light-shadows gsap-divs" style={{ opacity: '1 !important', transform: 'none' }} >
+      <div className="mx-2 sm:mx-4 my-14 nav-medium-light-shadows gsap-divs" style={{ opacity: '1 !important', transform: 'none' }} >
         {/* top div */}
-        <div className={`flex flex-col items-center justify-between mx-2 mb-4 sm:${index % 2 !== 0 ? 'flex-row-reverse' : 'flex-row'}`}>
+        <div className={`flex flex-col items-center justify-between m-4 sm:${index % 2 !== 0 ? 'flex-row-reverse' : 'flex-row'}`}>
           <div className={`w-[50%]`}>
             <a href={link}>
               <h2 className="p-2 text-3xl text-center sm:text-right sm:text-4xl sm:p-4">
@@ -98,12 +98,11 @@ const SpecialFacilities = () => {
     <>
       <div className='w-[97%] mx-auto'>
 
-        <p className={`py-4 text-3xl sm:text-4xl text-left `}>&ldquo;Explore Special Facilities At SGGSIE&T&ldquo;</p>
-        <h2 className='text-2xl'>Overview.</h2>
+        <h1 className='text-3xl'>&ldquo;Explore Special Facilities At SGGSIE&T&ldquo;</h1>
+        <p className={`py-4 text-xl sm:text-2xl text-left `}>Overview.</p>
 
       </div>
       <div ref={comp}>
-
         {
           specialFacilities.map((service, index) => (
             (
@@ -112,8 +111,6 @@ const SpecialFacilities = () => {
           ))
         }
       </div>
-
-
     </>
   )
 }

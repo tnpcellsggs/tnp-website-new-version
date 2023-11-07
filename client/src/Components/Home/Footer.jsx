@@ -69,6 +69,7 @@ export default function Footer() {
               </a>
             </Stack>
           </Col>
+
           <Col className="f-col f-ql">
             <h2>Quick Links</h2>
             <div className="grid items-center justify-center grid-cols-1 gap-2 sm:grid-cols-3">
@@ -81,9 +82,9 @@ export default function Footer() {
                 <p>
                   <Link className="footer-links" to="/departments">Departments</Link>
                 </p>
-                <p>
+                {/* <p>
                   <Link className="footer-links" to="/researches">Researches</Link>
-                </p>
+                </p> */}
                 <p>
                   <Link className="footer-links" to="/past_recruiters">Past Recruiters</Link>
                 </p>
@@ -96,9 +97,9 @@ export default function Footer() {
                 <p>
                   <Link className="footer-links" to="/company_interest">Company Interest Form</Link>
                 </p>
-                <p>
-                  <Link className="footer-links" to="/ourTeam">Our Team</Link>
-                </p>
+                {/* <p>
+                  <Link className="footer-links" to="/studentSection">Student Section</Link>
+                </p> */}
                 <p>
                   <Link className="footer-links" to="/contactus">Contact Us</Link>
                 </p>
@@ -165,6 +166,7 @@ export default function Footer() {
             </Stack>
           </Col>
         </Row>
+
         <div className="copyright">
           Copyright @2022 SGGSIE&T. All Rights Reserved.<br />
           Developed By Technical Team | T&P Cell
