@@ -28,6 +28,7 @@ app.use("/admin/signin/", adminRoute);
 app.use("/admin/cert/", certificateRoute);
 app.use("/admin/events/", eventRoute);
 app.use("/admin/placements/", Placements);
+app.use("/sendFile", JAF);
 
 const PORT = process.env.PORT || 4019;
 app.listen(PORT, () => {

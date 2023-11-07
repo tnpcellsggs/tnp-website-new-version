@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
 const Placements = require("./routes/placementsRoute");
+const JAF = require("./routes/jaf");
 
 const app = express();
 dotenv.config();
@@ -19,6 +20,7 @@ mongoose.connect(mongoURI, (err) => {
 app.use(express.json());
 
 app.use("/admin/placements/", Placements);
+app.use("/sendFile", JAF);
 
 // const PORT = process.env.PORT || 8000;
 app.listen(port, () => {
