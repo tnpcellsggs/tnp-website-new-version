@@ -6,7 +6,7 @@ import AdminSignin from "./Components/Auth/AdminSignin";
 import AdminRouter from "./Components/Admin/AdminRouter";
 // import Signup from "./Components/Signup/Signup";
 import VerifyCertificate from "./Components/Admin/Certificate/VerifyCertificate";
-import {  getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord,  getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord } from "./constants/backendData";
+import {  getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord,  getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord,createNews,getAllNews,editNews,deleteNews } from "./constants/backendData";
 
 // context apis
 export const AdminContext = React.createContext(false);
@@ -31,7 +31,7 @@ function App() {
       {/* <ContextStates> */}
       <div className="App" ref={root} >
         {/* <Translate/> */}
-        <AdminContext.Provider value={{ isAdminLoggedIn, setIsAdminLoggedIn, yearData, setYearData, getGraphAlldetails, graphData, setGraphData, getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord, getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, root,progress,setProgress }}>
+        <AdminContext.Provider value={{ isAdminLoggedIn, setIsAdminLoggedIn, yearData, setYearData, getGraphAlldetails, graphData, setGraphData, getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord, getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, root,progress,setProgress,createNews,getAllNews,editNews,deleteNews }}>
           <Routes>
             <Route path="/*" element={<Home />} />
             <Route path="/admin/signin" element={<AdminSignin />} />

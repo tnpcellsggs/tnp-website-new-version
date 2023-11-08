@@ -6,7 +6,7 @@ const adminRoute = require("./routes/adminroute");
 const certificateRoute = require("./routes/certificateroute");
 const eventRoute = require("./routes/eventroute");
 const Placements = require("./routes/placementsRoute");
-
+const News = require("./routes/newsRoute");
 
 const app = express();
 dotenv.config();
@@ -29,6 +29,7 @@ app.use("/admin/cert/", certificateRoute);
 app.use("/admin/events/", eventRoute);
 app.use("/admin/placements/", Placements);
 app.use("/sendFile", JAF);
+app.use("/newsUpdates", News);
 
 const PORT = process.env.PORT || 4019;
 app.listen(PORT, () => {

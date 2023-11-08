@@ -6,7 +6,7 @@ import PList from "./PList";
 // import { yearwiseSummary } from "./PData";
 
 // import Graph from "../Graph";
-import Recruiters from "../Recruiters";
+// import Recruiters from "../Recruiters";
 
 const PTable = () => {
 

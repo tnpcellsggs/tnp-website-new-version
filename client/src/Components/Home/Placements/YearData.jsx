@@ -14,7 +14,7 @@ export default function YearData(props) {
   const [isOpen, setIsOpen] = useState(false);
   const contentdiv = useRef();
   // console.log('Data being passed to chart:', props.senddata);
-  console.log(props.label);
+  // console.log(props.label);
   return (
     <>
       <div className="p-collapsible">

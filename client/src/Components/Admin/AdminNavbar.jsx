@@ -87,6 +87,16 @@ export default function AdminNavbar() {
               Department Wise Placements
             </NavLink>
           </li>
+          <li >
+            <NavLink
+              to="./newsSection"
+              style={({ isActive }) =>
+                isActive ? { color: "#2af" } : { color: "#fff" }
+              }
+            >
+              News & Updates
+            </NavLink>
+          </li>
           <li>
             <div
               style={{
