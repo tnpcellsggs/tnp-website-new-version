@@ -1,5 +1,6 @@
 // Database URL
 const host = process.env.REACT_APP_REQURL;
+const host2 = 'http://localhost:4019';
 // 1) YearWise Context APIs
 
 // fetch all the records from database
@@ -220,6 +221,7 @@ const getDeptAlldetails = async () => {
     const json = await response.json();
 
     let arr = json.map((item, index) => {
+
         return {
             "_id": item._id,
             dataKey: index,
@@ -236,7 +238,7 @@ const getDeptAlldetails = async () => {
                 }
             })
         }
-    });
+    })
     // console.log(arr);
     return arr;
 };
@@ -315,5 +317,94 @@ const deleteDeptRecord = async (userInp) => {
     const json = await response.json();
     // console.log(json);
 }
+//////////////////////////////////////////////////////////////////////////////////////
+// 4) News Section API
+// fetch all the records from database
+const getAllNews = async () => {
+    let url = `${host2}/newsUpdates/getAllNews`;
+    let response = await fetch(url, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        },
+    });
+    const json = await response.json();
+    // console.log(json)
+    let arr = json['newsInfo'].map((item, index) => {
+        return {
+            Title: item.Title,
+            Description: item.Description,
+            Date: item.Date,
+            ImageLink: item.ImageLink,
+            ID: item.Title + item.Date
+        }
+    });
+    // console.log(arr);
+    return arr;
+};
 
-export { getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord, getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord };
+
+// create a new record in database
+const createNews = async (userInp) => {
+    // console.log(userInp);
+    // Logic to create a new record to database
+    let url = `${host2}/newsUpdates/create`;
+    let response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "Title": userInp.Title,
+            "Description": userInp.Description,
+            "Date": userInp.Date,
+            "ImageLink": userInp.ImageLink,
+            "ID": userInp.Title + userInp.Date
+        })
+    });
+
+    const json = await response.json();
+    // console.log(json);
+}
+
+// edit a record
+const editNews = async (_id, userInp) => {
+    // Logic to edit a record to database
+    let url = `${host2}/newsUpdates/editNews`;
+    let response = await fetch(url, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "Title": userInp.Title,
+            "Description": userInp.Description,
+            "Date": userInp.Date,
+            "ImageLink": userInp.ImageLink,
+            "ID": _id
+        })
+    });
+
+    // const json = await response.json();
+    // console.log(json);
+}
+
+// delete a record
+const deleteNews = async (_id) => {
+    // Logic to delete a record to database
+    let url = `${host2}/newsUpdates/delete`;
+    let response = await fetch(url, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+           "ID":_id.ID
+        })
+    });
+
+    // const json = await response.json();
+    // console.log(json);
+}
+
+export { getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord, getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord,createNews,getAllNews,editNews,deleteNews };

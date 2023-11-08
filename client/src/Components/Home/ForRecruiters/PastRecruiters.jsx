@@ -76,7 +76,7 @@ const PastRecruiters = () => {
               <h3 className="p-4 mx-4 my-8 text-xl text-center border-2 rounded-lg nav-light-shadows w-[100%]">&ldquo;Your Path to Success Starts with Our Placement Alliances&rdquo;</h3>
             </div>
 
-            <div ref={comp} className="grid items-center justify-center grid-cols-1 gap-4 sm:grid-cols-5">
+            <div ref={comp} className="grid items-center justify-center grid-cols-1 gap-2 sm:grid-cols-4 ">
               {
                 past_recuriters_list.map((items, index) => {
                   return (

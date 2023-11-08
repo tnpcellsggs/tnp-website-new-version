@@ -4,23 +4,25 @@ const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
 const Placements = require("./routes/placementsRoute");
 const JAF = require("./routes/jaf");
+const News = require("./routes/newsRoute");
 
 const app = express();
 dotenv.config();
 const port = 4019;
-const mongoURI = `mongodb://127.0.0.1/placements`;
+const mongoURI1 = `mongodb://127.0.0.1/placements`;
 
 app.use(cors());
 
-mongoose.connect(mongoURI, (err) => {
+mongoose.connect(mongoURI1, (err) => {
   if (err) console.log(err);
-  else console.log("Connected to MongoDB");
+  else console.log("Connected to MongoDB Placements");
 });
 
 app.use(express.json());
 
 app.use("/admin/placements/", Placements);
 app.use("/sendFile", JAF);
+app.use("/newsUpdates", News);
 
 // const PORT = process.env.PORT || 8000;
 app.listen(port, () => {

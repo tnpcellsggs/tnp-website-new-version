@@ -24,7 +24,7 @@ function AdminSignin() {
 
   useEffect(() => {
     document.title = "Sign in as Admin";
-    console.log(isAdminLoggedIn);
+    // console.log(isAdminLoggedIn);
     if (!isAdminLoggedIn) {
       userRef.current.focus();
     }

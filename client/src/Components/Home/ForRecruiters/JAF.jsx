@@ -219,7 +219,7 @@ const JAF = () => {
             <div className=' w-full sm:w-[50%] m-2 text-center '>
               <Form>
                 <h2>Upload Forms Here</h2>
-                <input type="email" id='from' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='From(enter your email)' name='from' required onChange={onChange} />
+                <input type="email" id='from' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='From (Enter Your Email)' name='from' required onChange={onChange} />
                 <input type="text" id='subject' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='Subject' name='subject' onChange={onChange} />
                 <input type="text" id='specifications' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='Any Specifications' name='specifications' onChange={onChange} />
                 <input type="file" accept='.docx, .pdf' id='docInp' className='p-2 m-1 text-center border-0 rounded-xl nav-light-shadows' onChange={handleFileChange} multiple />

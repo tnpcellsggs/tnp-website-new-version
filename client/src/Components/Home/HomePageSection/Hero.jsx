@@ -1,12 +1,24 @@
 // import react from "react";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PosterSlider from './PosterSlider';
 import Summary from "../../../img/Gallary/summary_report_icon.jpg";
 import Stats from "../../../img/Gallary/statistics.jpg";
 import SectionWrapper from "../../../Higher_Order_Components/SectionWrapper";
+import { AdminContext } from "../../../App";
 
 const Hero = () => {
+  // using context api to save all the states & use it all over the app
+  const graphContext = useContext(AdminContext);
+  const [yearTempData, setTempData] = useState([]);
+
+  const { getYearWiseAlldetails } = graphContext;
+  useEffect(() => {
+    // getAlldetails();
+    getYearWiseAlldetails().then((data) => setTempData(data));
+    // console.log(yearTempData[yearTempData.length - 1].PackageRange);
+  }, []);
+
   return (
     <>
       {/* main wrapper container */}
@@ -48,7 +60,7 @@ const Hero = () => {
               <h2 className="text-sm ">Placement Summary(Last Year)</h2>
               <img src={Summary} alt='summary' className="w-[20%]" />
               <ul className="p-1 mt-2 space-y-2 list-disc">
-                <li className="text-xs">Total Offers: 485</li>
+                <li className="text-xs">Total Offers: 480+</li>
                 <li className="text-xs">Top Package: 60 LPA</li>
                 <li className="text-xs">Average: 6.2 LPA</li>
               </ul>
@@ -58,9 +70,10 @@ const Hero = () => {
               <img src={Stats} alt='stats' className="w-[20%]" />
               <ul className="p-1 mt-2 space-y-2 list-disc">
                 <li className="text-xs">Total Offers: 9+</li>
+                {/* <li className="text-xs">Top Package: {yearTempData[yearTempData.length - 1].PackageRange}</li>
+                <li className="text-xs">Average: {yearTempData[yearTempData.length - 1].AveragePackage}</li> */}
                 <li className="text-xs">Top Package: 12 LPA</li>
-                <li className="text-xs">Average: 7.02 LPA</li>
-
+                <li className="text-xs">Average: 6.7 LPA</li>
               </ul>
             </div>
           </div>
