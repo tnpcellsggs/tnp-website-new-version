@@ -17,8 +17,8 @@ export const CompanyInterest = () => {
     HRmail: '',
     specifications: '',
   });
-  const host = 'http://localhost:4019';
-  // const host = process.env.REACT_APP_REQURL;
+  // const host = 'http://localhost:4019';
+  const host = process.env.REACT_APP_REQURL;
 
   const getAlert = (message) => {
     document.getElementById('alertHeading').innerHTML = message;
@@ -45,14 +45,14 @@ export const CompanyInterest = () => {
           }
         });
         if (response) {
-          console.log("Success");
+          // console.log("Success");
         }
         else {
           getAlert("Some error occured");
-          console.log("Some error occured");
+          // console.log("Some error occured");
         }
       } catch (error) {
-        console.error('Error:', error);
+        // console.error('Error:', error);
       }
       document.getElementById('reset').click();
     }

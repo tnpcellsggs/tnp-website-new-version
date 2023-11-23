@@ -7,8 +7,8 @@ import SectionWrapper from "../../../Higher_Order_Components/SectionWrapper";
 
 const JAF = () => {
   const [inputs, setInputs] = useState({
-    ThisisFrom:'',
-    anyMessage:'',
+    ThisisFrom: '',
+    anyMessage: '',
     nameOrg: '',
     postalAdd: '',
     websiteLink: '',
@@ -45,41 +45,48 @@ const JAF = () => {
     btechBranches: [],
     mtechBranches: []
   });
+
   const [fileInputs, setFileInputs] = useState({
     from: '',
     subject: '',
     specifications: ''
   });
+
   const [file, setFile] = useState(null);
-  const host = 'http://localhost:4019';
-  // const host = process.env.REACT_APP_REQURL;
+  // const host = 'http://localhost:4019';
+  const host = process.env.REACT_APP_REQURL;
 
   const Submit = async (event) => {
     event.preventDefault();
-    console.log(inputs);
-    const formData = new FormData();
+    // console.log(inputs);
+    if (inputs.ThisisFrom !== '') {
+      const formData = new FormData();
 
-    for (const [key, value] of Object.entries(inputs)) {
-      formData.append(key, value);
-    }
-    try {
-      const response = await axios.post(`${host}/sendFile/filled`, formData, {
-        headers: {
-          "Content-Type": "application/json"
+      for (const [key, value] of Object.entries(inputs)) {
+        formData.append(key, value);
+      }
+      getAlert("Form Submitted Successfully");
+      try {
+        const response = await axios.post(`${host}/sendFile/filled`, formData, {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        if (response) {
+          // console.log("Success");
         }
-      });
-      if (response) {
-        console.log("Success");
-        getAlert("Form Submitted Successfully");
+        else {
+          getAlert("Some error occured");
+          // console.log("Some error occured");
+        }
+      } catch (error) {
+        // console.error('Error:', error);
       }
-      else {
-        getAlert("Some error occured");
-        console.log("Some error occured");
-      }
-    } catch (error) {
-      console.error('Error:', error);
+      document.getElementById('reset').click();
     }
-    document.getElementById('reset').click();
+    else {
+      getAlert("Enter Valid Credentials");
+    }
   }
 
   const onChange = (e) => {
@@ -148,19 +155,15 @@ const JAF = () => {
         document.getElementById('specifications').value = '';
 
         try {
-          const response = await axios.post(`${host}/sendFile/uploaded`, formData, {
-            headers: {
-              "Content-Type": "multipart/form-data"
-            }
-          });
+          const response = await axios.post(`${host}/sendFile/uploaded`, formData);
 
-          if (response) {
+          if (response.status === 200) {
             // console.log('File uploaded and sent successfully');
           } else {
-            // console.error('Failed to upload the file and send');
+            // console.error(response.status, 'Failed to upload the file and send');
           }
         } catch (error) {
-          console.error('Error:', error);
+          // console.error('Error:', error.response);
         }
       }
       else {
@@ -236,7 +239,7 @@ const JAF = () => {
         <div className='mt-4 rounded-[20px] p-4 nav-light-shadows '>
           <h2 className='text-2xl'>Fill The Form Manually</h2>
           <Form>
-          <input type="email" id='from' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='From (Email)' name='ThisisFrom' required onChange={onChange} />
+            <input type="email" id='from' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='From (Email)' name='ThisisFrom' required onChange={onChange} />
             <div className='flex flex-col items-center justify-between sm:flex-row'>
               <section className='p-1 w-full sm:w-[45%] min-h-[350px]'>
                 {/* About the organisation  */}
@@ -390,7 +393,7 @@ const JAF = () => {
                   <div className='w-full sm:w-[33%]'>
                     <span>Number of rounds<Form.Control type="number" onChange={onChange} name='rounds' placeholder="Rounds" /></span>
                     <span>Number of offers you intend to make<Form.Control type="number" placeholder="Offers" onChange={onChange} name='offers' /></span>
-                    <span>Prefered Period<Form.Control type="text" onChange={onChange} name='period' placeholder="Period" /></span>
+                    <span>Preferred Period<Form.Control type="text" onChange={onChange} name='period' placeholder="Period" /></span>
                   </div>
                 </div>
               </Form.Group>

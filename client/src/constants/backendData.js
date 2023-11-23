@@ -1,6 +1,7 @@
 // Database URL
 const host = process.env.REACT_APP_REQURL;
-const host2 = 'http://localhost:4019';
+const host2 = process.env.REACT_APP_REQURL;
+// const host2 = 'http://localhost:4019';
 // 1) YearWise Context APIs
 
 // fetch all the records from database

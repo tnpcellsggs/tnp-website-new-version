@@ -9,7 +9,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 // import MBKokare from "../../../img/kokare-sir_2.jpeg";
-import MBKokare_2 from "../../../img/MBKokare_2.png";
+import MBKokare_2 from "../../../img/MBKokare_2.jpg";
 
 const Director = () => {
   return (

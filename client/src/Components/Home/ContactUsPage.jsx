@@ -7,7 +7,7 @@ import { fadeIn, } from '../../utils/motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import ContactUsIcon from "../../img/ContactUsIcon.png"
-import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
+// import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
 
 const LocationPin = ({ text }) => (
   <div className="marker">
@@ -36,12 +36,9 @@ export const ContactUsPage = () => {
                 </h1>
               </div>
               <div className="flex flex-col items-center justify-between sm:flex-row">
-                <a href='https://docs.google.com/document/d/1auq7RC49WYZ_oQCxjm0BzgKaWAGP3G-A/edit?usp=sharing&ouid=106712804397345244222&rtpof=true&sd=true' target="_blank" className="p-2 m-2 bg-white border-0 rounded-xl outline-0 hover:cursor-pointer">
-                  <button >Fill JAF Direct Recruitment</button>
-                </a>
-                <a href='https://docs.google.com/document/d/1BD-oeS6kxzI19G-ylMq_4kNKLFrKR6s6/edit?usp=sharing&ouid=106712804397345244222&rtpof=true&sd=true' target="_blank" className="p-2 m-2 bg-gray-300 border-0 rounded-xl outline-0 hover:cursor-pointer">
-                  <button >Fill JAF Internship</button>
-                </a>
+
+                <Link to='/jaf_recuriment' className='p-2 m-2 bg-white border-0 rounded-xl outline-0 hover:cursor-pointer'>Fill JAF Direct Recruitment</Link>
+                <Link to='/jaf_recuriment' className='p-2 m-2 bg-gray-300 border-0 rounded-xl outline-0 hover:cursor-pointer'>Fill JAF internship</Link>
               </div>
             </div>
 

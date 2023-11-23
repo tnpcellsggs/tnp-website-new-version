@@ -24,6 +24,7 @@ function Events() {
         templist.sort((a, b) => b.eventDate.localeCompare(a.eventDate));
         setEventsList(templist);
         setIsLoading(false);
+        console.log("jjii");
       } catch (err) {
         console.log(err);
         setIsLoading(false);

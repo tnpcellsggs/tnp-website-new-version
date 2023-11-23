@@ -21,7 +21,8 @@ router.post("/create", async (request, response) => {
     }
 
 });
-// ROUTE 1: Post request "/newsUpdates/getAllNews"
+
+// ROUTE 2: Post request "/newsUpdates/getAllNews"
 router.get("/getAllNews", async (request, response) => {
     try {
         let newsInfo = await NewsUpdate.find();
