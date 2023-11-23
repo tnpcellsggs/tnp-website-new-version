@@ -41,6 +41,7 @@ import trident_12Lpa from "../img/Posters_23_24/trident_12Lpa.jpg";
 import TRIDENT_18_lpa from "../img/Posters_23_24/TRIDENT_18_lpa.jpg";
 import TridentGroup_9_lpa from "../img/Posters_23_24/TridentGroup_9_lpa.jpg";
 
+
 // Special Facilities images
 import AICTE from "../img/Gallary/aicte.jpg";
 import center_image_processing from "../img/Gallary/center_image_processing.jpg";
@@ -187,8 +188,8 @@ import SharayuM from "../img/team2023_2024/_2_2SHARAYU-PURUSHOTTAM-MEGHARE.jpg";
 import RuchaP from "../img/team2023_2024/_2_2RUCHA-JANARDHAN-PAKWANNE.jpg";
 import VaishnaviP from "../img/team2023_2024/_2VAISHNAVI-GIRISH-PATIL.jpg";
 import ShushilB from "../img/team2023_2024/_2SUSHIL-SUBHASH-BHOYBAR.jpg";
-import HariomS from "../img/team2023_2024/_2Hariom-Pravin-Shivhare.jpeg";
-import ApoorvM from "../img/team2023_2024/_2APOORV-ABHAY-MEHAR.JPG";
+import HariomS from "../img/team2023_2024/_2Hariom-Pravin-Shivhare.jpg";
+import ApoorvM from "../img/team2023_2024/_2APOORV-ABHAY-MEHAR.jpg";
 import AkashV from "../img/team2023_2024/_2AKASH-AMRESH-VISHWAKARMA.jpg";
 import HarshaC from "../img/team2023_2024/_2HARSHA-VIVEKRAO-CHANAKHEKAR.jpg";
 import MadanT from "../img/team2023_2024/_2MADAN-DINESHRAO-TAMBADE.jpg";
@@ -1065,7 +1066,7 @@ const team_23_24 = [
                 imageLink: RoshanV,
                 phoneNo: 7219041181,
                 emailId: '2021bcs155@sggs.ac.in',
-                linkedinId: 'https://www.linkedin.com/in/theroshan21.'
+                linkedinId: 'https://www.linkedin.com/in/roshan-vishwakarma-0a7341256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
             }
         ]
     },
@@ -1223,7 +1224,7 @@ const team_23_24 = [
                 linkedinId: 'https://www.linkedin.com/in/shraddha-lokhande-527827250'
             },
             {
-                name: 'VaishnaviG',
+                name: 'Vaishnavi Ghuge',
                 title:'DC (EXTC)',
                 imageLink: VaishnaviG,
                 phoneNo: 9075515019,

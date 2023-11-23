@@ -4,7 +4,7 @@ import React from "react";
 // import YVJoshi from "../../img/joshi sir.jpg";
 // import MBKokare from "../../img/kokare-sir.jpg";
 // import IGavakhore from "../../img/ishwar-sir.jpg";
-import TNPLogo from "../../../img/TNP LOGO.png";
+// import TNPLogo from "../../../img/TNP LOGO.png";
 
 import RajatV from "../../../img/team/rajatv.jpg";
 import SakshiM from "../../../img/team/sakshim.jpg";
@@ -33,7 +33,7 @@ import YashK from "../../../img/team/yashk.jpg";
 import SainathY from "../../../img/team/sainathy.jpg";
 import MohitC from "../../../img/team/mohitc.jpg";
 
-import Hexagons from "../../../img/hexagons.png";
+// import Hexagons from "../../../img/hexagons.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";

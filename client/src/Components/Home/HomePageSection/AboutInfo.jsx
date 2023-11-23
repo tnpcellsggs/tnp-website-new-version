@@ -8,8 +8,8 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import SggsCampus from "../../../img/SGGS_Campus.jpg";
-import SggsCampus_2 from "../../../img/sggs_campus_2.png";
+// import SggsCampus from "../../../img/SGGS_Campus.jpg";
+import SggsCampus_2 from "../../../img/sggs_campus_2.jpg";
 
 const AboutInfo = () => {
 

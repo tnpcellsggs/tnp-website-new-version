@@ -2,38 +2,31 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
-const adminRoute = require("./routes/adminroute");
-const certificateRoute = require("./routes/certificateroute");
-const eventRoute = require("./routes/eventroute");
 const Placements = require("./routes/placementsRoute");
+const JAF = require("./routes/jaf");
 const News = require("./routes/newsRoute");
 
 const app = express();
 dotenv.config();
+const port = 4019;
+const mongoURI1 = `mongodb://127.0.0.1/placements`;
 
 app.use(cors());
 
-mongoose.connect(process.env.MONGOURI, (err) => {
+mongoose.connect(mongoURI1, (err) => {
   if (err) console.log(err);
-  else console.log("Connected to MongoDB");
+  else console.log("Connected to MongoDB Placements");
 });
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Welcome to homepage");
-});
-
-app.use("/admin/signin/", adminRoute);
-app.use("/admin/cert/", certificateRoute);
-app.use("/admin/events/", eventRoute);
 app.use("/admin/placements/", Placements);
 app.use("/sendFile", JAF);
 app.use("/newsUpdates", News);
 
-const PORT = process.env.PORT || 4019;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// const PORT = process.env.PORT || 8000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port} http://localhost:${port}`);
 });
 
 

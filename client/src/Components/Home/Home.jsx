@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "./Navbar";  // Navbar
 
 import Hero from "./HomePageSection/Hero"; // Home
+import EventsPage from "./HomePageSection/Events/Events"; // Home
 import TPO from "./HomePageSection/Tpo";    // Tpo
 import Director from "./HomePageSection/Director";  // Director
 import AboutInfo from "./HomePageSection/AboutInfo"; //About
@@ -39,12 +40,12 @@ const Homepage = () => {
     document.title = "Training & Placement, SGGSIE&T Nanded";
     window.scrollTo(scrollBehavior);
 
-    const fetchEventList = async () => {
+    const fetchEventList = async (req,res) => {
       try {
         let res = await axios.get(
           `${process.env.REACT_APP_REQURL}/admin/events/getall/`
         );
-        // console.log(res);
+        res.status(200).send("ok");
       } catch (err) {
         console.log(err);
       }
@@ -52,7 +53,6 @@ const Homepage = () => {
     fetchEventList();
   }, []);
 
-  const [showNavExternal3, setShowNavExternal3] = useState(false);
   return (
     <>
       {/* 1) Hero section */}
@@ -129,6 +129,7 @@ export default function Home() {
       />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/eventsPage" element={<EventsPage />} />
         <Route path="/placements" element={<Placements />} />
         <Route path="/special_facilities" element={<SpecialFacilities />} />
         <Route path="/departments" element={<Departments />} />

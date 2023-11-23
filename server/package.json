@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specific\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
+    "googleapis": "^128.0.0",
     "mime-types": "^2.1.35",
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.1",
