@@ -42,7 +42,7 @@ export default function VerifyCertificate() {
   return (
     <>
       <div className="minimalnav">
-        <img src={TNPLogo} />
+        <img src={TNPLogo} alt="tnplogo" />
         TNPCell, SGGS Nanded
       </div>
       <div className="minimalsubnav">

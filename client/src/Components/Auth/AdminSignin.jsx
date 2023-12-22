@@ -10,7 +10,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./AdminSignin.css";
 import TNPLogo from "../../img/TNP LOGO.png";
 import axios from "axios";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 function AdminSignin() {
   const { isAdminLoggedIn, setIsAdminLoggedIn } = useContext(AdminContext);
@@ -50,6 +49,8 @@ function AdminSignin() {
       setUsername("");
       setPassword("");
       setIsAdminLoggedIn(true);
+
+      res.status(200);
     } catch (err) {
       console.log(err);
       switch (err.response.status) {
@@ -95,7 +96,7 @@ function AdminSignin() {
     <>
       <div className="suheader">
         <div>
-          <img style={{ width: "75px", margin: "8px" }} src={TNPLogo} />
+          <img style={{ width: "75px", margin: "8px" }} src={TNPLogo} alt="tnplogo" />
         </div>
         <div className="sutext">Sign in to T&P Admin Console</div>
       </div>
@@ -105,8 +106,9 @@ function AdminSignin() {
         <div className="sucontainer">
           <div className="logincontainer">
             <form onSubmit={handleSubmit}>
-              <label htmlFor="username">Username:</label>
+              <label  htmlFor="username">Username:</label>
               <input
+                className="border-2 border-black"
                 type="text"
                 ref={userRef}
                 autoComplete="off"
@@ -116,8 +118,9 @@ function AdminSignin() {
                 value={username}
                 required
               />
-              <label htmlFor="password">Password:</label>
+              <label  htmlFor="password">Password:</label>
               <input
+                className="border-2 border-black"
                 type="password"
                 onChange={(e) => {
                   setPassword(e.target.value);
@@ -133,10 +136,8 @@ function AdminSignin() {
           </div>
         </div>
       )}
-      <div className="container sufooter" style={{
-        textAlign: "center"
-      }}>
-        <Link to="/"><button>Back to Home</button></Link>.
+      <div className="container text-center" >
+        <Link to="/" ><button className="p-1 font-bold border-2 border-black rounded-xl">Back to Home</button></Link>
       </div>
     </>
   );

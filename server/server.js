@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
 const Placements = require("./routes/placementsRoute");
+const eventRoute = require("./routes/eventroute");
 const JAF = require("./routes/jaf");
 const News = require("./routes/newsRoute");
 
@@ -21,6 +22,7 @@ mongoose.connect(mongoURI1, (err) => {
 app.use(express.json());
 
 app.use("/admin/placements/", Placements);
+app.use("/admin/events/", eventRoute);
 app.use("/sendFile", JAF);
 app.use("/newsUpdates", News);
 

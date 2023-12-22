@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { OurTeam } from "./OurTeam";
-import Tilt from 'react-parallax-tilt';
+// import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 import { fadeIn, } from '../../utils/motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,11 +9,11 @@ import { faMapLocationDot, faEnvelope, faPhone } from "@fortawesome/free-solid-s
 import ContactUsIcon from "../../img/ContactUsIcon.png"
 // import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
 
-const LocationPin = ({ text }) => (
-  <div className="marker">
-    {text}
-  </div>
-);
+// const LocationPin = ({ text }) => (
+//   <div className="marker">
+//     {text}
+//   </div>
+// );
 
 export const ContactUsPage = () => {
   useEffect(() => {
@@ -36,12 +36,10 @@ export const ContactUsPage = () => {
                 </h1>
               </div>
               <div className="flex flex-col items-center justify-between sm:flex-row">
-
-                <Link to='/jaf_recuriment' className='p-2 m-2 bg-white border-0 rounded-xl outline-0 hover:cursor-pointer'>Fill JAF Direct Recruitment</Link>
-                <Link to='/jaf_recuriment' className='p-2 m-2 bg-gray-300 border-0 rounded-xl outline-0 hover:cursor-pointer'>Fill JAF internship</Link>
+                <Link to='/jaf_recuriment' className='p-2 m-2 font-bold bg-white border-0 rounded-xl outline-0 hover:cursor-pointer'>Fill JAF Direct Recruitment</Link>
+                <Link to='/jaf_recuriment' className='p-2 m-2 font-bold bg-gray-300 border-0 rounded-xl outline-0 hover:cursor-pointer'>Fill JAF Internship</Link>
               </div>
             </div>
-
 
             <div className="sm:w-[40%] w-[80%] text-center flex justify-center items-center mt-4">
               <img src={ContactUsIcon} alt="contact" className="sm:w-[80%] h-[100%] mb-4 mr-4 w-[100%] rounded-xl" />
@@ -70,7 +68,7 @@ export const ContactUsPage = () => {
             {/* Contact Cards */}
             <div className="flex flex-col items-center justify-between w-4/5 text-center sm:flex-row">
               {/* Address */}
-              <Tilt className='xs:w-[350px] w-full my-4'>
+              <div className='lg:w-[350px] md:w-[230px] sm:w-full my-4'>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * 0, 0.75)}
                   className='w-full nav-light-shadows p-[1px] rounded-[20px] shadow-card'
@@ -81,7 +79,7 @@ export const ContactUsPage = () => {
                     scale: 1,
                     speed: 450
                   }}
-                    className=' rounded-[20px] py-2 px-3 h-96 flex justify-evenly items-center flex-col'
+                    className=' rounded-[20px] py-2 px-3 h-[250px] flex justify-evenly items-center flex-col'
                   >
                     <div className="flex items-center justify-center w-[100%]">
                       <h3 className='mx-4 text-2xl font-bold text-center'>Address</h3>
@@ -99,8 +97,8 @@ export const ContactUsPage = () => {
                   </div>
                 </motion.div>
 
-              </Tilt>
-              <Tilt className='xs:w-[350px] w-full my-4'>
+              </div>
+              <div className='lg:w-[350px] md:w-[230px] sm:w-full my-4'>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * 0, 0.75)}
                   className='w-full nav-light-shadows p-[1px] rounded-[20px] shadow-card'
@@ -111,7 +109,7 @@ export const ContactUsPage = () => {
                     scale: 1,
                     speed: 450
                   }}
-                    className='rounded-[20px]  py-2 px-3 h-96 flex justify-evenly items-center flex-col'
+                    className='rounded-[20px]  py-2 px-3 h-[250px] flex justify-evenly items-center flex-col'
                   >
                     <div className="flex items-center justify-center w-[100%]">
                       <h3 className='mx-4 text-xl font-bold text-center'>Write Us An Email</h3>
@@ -123,17 +121,17 @@ export const ContactUsPage = () => {
                         <p className="p-2 m-2 border-2 border-blue-400 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`mailto:tpo@sggs.ac.in`}>tpo@sggs.ac.in</a></p>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tnpcell@sggs.ac.in`} >tnpcell@sggs.ac.in</a></p>
                       </div>
-                      <div>
+                      {/* <div>
                         <h4>Placement Co-ordinators:</h4>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tnpcell@sggs.ac.in`} >2021bit027@sggs.ac.in</a></p>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tnpcell@sggs.ac.in`} >2021bcs155@sggs.ac.in</a></p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </motion.div>
 
-              </Tilt>
-              <Tilt className='xs:w-[350px] w-full my-4'>
+              </div>
+              <div className='lg:w-[350px] md:w-[230px] sm:w-full my-4'>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * 0, 0.75)}
                   className='w-full nav-light-shadows p-[1px] rounded-[20px] shadow-card'
@@ -144,7 +142,7 @@ export const ContactUsPage = () => {
                     scale: 1,
                     speed: 450
                   }}
-                    className=' rounded-[20px]  py-2 px-3 h-96 flex justify-evenly items-center flex-col'
+                    className=' rounded-[20px]  py-2 px-3 h-[250px] flex justify-evenly items-center flex-col'
                   >
                     <div className="flex items-center justify-center w-[100%]">
                       <h3 className='mx-4 text-xl font-bold text-center'>Call Us</h3>
@@ -160,15 +158,15 @@ export const ContactUsPage = () => {
                         <h4>TPO Dean:</h4>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91 94218 68526`} >+919421868526</a></p>
                       </div>
-                      <div>
+                      {/* <div>
                         <h4>TPO Assistant:</h4>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91 75078 77206`} >+91 75078 77206</a></p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </motion.div>
 
-              </Tilt>
+              </div>
 
             </div>
           </div>
@@ -188,6 +186,30 @@ export const ContactUsPage = () => {
       <div className="flex flex-col items-center justify-between mx-2 mb-4 ">
         <div className="text-center w-[80%] flex flex-col items-start justify-start mt-4">
           <h2 className="p-2 text-3xl text-center sm:text-4xl sm:p-4">
+            See Our Previous Teams.
+          </h2>
+        </div>
+      </div>
+      {/* button for previous teams */}
+      <div className="prev-team-container" style={{ margin: "40px" }}>
+        <Link to="/prevteam"><button id="prevBtn" className="ui-btn">Previous Teams</button></Link>
+      </div>
+
+      <div className="flex flex-col items-center justify-between mx-2 mb-4 ">
+        <div className="text-center w-[80%] flex flex-col items-start justify-start mt-4">
+          <h2 className="p-2 text-3xl text-center sm:text-4xl sm:p-4">
+            Training And Placement Cell- Team Hierarchy
+          </h2>
+        </div>
+      </div>
+      {/* button for previous teams */}
+      <div className="prev-team-container" style={{ margin: "40px" }}>
+        <Link to="/teamHierarchy"><button id="prevBtn" className="ui-btn">Team Hierarchy</button></Link>
+      </div>
+
+      <div className="flex flex-col items-center justify-between mx-2 mb-4 ">
+        <div className="text-center w-[80%] flex flex-col items-start justify-start mt-4">
+          <h2 className="p-2 text-3xl text-center sm:text-4xl sm:p-4">
             Walk Us Through.
           </h2>
         </div>
@@ -196,14 +218,13 @@ export const ContactUsPage = () => {
       <div style={{ height: '400px', width: '80%' }} className="mx-auto relative w-[100%] mb-8" >
 
         <iframe
+          title="sggsLocation"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8859874908458!2d77.292024!3d19.112657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29f7545a76b3%3A0x44c589a50ec5980e!2sS%20G%20G%20S%20College%20Vishnupuri!5e0!3m2!1sen!2sin!4v1698244204796!5m2!1sen!2sin"
           width="600"
           height="450"
           style={{ border: '0' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           className="absolute h-[100%] w-[100%] m-auto nav-light-shadows"
         ></iframe>
-
-
       </div>
     </>
   );

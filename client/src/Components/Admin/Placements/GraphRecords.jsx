@@ -80,25 +80,25 @@ export const GraphRecords = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit the Record</Modal.Title></Modal.Header>
-                <Form.Text className="text-muted container">
+                <Form.Text className="container text-muted">
                     Previous Records are given in light text
                 </Form.Text>
                 <Modal.Body>
                     <Form>
-                        <Form.Group className="mb-3 container my-3" controlId="Year">
+                        <Form.Group className="container my-3 mb-3" controlId="Year">
                             <Form.Label>Year</Form.Label>
                             <Form.Control className="inpts" type="text" placeholder={graphData.Year} onChange={onChange} name={'Year'} />
                         </Form.Group>
 
-                        <Form.Group className="mb-3 container my-3" controlId="UnderGraduate">
+                        <Form.Group className="container my-3 mb-3" controlId="UnderGraduate">
                             <Form.Label>Under Graduate</Form.Label>
                             <Form.Control className="inpts" type="number" placeholder={graphData.UnderGraduate} onChange={onChange} name={'UnderGraduate'} />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="PostGraduate">
+                        <Form.Group className="container my-3 mb-3" controlId="PostGraduate">
                             <Form.Label>Post Graduate</Form.Label>
                             <Form.Control className="inpts" type="number" placeholder={graphData.PostGraduate} onChange={onChange} name={"PostGraduate"} />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="Total">
+                        <Form.Group className="container my-3 mb-3" controlId="Total">
                             <Form.Label>Total</Form.Label>
                             <Form.Control className="inpts" type="number" placeholder={graphData.Total} onChange={onChange} name={"Total"} />
                         </Form.Group>
@@ -160,7 +160,7 @@ export const GraphRecords = () => {
                         })
                     }
                 </tbody>
-                <Button ref={btnRef} Button variant="dark" className='justify-content-center container md-3 my-3' onClick={refreshPage}>
+                <Button ref={btnRef} Button variant="dark" className='container my-3 justify-content-center md-3' onClick={refreshPage}>
                     Refresh
                 </Button>
             </Table>
@@ -169,25 +169,25 @@ export const GraphRecords = () => {
             <Form>
                 <hr />
                 <h2 className="container my-3">Add Records for Graph Here</h2>
-                <Form.Group className="mb-3 container my-3" controlId="Year">
+                <Form.Group className="container my-3 mb-3" controlId="Year">
                     <Form.Label>Year</Form.Label>
                     <Form.Control className="inpts" type="text" placeholder="e.g AY 23-24" onChange={onChange} name={'Year'} />
                 </Form.Group>
 
-                <Form.Group className="mb-3 container my-3" controlId="UnderGraduate">
+                <Form.Group className="container my-3 mb-3" controlId="UnderGraduate">
                     <Form.Label>Under Graduate</Form.Label>
                     <Form.Control className="inpts" type="number" placeholder="e.g 412" onChange={onChange} name={'UnderGraduate'} />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="PostGraduate">
+                <Form.Group className="container my-3 mb-3" controlId="PostGraduate">
                     <Form.Label>Post Graduate</Form.Label>
                     <Form.Control className="inpts" type="number" placeholder="e.g 123" onChange={onChange} name={"PostGraduate"} />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="Total">
+                <Form.Group className="container my-3 mb-3" controlId="Total">
                     <Form.Label>Total</Form.Label>
                     <Form.Control className="inpts" type="number" placeholder="e.g 535" onChange={onChange} name={"Total"} />
                 </Form.Group>
 
-                <Form.Group className="mb-3 container my-3" controlId="Year">
+                <Form.Group className="container my-3 mb-3" controlId="Year">
                     <Button variant="primary text-center" className='b-end-btn-blue' type="submit" onClick={addARecord}>
                         Add
                     </Button>

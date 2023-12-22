@@ -15,7 +15,7 @@ const DepartmentCards = (props) => {
         contentStyle={{
           color: '#000',
           borderRadius: '20px',
-          boxShadow: '1px 1px 10px #8f8f8f'
+          boxShadow: '1px 1px 10px #cdcdcd'
         }}
         contentArrowStyle={{
           borderRight: '7px solid #232631'
@@ -36,7 +36,7 @@ const DepartmentCards = (props) => {
       >
         <div className={`flex justify-center flex-col w-full h-full items-center`}>
           <h3 className='text-3xl font-bold text-center '>{name}</h3>
-          <img src={icon} alt="image" className="w-[40%] sm:w-[20%] rounded-xl mt-4 text-center" />
+          <img src={icon} alt="icon" className="w-[40%] sm:w-[20%] rounded-xl mt-4 text-center" />
         </div>
 
         <ul className='flex items-center justify-center p-4 text-center'>
@@ -69,10 +69,10 @@ const RecruitmentProcedures = () => {
             <div className="w-[80%] mx-auto text-center flex flex-col justify-center items-center">
               <h1 className="my-2 text-3xl text-center">Our Recruitment Procedures</h1>
               <div className="p-4 my-2 text-xl text-left text-center border-2 rounded-lg nav-light-shadows ">
-                <h3 >The very first step for Recruitment Procedure is to Fill the JNF Direct Recruitment or Internship JNF/JAF Form.
+                <h3 >The very first step for Recruitment Procedure is to Fill the JAF Direct Recruitment or Internship JAF Form.
                 </h3>
                 <h3>
-                  &ldquo;Company needs to fill JNF form in order to recruit from SGGSIE&T.&ldquo; </h3>
+                  &ldquo;Company needs to fill JAF form in order to recruit from SGGSIE&T.&ldquo; </h3>
               </div>
             </div>
             <VerticalTimeline layout='1-column-left'>

@@ -91,41 +91,41 @@ export const YearWise = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit the Record</Modal.Title></Modal.Header>
-                <Form.Text className="text-muted container">
+                <Form.Text className="container text-muted">
                     Previous Records are given in light text
                 </Form.Text>
                 <Modal.Body>
                     <Form>
-                        <Form.Group className="mb-3 container my-3" controlId="Year">
+                        <Form.Group className="container my-3 mb-3" controlId="Year">
                             <Form.Label>Year</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="text" placeholder={`${recordData.Year}`} name="Year" />
                         </Form.Group>
 
-                        <Form.Group className="mb-3 container my-3" controlId="BTechOnRoll">
+                        <Form.Group className="container my-3 mb-3" controlId="BTechOnRoll">
                             <Form.Label>BTech On Roll</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="number" placeholder={`${recordData.BTechOnRoll}`} name="BTechOnRoll" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="BTechPlaced">
+                        <Form.Group className="container my-3 mb-3" controlId="BTechPlaced">
                             <Form.Label>BTech Placed</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="number" placeholder={`${recordData.BTechPlaced}`} name="BTechPlaced" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="MTechOnRoll">
+                        <Form.Group className="container my-3 mb-3" controlId="MTechOnRoll">
                             <Form.Label>MTech On Roll</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="number" placeholder={`${recordData.MTechOnRoll}`} name="MTechOnRoll" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="MTechPlaced">
+                        <Form.Group className="container my-3 mb-3" controlId="MTechPlaced">
                             <Form.Label>MTech Placed</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="number" placeholder={`${recordData.MTechPlaced}`} name="MTechPlaced" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="TotalPlaced">
+                        <Form.Group className="container my-3 mb-3" controlId="TotalPlaced">
                             <Form.Label>Total Placed</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="number" placeholder={`${recordData.TotalPlaced}`} name="TotalPlaced" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="AveragePackage">
+                        <Form.Group className="container my-3 mb-3" controlId="AveragePackage">
                             <Form.Label>Average Package</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="text" placeholder={`${recordData.AveragePackage}`} name="AveragePackage" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="PackageRange">
+                        <Form.Group className="container my-3 mb-3" controlId="PackageRange">
                             <Form.Label>Package Range</Form.Label>
                             <Form.Control className="inpts" onChange={onChange} type="text" placeholder={`${recordData.PackageRange}`} name="PackageRange" />
                         </Form.Group>
@@ -190,51 +190,51 @@ export const YearWise = () => {
                     }
                 </tbody>
                 <div className="container">
-                    <Button ref={btnRef} Button variant="dark" className='justify-content-center container md-3 my-3' onClick={refreshPage}>
+                    <Button ref={btnRef} Button variant="dark" className='container my-3 justify-content-center md-3' onClick={refreshPage}>
                         Refresh
                     </Button>
                 </div>
             </Table >
 
             {/* Form to add records */}
-            <Form Form >
+            <Form  >
                 <hr />
                 <h2 className="container my-3">Add Year Wise Records Here</h2>
-                <Form.Group className="mb-3 container my-3" controlId="Year">
+                <Form.Group className="container my-3 mb-3" controlId="Year">
                     <Form.Label>Year</Form.Label>
                     <Form.Control className="inpts" type="text" placeholder="e.g 2023-24" onChange={onChange} name="Year" />
                 </Form.Group>
 
-                <Form.Group className="mb-3 container my-3" controlId="BTechOnRoll">
+                <Form.Group className="container my-3 mb-3" controlId="BTechOnRoll">
                     <Form.Label>BTech On Roll</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 412" name="BTechOnRoll" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="BTechPlaced">
+                <Form.Group className="container my-3 mb-3" controlId="BTechPlaced">
                     <Form.Label>BTech Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 123" name="BTechPlaced" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="MTechOnRoll">
+                <Form.Group className="container my-3 mb-3" controlId="MTechOnRoll">
                     <Form.Label>MTech On Roll</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 153" name="MTechOnRoll" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="MTechPlaced">
+                <Form.Group className="container my-3 mb-3" controlId="MTechPlaced">
                     <Form.Label>MTech Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 123" name="MTechPlaced" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="TotalPlaced">
+                <Form.Group className="container my-3 mb-3" controlId="TotalPlaced">
                     <Form.Label>Total Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 325" name="TotalPlaced" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="AveragePackage">
+                <Form.Group className="container my-3 mb-3" controlId="AveragePackage">
                     <Form.Label>Average Package</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="e.g 8.8 LPA" name="AveragePackage" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="PackageRange">
+                <Form.Group className="container my-3 mb-3" controlId="PackageRange">
                     <Form.Label>Package Range</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="e.g 5.3 - 12+ LPA" name="PackageRange" />
                 </Form.Group>
 
-                <Form.Group className="mb-3 container my-3" controlId="Submit">
+                <Form.Group className="container my-3 mb-3" controlId="Submit">
                     <Button onClick={addARecord} className='b-end-btn-blue' variant="primary text-center" type="submit">
                         Add
                     </Button>

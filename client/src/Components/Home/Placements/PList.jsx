@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext,useCallback } from "react";
 import { AdminContext } from "../../../App";
 // import {
 //   y2021
@@ -14,7 +14,7 @@ export default function PList() {
 
   const { getDeptAlldetails } = deptWiseData;
 
-  async function getDetails(){
+  const getDetails = useCallback(async () => {
     // getAlldetails();
     getDeptAlldetails().then((data) => {
         let info = data;
@@ -23,7 +23,8 @@ export default function PList() {
         }).reverse();
         setDeptData(info);
     });
-}
+}, [getDeptAlldetails, setDeptData]);
+
 useEffect(() => {
     getDetails();
 }, []);
@@ -38,7 +39,7 @@ useEffect(() => {
           alignItems: "center",
         }}
       >
-        <h3>
+        <h3 className="text-3xl">
           Department Wise Yearly Placement Record{" "}
           <span style={{ fontSize: "15px" }}>(Click to expand)</span>
         </h3>

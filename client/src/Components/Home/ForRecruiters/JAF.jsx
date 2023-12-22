@@ -221,11 +221,11 @@ const JAF = () => {
             {/* Upload form */}
             <div className=' w-full sm:w-[50%] m-2 text-center '>
               <Form>
-                <h2>Upload Forms Here</h2>
-                <input type="email" id='from' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='From (Enter Your Email)' name='from' required onChange={onChange} />
-                <input type="text" id='subject' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='Subject' name='subject' onChange={onChange} />
-                <input type="text" id='specifications' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='Any Specifications' name='specifications' onChange={onChange} />
-                <input type="file" accept='.docx, .pdf' id='docInp' className='p-2 m-1 text-center border-0 rounded-xl nav-light-shadows' onChange={handleFileChange} multiple />
+                <h2 className='m-2 text-center'>Upload Forms Here</h2>
+                <input type="email" id='from' className='w-[80%] mx-auto border-b-2 border-black text-black m-1 p-1' placeholder='Email Address' name='from' required onChange={onChange} />
+                <input type="text" id='subject' className='w-[80%] mx-auto border-b-2 border-black text-black m-1 p-1' placeholder='Subject' name='subject' onChange={onChange} />
+                <input type="text" id='specifications' className='w-[80%] mx-auto border-b-2 border-black text-black m-1 p-1' placeholder='Any Specifications' name='specifications' onChange={onChange} />
+                <input type="file" accept='.docx, .pdf' id='docInp' className='m-2 mx-auto text-center border-2' onChange={handleFileChange} multiple />
                 <Button variant="primary" className='m-1 bg-blue-700' type={'submit'} onClick={handleFileSubmit}>
                   Submit
                 </Button>
@@ -239,7 +239,7 @@ const JAF = () => {
         <div className='mt-4 rounded-[20px] p-4 nav-light-shadows '>
           <h2 className='text-2xl'>Fill The Form Manually</h2>
           <Form>
-            <input type="email" id='from' className='w-[80%] mx-auto border-2 rounded-xl border-black text-black m-1 p-1' placeholder='From (Email)' name='ThisisFrom' required onChange={onChange} />
+            <input type="email" id='from' className='w-full sm:w-[50%] mx-auto border-b-2 border-black text-black m-1 p-1' placeholder='Enter Your Email Address' name='ThisisFrom' required onChange={onChange} />
             <div className='flex flex-col items-center justify-between sm:flex-row'>
               <section className='p-1 w-full sm:w-[45%] min-h-[350px]'>
                 {/* About the organisation  */}

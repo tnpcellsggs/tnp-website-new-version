@@ -26,6 +26,7 @@
     "react-countup": "^6.3.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
+    "react-organizational-chart": "^2.2.1",
     "react-parallax-tilt": "^1.7.171",
     "react-pdf": "^7.5.1",
     "react-pdf-annotator": "^1.0.0",

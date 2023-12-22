@@ -7,6 +7,9 @@ const EventSchema = mongoose.Schema(
     eventType: { type: String, required: true },
     eventDesc: { type: String, required: true },
     eventDate: { type: Date },
+    eventId: { type: String },
+    eventVideoLink: { type: String },
+    eventImageLink: { type: String }
   },
   { collection: "events" }
 );

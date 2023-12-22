@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import {
   ResponsiveContainer,
@@ -13,8 +13,17 @@ import {
 export default function YearData(props) {
   const [isOpen, setIsOpen] = useState(false);
   const contentdiv = useRef();
+  // const [ifData, setiFData] = useState(0);
+
+  useEffect(() => {
+    // let sum = 0;
+    // props.senddata.forEach((ele1) => {
+    //   return ele1.PostgradPlaced + sum;
+    // })
+    // setiFData(sum);
+  }, []);
   // console.log('Data being passed to chart:', props.senddata);
-  // console.log(props.label);
+  // console.log(props.senddata[0].PostgradPlaced);
   return (
     <>
       <div className="p-collapsible">
@@ -45,31 +54,33 @@ export default function YearData(props) {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="UndergradTotal" stackId="a" fill="#a7e937" />
-                <Bar dataKey="UndergradPlaced" stackId="a" fill="#aaa6fa" />
+                <Bar dataKey="UndergradTotal" stackId="a" fill="#ffa94f" />
+                <Bar dataKey="UndergradPlaced" stackId="a" fill="#766fff" />
               </BarChart>
             </ResponsiveContainer>
 
             {/* Bar Chart to display the placement records of Post graduate students  */}
-            <ResponsiveContainer height={300} width="100%">
-              <BarChart
-                data={props.senddata}
-                margin={{
-                  top: 50,
-                  right: 30,
-                  left: 20,
-                  bottom: 50,
-                }}
-              >
-                <XAxis dataKey="Department" interval={0} tick={{ fontSize: 8 }}/>
-                {/* <XAxis dataKey="Department" textAnchor="end" /> */}
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="PostgradTotal" stackId="b" fill="#259B9A" />
-                <Bar dataKey="PostgradPlaced" stackId="b" fill="#a7e937" />
-              </BarChart>
-            </ResponsiveContainer>
+            {
+              (<ResponsiveContainer height={300} width="100%">
+                <BarChart
+                  data={props.senddata}
+                  margin={{
+                    top: 50,
+                    right: 30,
+                    left: 20,
+                    bottom: 50,
+                  }}
+                >
+                  <XAxis dataKey="Department" interval={0} tick={{ fontSize: 8 }} />
+                  {/* <XAxis dataKey="Department" textAnchor="end" /> */}
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="PostgradTotal" stackId="b" fill="#259B9A" />
+                  <Bar dataKey="PostgradPlaced" stackId="b" fill="#a7e937" />
+                </BarChart>
+              </ResponsiveContainer>)
+            }
           </div>
         </div>
       </div>

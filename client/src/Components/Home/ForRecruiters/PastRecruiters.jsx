@@ -10,7 +10,7 @@ import SectionWrapper from "../../../Higher_Order_Components/SectionWrapper";
 
 gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
 
-const Past_Recruiters_Cards = (props) => {
+const PastRecruitersCards = (props) => {
   const { title, imageLink } = props.item;
   // const index = props.index;
   return (
@@ -71,16 +71,16 @@ const PastRecruiters = () => {
       <section id="features" className="features">
         <Container>
           <Row>
-            <div className="w-[80%] mx-auto text-center flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center justify-center w-[95%] mx-auto text-center">
               <h1 className="text-3xl text-center">Our Placement Partners</h1>
               <h3 className="p-4 mx-4 my-8 text-xl text-center border-2 rounded-lg nav-light-shadows w-[100%]">&ldquo;Your Path to Success Starts with Our Placement Alliances&rdquo;</h3>
             </div>
 
-            <div ref={comp} className="grid items-center justify-center grid-cols-1 gap-2 sm:grid-cols-4 ">
+            <div ref={comp} className="grid items-center justify-center gap-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
               {
                 past_recuriters_list.map((items, index) => {
                   return (
-                    <Past_Recruiters_Cards key={index} index={index} item={items} />
+                    <PastRecruitersCards key={index} index={index} item={items} />
                   )
                 })
               }

@@ -1,53 +1,53 @@
-import React, { useState, useLayoutEffect, useContext } from "react";
-import { Container } from "react-bootstrap";
-import { Navbar as BSNavbar, Nav, NavDropdown } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import { AdminContext } from "../../App";
+import { navDrops } from "../../constants";
 import { Link } from "react-router-dom";
 import menu from "../../img/menu.svg";
 import close from "../../img/close.svg";
-import { faCaretDown, faBars, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { Container } from "react-bootstrap";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Navbar as BSNavbar, Nav, NavDropdown } from "react-bootstrap";
 
 import TNPLogo from "../../img/TNP LOGO.png";
 import SGGSLogo from "../../img/sggs.png";
 // import Translate from "./Translate";
+// import { faCaretDown, faBars, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
-import { AdminContext } from "../../App";
 
-import { navDrops } from "../../constants";
 
-const isLoggedIn = true;
-const username = "User";
+// const isLoggedIn = true;
+// const username = "User";
 
-const LoginButton = () => {
+// const LoginButton = () => {
 
-  if (isLoggedIn) {
-    return (
-      <>
-        <div className="loginbutton">
-          <div style={{ marginRight: "10px" }}>
-            <div style={{ fontSize: "9px" }}>Welcome,</div>
-            <div style={{ fontSize: "16px" }}>{username}</div>
-          </div>
-          <div className="loginimg"></div>
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Link id="navLink" to="/user/login">
-          <div className="loginbutton">
-            <div>Login</div>
-          </div>
-        </Link>
-      </>
-    );
-  }
-};
+//   if (isLoggedIn) {
+//     return (
+//       <>
+//         <div className="loginbutton">
+//           <div style={{ marginRight: "10px" }}>
+//             <div style={{ fontSize: "9px" }}>Welcome,</div>
+//             <div style={{ fontSize: "16px" }}>{username}</div>
+//           </div>
+//           <div className="loginimg"></div>
+//         </div>
+//       </>
+//     );
+//   } else {
+//     return (
+//       <>
+//         <Link id="navLink" to="/user/login">
+//           <div className="loginbutton">
+//             <div>Login</div>
+//           </div>
+//         </Link>
+//       </>
+//     );
+//   }
+// };
 
 const Drops = (props) => {
   const { title, links } = props.items;
-
   const [isOpen, setIsOpen] = useState(false);
 
   const [style, setStyle] = useState({});
@@ -78,8 +78,8 @@ const Drops = (props) => {
           links.map((item, index) => {
             return (
               <>
-                <div className="flex flex-col items-center justify-center ">
-                  <NavDropdown.Item key={index} as={Link} to={item.link}>{item.name === '' ? '' : item.name}</NavDropdown.Item>
+                <div key={index} className="flex flex-col items-center justify-center ">
+                  <NavDropdown.Item as={Link} to={item.link} className='md:text-[12px] lg:text-base'>{item.name === '' ? '' : item.name}</NavDropdown.Item>
                 </div>
               </>
             )
@@ -128,23 +128,23 @@ const InnerDropDowns = (props) => {
   );
 }
 
-const HamburgerMenuTag = (props) => {
-  const [toggle, setToggle] = useState(false);
-  return (
-    <>
-      <div className="flex items-center justify-end flex-1 hidden mx-2 sm:block">
-        <FontAwesomeIcon icon={toggle ? faCircleXmark : faBars} onClick={() => {
-          setToggle(!toggle)
-        }} />
-      </div>
-      <div className={`${!toggle ? 'hidden' : 'flex'} bg-white p-6 absolute top-20 right-4 z-10 rounded-x1 w-60 border-gray-300 rounded-md flex-col text-18`} style={{ border: '1px solid #b9b9b9' }}>
-        <div className={`my-2 p-0.5 border-2 rounded-2xl flex justify-center items-center text-base nav-light-shadows`}>
-          <Link onClick={props.getProgress} to='studentSection' >Student Section</Link>
-        </div>
-      </div>
-    </>
-  )
-}
+// const HamburgerMenuTag = (props) => {
+//   const [toggle, setToggle] = useState(false);
+//   return (
+//     <>
+//       <div className="flex items-center justify-end flex-1 hidden mx-2 sm:block">
+//         <FontAwesomeIcon icon={toggle ? faCircleXmark : faBars} onClick={() => {
+//           setToggle(!toggle)
+//         }} />
+//       </div>
+//       <div className={`${!toggle ? 'hidden' : 'flex'} bg-white p-6 absolute top-20 right-4 z-10 rounded-x1 w-60 border-gray-300 rounded-md flex-col text-18`} style={{ border: '1px solid #b9b9b9' }}>
+//         <div className={`my-2 p-0.5 border-2 rounded-2xl flex justify-center items-center text-base nav-light-shadows`}>
+//           <Link onClick={props.getProgress} to='studentSection' >Student Section</Link>
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
 
 
 export default function Navbar() {
@@ -171,13 +171,14 @@ export default function Navbar() {
             <span className="divider"></span>
             <img className="logo-img logo-mobile" src={TNPLogo} alt="img-logo" />
             &nbsp;
-            <span className="logo-text">
+            <span className="logo-text md:text-sm lg:text-xl sm:text-xl">
               SHRI GURU GOBIND SINGHJI INSTITUTE<br />
               OF ENGINEERING & TECHNOLOGY{" "}
             </span>
           </BSNavbar.Brand>
         </Container>
         <Container >
+
           <Nav className="desktop-navmenu ms-auto">
             <Link onClick={getProgress} className="navLink" to="/">Home</Link>
             <Link onClick={getProgress} className="navLink" to="/placements">Placements</Link>
@@ -201,6 +202,7 @@ export default function Navbar() {
               setToggle(!toggle)
             }} />
           </div>
+
           <div className={`${!toggle ? 'hidden' : 'flex'} bg-white p-6 absolute top-20 right-0 left-0 z-10 rounded-x1 w-full scrollable-div flex flex-col  z-[5]`}>
             <MobileNavigation getTouch={getTouch} title='Home' to_='/' />
             <MobileNavigation getTouch={getTouch} to_='placements' title='Placements' />
