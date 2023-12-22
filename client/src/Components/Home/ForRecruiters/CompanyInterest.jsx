@@ -71,6 +71,7 @@ export const CompanyInterest = () => {
     document.title = "Company Interest Form | SGGS Training & Placement";
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <div className='m-2 w-[90%] mx-auto'>
@@ -81,10 +82,10 @@ export const CompanyInterest = () => {
         </div>
         <h1 className='m-4 text-3xl'>Company Interest Form</h1>
         <div className='border-2 nav-light-shadows rounded-xl'>
-          <h2 className='w-full m-2 mb-4 text-xl align-top'>Get Job Announcement Forms Here</h2>
+          <h2 className='w-[95%] mx-auto m-2 p-2 text-xl '>Get Job Announcement Forms Here</h2>
           <div className='flex flex-col items-center justify-center m-4 sm:flex-row'>
-            <Link to='/jaf_recuriment' className='w-[80%] sm:w-[60%] text-center font-bold text-lg p-2 m-2 border-2 rounded-xl nav-light-shadows'>JAF direct recuritment</Link>
-            <Link to='/jaf_recuriment' className='w-[80%] sm:w-[60%] text-center font-bold text-lg p-2 m-2 border-2 rounded-xl nav-light-shadows'>JAF internship</Link>
+            <Link to='/jaf_recuriment' className='inline-block w-full h-full p-2 m-2 text-lg font-bold text-center border-2 rounded-xl nav-light-shadows'>JAF Direct Recuritment</Link>
+            <Link to='/jaf_recuriment' className='inline-block w-full h-full p-2 m-2 text-lg font-bold text-center border-2 rounded-xl nav-light-shadows'>JAF Internship</Link>
           </div>
         </div>
       </div>
@@ -93,7 +94,7 @@ export const CompanyInterest = () => {
         <Form>
           <div className='m-2'>
             <h3>From: </h3>
-            <input type="email" id='from' className='w-[50%] p-1 m-1 mx-auto text-black border-2 border-black nav-light-shadows rounded-xl' placeholder='From (Email)' name='ThisisFrom' required onChange={onChange} />
+            <input type="email" id='from' className='w-full sm:w-[50%] p-1 m-1 mx-auto text-black border-b-2 border-black ' placeholder='Enter Your Email Address' name='ThisisFrom' required onChange={onChange} />
           </div>
           <div className=''>
             <section className='w-full p-1'>

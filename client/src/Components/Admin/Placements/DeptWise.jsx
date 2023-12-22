@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useRef } from 'react'
+import React, { useEffect, useState, useContext, useRef, useCallback } from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -67,7 +67,7 @@ export const DeptWise = () => {
         getDetails();
     }
 
-    async function getDetails() {
+    const getDetails = async () => {
         // getAlldetails();
         getDeptAlldetails().then((data) => {
             let info = data;
@@ -77,10 +77,10 @@ export const DeptWise = () => {
             setDeptData(info);
         });
     }
+
     useEffect(() => {
         getDetails();
     }, []);
-
     return (
         <>
             {/* Modal to edit the data */}
@@ -92,34 +92,34 @@ export const DeptWise = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit the Record</Modal.Title></Modal.Header>
-                <Form.Text className="text-muted container">
+                <Form.Text className="container text-muted">
                     Previous Records are given in light text
                 </Form.Text>
                 <Modal.Body>
                     <Form>
 
-                        <Form.Group className="mb-3 container my-3" controlId="Year">
+                        <Form.Group className="container my-3 mb-3" controlId="Year">
                             <Form.Label>Year</Form.Label>
                             <Form.Control className="inpts" type="text" placeholder={`${recordData.Year}`} onChange={onChange} name="Year" />
                         </Form.Group>
 
-                        <Form.Group className="mb-3 container my-3" controlId="Department">
+                        <Form.Group className="container my-3 mb-3" controlId="Department">
                             <Form.Label>Department</Form.Label>
                             <Form.Control className="inpts" type="text" onChange={onChange} placeholder={`${recordData.Department}`} name="Department" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="UndergradTotal">
+                        <Form.Group className="container my-3 mb-3" controlId="UndergradTotal">
                             <Form.Label>Undergrad Total</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.UndergradTotal}`} name="UndergradTotal" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="UndergradPlaced">
+                        <Form.Group className="container my-3 mb-3" controlId="UndergradPlaced">
                             <Form.Label>Undergrad Placed</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.UndergradPlaced}`} name="UndergradPlaced" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="PostgradTotal">
+                        <Form.Group className="container my-3 mb-3" controlId="PostgradTotal">
                             <Form.Label>Postgrad Total</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.PostgradTotal}`} name="PostgradTotal" />
                         </Form.Group>
-                        <Form.Group className="mb-3 container my-3" controlId="PostgradPlaced">
+                        <Form.Group className="container my-3 mb-3" controlId="PostgradPlaced">
                             <Form.Label>Postgrad Placed</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.PostgradPlaced}`} name="PostgradPlaced" />
                         </Form.Group>
@@ -137,14 +137,14 @@ export const DeptWise = () => {
             </Modal>
 
             <div className="container">
-                <Button ref={btnRef} Button variant="dark" className='justify-content-center container md-3 my-3' onClick={refreshPage}>
+                <Button ref={btnRef} Button variant="dark" className='container my-3 justify-content-center md-3' onClick={refreshPage}>
                     Refresh
                 </Button>
                 {
-                    deptData.map((data,index) => {
+                    deptData.map((data, index) => {
                         return (
                             <>
-                                <Table striped bordered hover className='container my-3 table caption-top' responsive="lg" size="sm" key={index}>
+                                <Table striped bordered hover className='container table my-3 caption-top' responsive="lg" size="sm" key={index}>
                                     <caption style={{ textAlign: "center", fontSize: "22px", color: "black", fontWeight: "bold" }}>{"20" + data["_id"].substring(1, 3) + "-" + data["_id"].substring(3)}</caption>
                                     <thead>
                                         <tr style={{ textAlign: "center" }}>
@@ -159,7 +159,7 @@ export const DeptWise = () => {
                                     </thead>
                                     <tbody>
                                         {
-                                            data["departments"].map((innerData,index) => {
+                                            data["departments"].map((innerData, index) => {
                                                 return (
                                                     <>
                                                         <tr key={index}>
@@ -194,33 +194,33 @@ export const DeptWise = () => {
             <Form Form >
                 <hr />
                 <h2 className="container my-3">Add Department Wise Records Here</h2>
-                <Form.Group className="mb-3 container my-3" controlId="Year">
+                <Form.Group className="container my-3 mb-3" controlId="Year">
                     <Form.Label>Year</Form.Label>
                     <Form.Control className="inpts" type="text" placeholder="e.g y2324" onChange={onChange} name="Year" />
                 </Form.Group>
 
-                <Form.Group className="mb-3 container my-3" controlId="Department">
+                <Form.Group className="container my-3 mb-3" controlId="Department">
                     <Form.Label>Department</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="e.g CSE" name="Department" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="UndergradTotal">
+                <Form.Group className="container my-3 mb-3" controlId="UndergradTotal">
                     <Form.Label>Undergrad Total</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 123" name="UndergradTotal" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="UndergradPlaced">
+                <Form.Group className="container my-3 mb-3" controlId="UndergradPlaced">
                     <Form.Label>Undergrad Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 41" name="UndergradPlaced" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="PostgradTotal">
+                <Form.Group className="container my-3 mb-3" controlId="PostgradTotal">
                     <Form.Label>Postgrad Total</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 158" name="PostgradTotal" />
                 </Form.Group>
-                <Form.Group className="mb-3 container my-3" controlId="PostgradPlaced">
+                <Form.Group className="container my-3 mb-3" controlId="PostgradPlaced">
                     <Form.Label>Postgrad Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 63" name="PostgradPlaced" />
                 </Form.Group>
 
-                <Form.Group className="mb-3 container my-3" controlId="Submit">
+                <Form.Group className="container my-3 mb-3" controlId="Submit">
                     <Button onClick={addARecord} className='b-end-btn-blue' variant="primary text-center" type="submit">
                         Add Data
                     </Button>

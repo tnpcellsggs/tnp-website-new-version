@@ -12,7 +12,7 @@ export default function PosterSlider() {
             return (
               <>
                 <div key={index}>
-                  <img src={items.imageLink} alt='poster' className='rounded-2xl' />
+                  <img src={items.imageLink} alt='poster' className='w-full h-full rounded-2xl'  />
                   {/* <p className="legend"></p> */}
                 </div>
               </>

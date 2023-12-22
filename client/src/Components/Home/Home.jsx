@@ -33,6 +33,8 @@ import OldTeamTab from "../Home/OldTeams/oldTeamsTab"; //old team
 
 import { CompanyInterest, Researches } from "../../constants/Comps";
 
+import TeamHierarchy from "./WhyUS/TeamHierarchy";
+
 const scrollBehavior = { top: "0", left: "0", behavior: "smooth" };
 
 const Homepage = () => {
@@ -45,7 +47,6 @@ const Homepage = () => {
         let res = await axios.get(
           `${process.env.REACT_APP_REQURL}/admin/events/getall/`
         );
-        res.status(200).send("ok");
       } catch (err) {
         console.log(err);
       }
@@ -143,6 +144,7 @@ export default function Home() {
         <Route path="/ourTeam" element={<OurTeam />} />
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/prevteam" element={<OldTeamTab />} />
+        <Route path="/teamHierarchy" element={<TeamHierarchy />} />
         {/* <Route path="/contactus/previous" element={<OldTeams />} /> */}
         {/* <Route path="/gethelp" element={<Help />} /> */}
       </Routes>

@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+// import {news_list} from '../../../constants/index';
 import { Link } from 'react-router-dom';
 import Loading from "../../Utilities/Loading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,35 +14,104 @@ import { AdminContext } from "../../../App";
 // import { news_list } from '../../../constants/index';
 
 const NewsSection = () => {
-  const marqueeRef = useRef(null);
+  // const marqueeRef = useRef(null);
   // using context api to save all the states & use it all over the app
   const newsContext = useContext(AdminContext);
   const [newsUpdates, setNewsUpdates] = useState([]);
-
   const { getAllNews } = newsContext;
+  const [animateElements, setanimateElements] = useState(null);
+
   useEffect(() => {
     getAllNews().then((data) => {
-      setNewsUpdates(data.reverse().slice(0, 3));
+      setNewsUpdates(data.reverse());
     });
-  });
+
+    setanimateElements(document.querySelectorAll('.news-items'));
+  }, []);
 
   return (
     <div className="sm:w-[50%] w-full p-2 m-2 align-top h-full">
       <h2 className="mx-2 text-2xl"><FontAwesomeIcon icon={faNewspaper} className="mx-2" />Updates</h2>
-      <div className="flex-col items-start justify-start w-full mx-auto text-left align-middle sm:h-80" ref={marqueeRef}>
-        {
-          newsUpdates.reverse().map((data, index) => {
-            return (
-              <>
-                <ul key={index} className="m-4">
-                  <li><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
-                  <li className="text-center">{data.Description}</li>
-                  <li className="text-center">{data.Date}</li>
-                </ul>
-              </>
-            );
-          })
-        }
+
+      <div className="gallery">
+        <div className="block-33 ">
+          <div className="relative"
+            onMouseOut={() => {
+              animateElements.forEach((ele) => {
+                ele.style.animationPlayState = 'running';
+              })
+            }}
+            onMouseOver={() => {
+              animateElements.forEach((ele) => {
+                ele.style.animationPlayState = 'paused';
+              });
+
+            }}>
+
+            <div className="news-items" >
+              {
+                newsUpdates.reverse().map((data, index) => {
+                  console.log(data.ImageLink);
+                  // newsUpdates.reverse().map((data, index) => {
+                  return (
+                    <>
+                      <div key={index} className="relative gallery-image">
+                        <div className="gallery-image__img">
+                          <div className=" fill-dimensions" >
+                            <a href={data.ImagLink} className="hover:cursor-pointer" target='_blank'>
+                              <ul key={index} >
+                                <li className=""><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
+                                <li className="text-center">{data.Description}</li>
+                                <li className="text-center">{data.Date}</li>
+                                {/* <li className="text-center">{data.news}</li>
+                              <li className="text-center">{data.dates}</li> */}
+                              </ul>
+                            </a>
+
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })
+              }
+
+            </div>
+
+
+            {/* 2nd  */}
+            <div className="news-items" >
+              {
+                newsUpdates.map((data, index) => {
+                  // newsUpdates.reverse().map((data, index) => {
+                  return (
+                    <>
+                      <div key={index} className="relative gallery-image">
+                        <div className="gallery-image__img">
+                          <div className="fill-dimensions" >
+                          <a href={data.ImagLink} className="hover:cursor-pointer" target='_blank'>
+                              <ul key={index} >
+                                <li className=""><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
+                                <li className="text-center">{data.Description}</li>
+                                <li className="text-center">{data.Date}</li>
+                                {/* <li className="text-center">{data.news}</li>
+                              <li className="text-center">{data.dates}</li> */}
+                              </ul>
+                            </a>
+
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })
+              }
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   );
@@ -103,7 +173,7 @@ const EventsSection = () => {
 const NewsEvents = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-full m-2 nav-medium-light-shadows sm:flex-row">
+      <div className="flex flex-col items-center justify-center h-full m-2 nav-light-shadows sm:flex-row">
         <NewsSection />
         <EventsSection />
       </div>

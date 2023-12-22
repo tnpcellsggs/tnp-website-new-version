@@ -8,13 +8,13 @@ export default function CertificateList() {
     { uid: "-", recipent: "-", issued: 0, created: 0 },
   ]);
   const [isListRefreshing, setIsListRefreshing] = useState(false);
-  const tableHeaders = [
-    "Unique URL ID",
-    "Recipent",
-    "Issue Date",
-    "Entry Date",
-    "Del",
-  ];
+  // const tableHeaders = [
+  //   "Unique URL ID",
+  //   "Recipent",
+  //   "Issue Date",
+  //   "Entry Date",
+  //   "Del",
+  // ];
 
   useEffect(() => {
     const fetchCertList = async () => {
@@ -29,7 +29,7 @@ export default function CertificateList() {
     };
     fetchCertList();
     setIsListRefreshing(false);
-  }, [isListRefreshing]);
+  }, []);
 
   const handleCertDelete = async (uid) => {
     try {

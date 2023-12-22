@@ -9,35 +9,36 @@ function OldTeams() {
   const yearSwitch = (year) => {
     switch (year) {
       case "2223":
-        return <Team2223 />;
-        // break;
+        return <Team2223 runs={1000} />;
+      // break;
 
       case "2122":
-        return <Team2122 />;
-        // break;
+        return <Team2122 runs={1000} />;
+      // break;
 
       default:
-        return <Team2223 />;
-        // break;
+        return <Team2223 runs={1000} />;
+      // break;
     }
   };
 
   useEffect(() => {
     document.title = "Previous Teams | SGGS Training & Placement";
-    document.body.backgroundColor ="black";
+    document.body.backgroundColor = "black";
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <div className="oldteam-layout">
-        <div className="oldteam-selector">
-          <h3>Select year:</h3>
+      <div className="overflow-hidden oldteam-layout">
+        <div className="m-4 ">
+          <h1 className="text-3xl">Select year:</h1>
           <div>
             <button
               onClick={() => {
                 setTeamYear("2122");
               }}
+              className="p-2 m-4 font-bold rounded-2xl nav-medium-light-shadows hover:bg-blue-400"
             >
               AY 21-22
             </button>
@@ -45,12 +46,13 @@ function OldTeams() {
               onClick={() => {
                 setTeamYear("2223");
               }}
+              className="p-2 m-4 font-bold rounded-2xl nav-medium-light-shadows hover:bg-blue-400"
             >
               AY 22-23
             </button>
           </div>
         </div>
-        <div className="oldteam-display">{yearSwitch(teamYear)}</div>
+        <div className="overflow-hidden oldteam-display">{yearSwitch(teamYear)}</div>
       </div>
     </>
   );

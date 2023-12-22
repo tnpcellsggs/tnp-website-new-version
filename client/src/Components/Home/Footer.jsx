@@ -5,7 +5,7 @@ import { Container, Row, Col, Stack } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
-  faTwitter,
+  faSquareXTwitter,
   faInstagram,
   faYoutube,
   faLinkedinIn,
@@ -20,12 +20,10 @@ export default function Footer() {
   return (
     <>
       <Container className="footer" fluid>
-        <Row className="f-row">
-          <Col className="f-col f-about">
+        <Row className="sm:pl-[50px] sm:pr-[50px] p-[30px]">
+          <Col className="f-col A">
             <h2>About</h2>
-            <p>
-              {" "}
-              This is one of the prestigious institutes in the state of
+            <p className="text-justify text-white">{" "}This is one of the prestigious institutes in the state of
               Maharashtra. This institute provides you the opportunities to
               empower you with the present technologies. The faculty in the
               institute is ever enthusiastic to familiarize the students in
@@ -44,7 +42,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon color="#1da1f2" icon={faTwitter} />
+                <FontAwesomeIcon color="#1da1f2" icon={faSquareXTwitter} />
               </a>
               <a
                 href="https://www.instagram.com/tnp_sggsiet/"
@@ -72,56 +70,41 @@ export default function Footer() {
 
           <Col className="f-col f-ql">
             <h2>Quick Links</h2>
-            <div className="grid items-center justify-center grid-cols-1 gap-2 sm:grid-cols-3">
-                <p className="footer-links-ps">
-                  <Link className="footer-links" to="/">Home</Link>
-                </p >
-                <p>
-                  <Link className="footer-links" to="/special_facilities">Special Facilities</Link>
-                </p>
-                <p>
-                  <Link className="footer-links" to="/departments">Departments</Link>
-                </p>
-                {/* <p>
-                  <Link className="footer-links" to="/researches">Researches</Link>
+            <div className="grid items-center justify-center grid-cols-1 gap-2 sm:grid-cols-2">
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/">Home</Link></p >
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/placements">Placements</Link></p>
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/departments">Departments</Link></p>
+              {/* <p>
+                  <Link className="" to="/researches">Researches</Link>
                 </p> */}
-                <p>
-                  <Link className="footer-links" to="/past_recruiters">Past Recruiters</Link>
-                </p>
-                <p>
-                  <Link className="footer-links" to="/placements">Placements</Link>
-                </p>
-                <p>
-                  <Link className="footer-links" to="/recruitment_procedures">Recruitment Procedures</Link>
-                </p>
-                <p>
-                  <Link className="footer-links" to="/company_interest">Company Interest Form</Link>
-                </p>
-                {/* <p>
-                  <Link className="footer-links" to="/studentSection">Student Section</Link>
-                </p> */}
-                <p>
-                  <Link className="footer-links" to="/contactus">Contact Us</Link>
-                </p>
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/past_recruiters">Past Recruiters</Link></p>
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/special_facilities">Special Facilities</Link></p>
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/contactus">Contact Us</Link></p>
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/company_interest">Company Interest Form</Link></p>
+              <p className="w-full h-full text-center"><Link className="inline-block w-full h-full border-2 border-transparent text-white-class hover:cursor-pointer hover:text-blue-600" to="/recruitment_procedures">Recruitment Procedures</Link></p>
             </div>
+              {/* <p>
+                  <Link className="" to="/studentSection">Student Section</Link>
+                </p> */}
           </Col>
-          <Col className="f-col f-ci">
+
+          <Col className="w-full f-col f-ci">
             <h2>Contact Info</h2>
             <Stack>
-              <div className="ci-cell">
+              <div className=" ci-cell">
                 <FontAwesomeIcon
                   size="2x"
                   color="#0d6efd"
                   className="ci-icon"
                   icon={faMapMarkerAlt}
                 />
-                <div className="ci-cell-div">
+                <div className="ci-cell-div ">
                   <a
                     target="_blank"
                     rel="noreferrer"
                     href="https://maps.app.goo.gl/KdkCbFL9v8gFrEm98"
                   >
-                    SGGSIE&T, <br /> Vishunupuri, Nanded
+                    <span>SGGSIE&T, Vishunupuri, Nanded</span>
                   </a>
                 </div>
               </div>
@@ -133,15 +116,15 @@ export default function Footer() {
                   icon={faPhone}
                 />
                 <div
-                  className="ci-cell-div"
+                  className="ci-cell-div "
                   style={{ alignItems: "center", color: "#fff" }}
                 >
-                  <div>
-                    TPO Dean IL:&nbsp;
-                    <a href="tel:7588428778">+91 75884 28778</a>
+                  <div className="mt-2 mb-2">
+                    TPO Dean IL:
+                    <a href="tel:7588428778" className="inline-block">&nbsp;+91 75884 28778</a>
                     <br />
-                    TPO Assistant:&nbsp;
-                    <a href="tel:7507877206">+91 75078 77206</a>
+                    TPO Assistant:
+                    <a href="tel:7507877206" className="inline-block">&nbsp;+91 75078 77206</a>
                   </div>
                 </div>
               </div>
@@ -168,7 +151,7 @@ export default function Footer() {
         </Row>
 
         <div className="copyright">
-          Copyright @2022 SGGSIE&T. All Rights Reserved.<br />
+          Copyright @2023 SGGSIE&T. All Rights Reserved.<br />
           Developed By Technical Team | T&P Cell
         </div>
       </Container>

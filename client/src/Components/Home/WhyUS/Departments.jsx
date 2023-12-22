@@ -15,7 +15,7 @@ const DepartmentCards = (props) => {
         contentStyle={{
           color: '#000',
           borderRadius: '20px',
-          boxShadow: '1px 1px 10px #8f8f8f'
+          boxShadow: '1px 1px 10px #cdcdcd'
         }}
         contentArrowStyle={{
           borderRight: '7px solid #232631'
@@ -35,10 +35,10 @@ const DepartmentCards = (props) => {
         className="rounded-lg"
       >
         <div className={`flex justify-center flex-col w-full h-full items-center`}>
-          <h3 className='text-2xl font-bold text-center '><a className='text-center text-black' target='_blank' href={link}>{name}</a></h3>
+          <h3 className='text-2xl font-bold text-center '><a className='text-center text-black' rel="noreferrer" target='_blank' href={link}>{name}</a></h3>
           {/* <img src={imageLink} alt="" className="w-[40%] rounded-full sm:w-[20%] m-4"/> */}
           <img src={imageLink} alt="department" className="w-[40%] rounded-xl w-[80%] mt-4 ml-4 m-r mb-1" />
-          <p className="text-center text-secondary ">HOD: {head}</p>
+          <p className="text-[18px] font-bold text-center">HOD: {head}</p>
         </div>
 
         <ul className='mt-2 ml-5 space-y-2 list-disc'>
@@ -46,7 +46,7 @@ const DepartmentCards = (props) => {
             info.map((point, index) => {
               return (
                 <li
-                  key={index} className='text-black-100 text-[14px] pl-1 tracking-wider'
+                  key={index} className='text-justify text-black-100 md:text-[12px] text-[12px] lg:text-[16px] pl-1 tracking-wider'
                 >{point}
                 </li>
               )

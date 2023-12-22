@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { css } from '@emotion/react';
 // import { css } from ' @emotion/css';
-import Tilt from 'react-parallax-tilt';
+// import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 import { useLayoutEffect } from 'react';
 import { fadeIn } from '../../utils/motion';
@@ -15,7 +15,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import HatkarSir from "../../img/HatkarSir.jpg";
 import IGavakhore from "../../img/ishwar-sir.jpg";
-import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";
+import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.webp";
 
 gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
 
@@ -30,10 +30,10 @@ const TeamCards = (props) => {
 
                     {
                         members.map((people, index) => {
-                            const { name, imageLink, phoneNo, emailId, linkedinId,title } = people;
+                            const { name, imageLink, phoneNo, emailId, linkedinId, title } = people;
                             return (
                                 <>
-                                    <Tilt className='sm:w-[345px] w-[90%] my-4 nav-light-shadows rounded-2xl our_team_divs' key={index}>
+                                    <div className='sm:w-[345px] w-[90%] my-4 nav-light-shadows rounded-2xl our_team_divs' key={index}>
                                         <div options={{
                                             max: 45,
                                             scale: 1,
@@ -55,14 +55,14 @@ const TeamCards = (props) => {
                                                     width: 100%;
                                                     height: 200px;
                                                     background-image: url(${Secretary});
-                                                    filter: blur(55px);
+                                                    filter: blur(70px);
                                                     background-size: cover;
                                                     background-position: center;
                                                     transition: 0.5s;
                                             `}
 
-                                            // background-image: url(${imageLink});
-                                            //  filter: blur(25px);
+                                                // background-image: url(${imageLink});
+                                                //  filter: blur(25px);
 
                                                 className="flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"
                                             >
@@ -85,7 +85,7 @@ const TeamCards = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </Tilt>
+                                    </div>
                                 </>
                             )
                         })
@@ -100,25 +100,25 @@ export const OurTeam = () => {
 
     const comp = useRef();
     useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
-            const boxes = gsap.utils.toArray('.our_team_divs');
-            boxes.forEach((box, index) => {
-                gsap.from(box, {
-                    x: -300,
-                    opacity: 0,
-                    duration: 1.5,
-                    scrollTrigger: {
-                        trigger: box,
-                        start: "-20% 90%",
-                        toggleActions: "play none none none",
-                    }
-                })
-            });
-        }, comp);
+        // let ctx = gsap.context(() => {
+        //     const boxes = gsap.utils.toArray('.our_team_divs');
+        //     boxes.forEach((box, index) => {
+        //         gsap.from(box, {
+        //             x: -300,
+        //             opacity: 0,
+        //             duration: 1.5,
+        //             scrollTrigger: {
+        //                 trigger: box,
+        //                 start: "-20% 90%",
+        //                 toggleActions: "play none none none",
+        //             }
+        //         })
+        //     });
+        // }, comp);
 
-        return () => {
-            ctx.revert();
-        }
+        // return () => {
+        //     ctx.revert();
+        // }
 
     }, []);
 
@@ -139,7 +139,7 @@ export const OurTeam = () => {
                     <h2 className="pt-4 text-3xl text-center text-black">TPO Head & Assistant</h2>
                     <div className="flex flex-col w-[90%] justify-evenly items-center mx-auto mb-4 mt-4 sm:flex-row ">
 
-                        <Tilt className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl our_team_divs'>
+                        <div className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl our_team_divs'>
                             <div options={{
                                 max: 45,
                                 scale: 1,
@@ -161,13 +161,13 @@ export const OurTeam = () => {
                                 <div className="flex items-center justify-center w-full h-[40%]">
                                     <div className="flex-col items-center justify-center">
                                         <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tpo@sggs.ac.in`} >tpo@sggs.ac.in | <FontAwesomeIcon icon={faEnvelope} /></a></p>
-                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91-2462-269182`}>+91-2462-269182(Office) | <FontAwesomeIcon icon={faPhone} /></a></p>
+                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91-2462-269182`}>+91 94218 68526 | <FontAwesomeIcon icon={faPhone} /></a></p>
                                     </div>
                                 </div>
                             </div>
-                        </Tilt>
+                        </div>
 
-                        <Tilt className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl'>
+                        <div className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl'>
                             <div options={{
                                 max: 45,
                                 scale: 1,
@@ -194,14 +194,17 @@ export const OurTeam = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Tilt>
+                        </div>
                     </div>
                 </div>
             </motion.div>
 
+            {/* Our Team */}
             <div ref={comp}>
                 {team_23_24.map((items, index) => { return (<TeamCards key={`${index}` + items.post} index={index} item={items} />) })}
             </div>
+
+
 
         </>
     );

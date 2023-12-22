@@ -12,7 +12,7 @@ export default function AdminNavbar() {
   const handleLogout = useCallback(() => {
     setIsAdminLoggedIn(false);
     navigate("/", { replace: true });
-  }, [navigate]);
+  }, [navigate,setIsAdminLoggedIn]);
   return (
     <>
       <div className="admin-navbar">

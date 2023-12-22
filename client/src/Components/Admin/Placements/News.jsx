@@ -131,7 +131,7 @@ export const News = () => {
                         <th>Title</th>
                         <th>Description</th>
                         <th>Date</th>
-                        <th>Image Link</th>
+                        <th>Imp. Link</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -170,7 +170,7 @@ export const News = () => {
             </Table >
 
             {/* Form to add records */}
-            <Form Form >
+            <Form className='w-[90%] mx-auto' >
                 <hr />
                 <h2 className="container my-3">Add News or Updates Here</h2>
                 <Form.Group className="container my-3 mb-3" controlId="Year">
@@ -187,7 +187,7 @@ export const News = () => {
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="01/11/2023" name="Date" />
                 </Form.Group>
                 <Form.Group className="container my-3 mb-3" controlId="ImageLink">
-                    <Form.Label>Image Link(optional)</Form.Label>
+                    <Form.Label>Imp Link(if any)</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="//drive.image/link" name="ImageLink" />
                 </Form.Group>
 
