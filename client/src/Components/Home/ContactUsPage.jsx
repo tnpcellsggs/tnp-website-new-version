@@ -32,7 +32,7 @@ export const ContactUsPage = () => {
             <div className="text-center w-[50%] flex flex-col items-center justify-center mt-4">
               <div>
                 <h1 className="p-2 text-2xl text-left sm:text-3xl sm:p-4">
-                  Looking to Hire from SGGSIT&T?<br />Fill the Job Announcement Form today!!!
+                  Looking to Hire from SGGSIE&T?<br />Fill the Job Announcement Form today!!!
                 </h1>
               </div>
               <div className="flex flex-col items-center justify-between sm:flex-row">
