@@ -60,8 +60,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:yarn": "yarn start",
+    "build:yarn": "yarn build",
+    "test:yarn": "yarn test",
+    "eject:yarn": "yarn eject",
+    "dev": "react-scripts start"
   },
+
+
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -152,6 +152,7 @@ import Infosys from "../img/tnpsite-logo/newCompanies/infosys.webp";
 import Intellipaat from "../img/tnpsite-logo/newCompanies/intellipaat.webp";
 import Infinichains from "../img/tnpsite-logo/newCompanies/infinichains.webp";
 import JohnsonControl from "../img/tnpsite-logo/newCompanies/johnson-controls.webp";
+import Jailaxmi from "../img/tnpsite-logo/newCompanies/jailaxmi.webp";
 import Kennovation from "../img/tnpsite-logo/newCompanies/kennovation.webp";
 import Kratin from "../img/tnpsite-logo/newCompanies/kratin.webp";
 import Mavenberg from "../img/tnpsite-logo/newCompanies/mavenberg.webp";
@@ -178,6 +179,7 @@ import Siemens from "../img/tnpsite-logo/newCompanies/siemens.webp";
 import TCS from "../img/tnpsite-logo/newCompanies/tcs.webp";
 import TechMahindra from "../img/tnpsite-logo/newCompanies/tech-mahindra.webp";
 import Thermax from "../img/tnpsite-logo/newCompanies/thermax.webp";
+import ThyssenKrupp from "../img/tnpsite-logo/newCompanies/thussenkrupp.webp";
 import Tataelexi from "../img/tnpsite-logo/newCompanies/tataelexi.webp";
 import TIAA from "../img/tnpsite-logo/newCompanies/tiaa.webp";
 import TridentGroup from "../img/tnpsite-logo/newCompanies/trident-group.webp";
@@ -941,6 +943,10 @@ const past_recuriters_list = [
         title: 'Johnson Control',
         imageLink: JohnsonControl
     },
+    {
+        title: 'Jailaxmi Casting and Alloys',
+        imageLink: Jailaxmi
+    },
     // {
     //     title: 'Jacobs Jfif',
     //     imageLink: jacobs_jfif
@@ -1154,6 +1160,10 @@ const past_recuriters_list = [
         imageLink: Thermax
     },
     {
+        title: 'ThyssenKrupp Uhde',
+        imageLink: ThyssenKrupp
+    },
+    {
         title: 'TIAA',
         imageLink: TIAA
     },
@@ -1345,7 +1355,7 @@ const team_21_22 = [
                 name: 'Kshitij Dhanvij',
                 title: 'DBMS Executive',
                 imageLink: 'https://drive.google.com/uc?export=view&id=1ZykwafgesUw6y12EU5rccGv1oNjq2vco',
-                phoneNo: 0,
+                phoneNo: 7666298202,
                 emailId: 'kshitij.dhanvij@gmail.com',
                 linkedinId: 'https://www.linkedin.com/in/kshitijdhanvij0901?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWl8nBBHiRM%2Bf6NyNIToEfg%3D%3D'
             },
@@ -1481,7 +1491,7 @@ const team_21_22 = [
             {
                 name: 'Kshitij Dhanvij',
                 title: '(CHEM)',
-                imageLink: 'https://drive.google.com/uc?export=view&id=1AREAnPZ7bK1jDvMMaSfvyczZNS9girB3',
+                imageLink: 'https://drive.google.com/uc?export=view&id=1ZykwafgesUw6y12EU5rccGv1oNjq2vco',
                 phoneNo: 7666298202,
                 emailId: '2019bch005@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/in/kshitijdhanvij0901/'
@@ -1491,7 +1501,7 @@ const team_21_22 = [
                 title: '(CIVIL)',
                 imageLink: 'https://drive.google.com/uc?export=view&id=19l_MQHe_8dk3KM87KrpSXFhWEnqSqiGz',
                 phoneNo: 0,
-                emailId: '#',
+                emailId: 'sairajmulange2000@gmail.com',
                 linkedinId: 'https://www.linkedin.com/in/sairaj-mulange-84a11720a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBUmTuuNCRq6XCHvZf2NJ9A%3D%3D#'
             },
             {
@@ -1712,7 +1722,7 @@ const team_22_23 = [
             {
                 name: 'Pranav Umak',
                 title: 'Workshop Executive',
-                imageLink: 'https://drive.google.com/uc?export=view&id=1l8TbJ32K7_kQSVKclKxcu02wHcxzYI2Y',
+                imageLink: 'https://drive.google.com/uc?export=view&id=1EKFjxw7GroTsMKlme6KX6H7TgiImSdtD',
                 phoneNo: 7620965567,
                 emailId: '2020bcs077@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/in/pranav-umak-8b565b213'

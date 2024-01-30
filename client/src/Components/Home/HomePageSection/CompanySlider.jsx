@@ -9,7 +9,7 @@ const CompanySlider = () => {
         <>
             <div className='p-2 m-2 nav-light-shadows'>
                 <div className='flex flex-col items-center justify-between m-2 text-center sm:flex-row'>
-                    <h2 className='"p-2 text-3xl text-left text-center sm:text-4xl sm:p-4'>Our Hiring Partners</h2>
+                    <h2 className='"p-2 text-3xl text-center sm:text-4xl sm:p-4'>Our Hiring Partners</h2>
                     <p className='p-2 m-2 text-sm border-2 border-black rounded-xl hover:cursor-pointer'><Link to='/past_recruiters' className='font-bold'>See All</Link></p>
                 </div>
                 <div className='my-4 text-center w-[95%] mx-auto '>

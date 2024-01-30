@@ -17,15 +17,17 @@ const TeamCards = (props) => {
                     {
                         members.map((people, index) => {
                             const { name, imageLink, phoneNo, emailId, linkedinId, title } = people;
+                            let string = imageLink.split('.com/uc')
+                            string = string[0] + '.com/thumbnail' + string[1] + '&sz=w1000'
                             return (
                                 <>
                                     <div className='flex flex-col items-center justify-center h-full m-2 rounded-2xl'
-                                    >
+                                    key={index}>
                                         <div className="flex-col items-center justify-center h-[100%] w-full rounded-t-2xl"
                                         >
                                             {/* div for intro  */}
                                             {/* <IconDiamond className=" flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"> */}
-                                            <img src={imageLink} alt={name} className="w-[50%] rounded-full text-center nav-darker-shadows align-center text-center mx-auto mt-2 mb-2" />
+                                            <img src={string} alt={name} className="w-[50%] rounded-full nav-darker-shadows align-center text-center mx-auto mt-2 mb-2" referrerPolicy="no-referrer"/>
                                             <div className="z-20 flex flex-col items-center justify-center w-full text-center ">
                                                 <h3 className='w-full text-xl font-bold text-center text-black'>{name}</h3>
                                                 <p className="text-center text-gray-600">{title}</p>

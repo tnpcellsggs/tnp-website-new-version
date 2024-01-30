@@ -203,7 +203,7 @@ export default function Navbar() {
             }} />
           </div>
 
-          <div className={`${!toggle ? 'hidden' : 'flex'} bg-white p-6 absolute top-20 right-0 left-0 z-10 rounded-x1 w-full scrollable-div flex flex-col  z-[5]`}>
+          <div className={`${!toggle ? 'hidden' : 'flex'} bg-white p-6 absolute top-20 right-0 left-0 z-10 rounded-x1 w-full scrollable-div flex flex-col `}>
             <MobileNavigation getTouch={getTouch} title='Home' to_='/' />
             <MobileNavigation getTouch={getTouch} to_='placements' title='Placements' />
             <InnerDropDowns getTouch={getTouch} navDrops={navDrops[0]} title={'Why SGGSIE&T'} />
