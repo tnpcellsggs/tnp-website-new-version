@@ -16,7 +16,7 @@ function EPast(props) {
           props.type === "drive" ? "past-container pe-drive" : "past-container"
         }
       >
-        <div className="w-[90%] mx-auto flex border-2 m-4 rounded-b-[22px] sm:rounded-r-[22px] flex flex-col sm:flex-row">
+        <div className="w-[90%] mx-auto border-2 m-4 rounded-b-[22px] sm:rounded-r-[22px] flex flex-col sm:flex-row">
           {/* left for image */}
           <div className="h-full w-full sm:w-[40%] flex items-center ">
             <a href={props.videoLink} target='_blank'>

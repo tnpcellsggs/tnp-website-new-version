@@ -6,6 +6,33 @@ import Stats from "../../../img/Gallary/statistics.jpg";
 import Summary from "../../../img/Gallary/summary_report_icon.jpg";
 import SectionWrapper from "../../../Higher_Order_Components/SectionWrapper";
 
+// const MessagePopup = ({ message }) => {
+//   const [showMessage, setShowMessage] = useState(true);
+
+//   useEffect(() => {
+//     const timeout = setTimeout(() => {
+//       // setShowMessage(false);
+//     }, 5000); // 3000 milliseconds (3 seconds)
+
+//     return () => {
+//       clearTimeout(timeout);
+//     };
+//   }, []); // Empty dependency array ensures that this effect runs once after the initial render
+
+//   const closeMessage = () => {
+//     setShowMessage(false);
+//   };
+
+//   return (
+//     showMessage && (
+//       <div className="absolute bg-black border-2 message-popup top-[20px]">
+//         <p>{message}</p>
+//         <button onClick={closeMessage}>Close</button>
+//       </div>
+//     )
+//   );
+// };
+
 const Hero = () => {
   // using context api to save all the states & use it all over the app
   const placementContext = useContext(AdminContext);
@@ -15,12 +42,14 @@ const Hero = () => {
   useEffect(() => {
     // getAlldetails();
     getYearWiseAlldetails().then((data) => setTempData(data));
-  },[]);
-
+  }, []);
   return (
     <>
       {/* main wrapper container */}
       <div className="flex flex-col items-center justify-center w-full sm:flex-row">
+
+
+        {/* <MessagePopup message="This is a sample message." /> */}
 
         {/* left section */}
         <div className="sm:w-[60%] w-[100%] h-full flex flex-col p-2">
@@ -82,10 +111,12 @@ const Hero = () => {
               <h3 className="m-1 text-sm sm:text-[12px]">Placement Stats 23-24</h3>
               <img src={Stats} alt='stats' className="w-[20%]" />
               {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
+                console.log(item.PackageRange)
+
                 return (
                   <ul key={item.Year} className="p-1 mt-2 space-y-2 list-disc ">
-                    <li className="text-xs">Total Offers: 63+</li>
-                    <li className="text-xs">Top Package: {item.PackageRange.slice(4, 12)}</li>
+                    <li className="text-xs">Total Offers: 150+</li>
+                    <li className="text-xs">Top Package: {item.PackageRange}</li>
                     <li className="text-xs">Average: {item.AveragePackage}</li>
                   </ul>
                 );
@@ -95,7 +126,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Section for Contact section & Brochures */}
+      {/* Section for Contact & Brochures for mobile view */}
       <div className="block m-2 sm:hidden">
         <div className="flex flex-col items-center justify-center w-full my-8 border-2 rounded-md nav-light-shadows sm:flex-row">
           <div className="w-full sm:w-[50%] ">

@@ -14,6 +14,7 @@ import EventsPage from "./HomePageSection/Events/Events"; // Home
 import TPO from "./HomePageSection/Tpo";    // Tpo
 import Director from "./HomePageSection/Director";  // Director
 import AboutInfo from "./HomePageSection/AboutInfo"; //About
+import Registration from './HomePageSection/Registration';   // Events
 import NewsEvents from './HomePageSection/NewsEvents';   // Events
 import CompanySlider from "./HomePageSection/CompanySlider"; // PosterSlider
 
@@ -58,6 +59,9 @@ const Homepage = () => {
     <>
       {/* 1) Hero section */}
       <Hero />
+
+      {/* 2) Registrations */}
+      {/* <Registration /> */}
 
       {/* 2) News and Events */}
       <NewsEvents />
