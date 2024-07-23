@@ -56,7 +56,7 @@ const AboutInfo = () => {
                 general. The most important one is to make our students "engineers"
                 who would be able to contribute to the society.
               </p>
-              <p className="sm:p-2.5 p-1 mx-1 sm:mx-2 md:text-[12px] text-[12px] lg:text-[16px] text-justify font-normal w-[90%] md:text-sm lg:text-lg">
+              <span className="sm:p-2.5 p-1 mx-1 sm:mx-2 md:text-[12px] text-[12px] lg:text-[16px] text-justify font-normal w-[90%] md:text-sm lg:text-lg">
                 Our team has following functions and responsibilities:
                 <ul className='mt-2 ml-2 space-y-2 md:text-[12px] text-[12px] lg:text-[16px] list-disc '>
                   <li>Organizes industrial visits to foster Industry-Institute interaction.</li>
@@ -64,7 +64,7 @@ const AboutInfo = () => {
                   <li>Channels feedback from visiting companies to enhance the curriculum.</li>
                   <li>Provides individual expert counseling for career guidance.</li>
                 </ul>
-              </p>
+              </span>
 
             </div>
           </div>

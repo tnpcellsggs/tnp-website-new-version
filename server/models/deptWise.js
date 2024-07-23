@@ -25,6 +25,10 @@ const PlacementsDepartmentWiseSchema = mongoose.Schema({
     PostgradPlaced: {
         type: Number,
         required: true
+    },
+    TotalOffers: {
+        type: Number,
+        required: true
     }
 },
     { collection: "placementsDeptWise" }

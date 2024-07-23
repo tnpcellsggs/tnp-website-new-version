@@ -5,6 +5,8 @@ import { AdminContext } from "../../../App";
 // } from "./PData.jsx";
 import { Container } from "react-bootstrap";
 
+// import Demo from "./Demo"
+
 import YearData from "./YearData";
 
 export default function PList() {
@@ -22,6 +24,7 @@ export default function PList() {
             return (Number.parseInt(a._id.slice(3)) - Number.parseInt(b._id.slice(3)));
         }).reverse();
         setDeptData(info);
+        // console.log(info)
     });
 }, [getDeptAlldetails, setDeptData]);
 
@@ -47,14 +50,17 @@ useEffect(() => {
           deptData.map((data) => {
             const { _id, departments } = data; // Destructure the _id and departments from each object
             return (
-              <>
-                <div key={_id }>
+
+                <div key={_id+Math.random() }>
                   <YearData key={_id} label={"20" + _id.substring(1, 3) + "-" + _id.substring(3)} senddata={departments} />
+                  {/* <Demo key={_id} label={"20" + _id.substring(1, 3) + "-" + _id.substring(3)} senddata={departments}/> */}
                 </div>
-              </>
+
             );
           })
         }
+
+
       </Container>
     </>
   );

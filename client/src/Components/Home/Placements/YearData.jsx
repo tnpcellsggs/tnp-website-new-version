@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 import {
   ResponsiveContainer,
@@ -15,13 +15,6 @@ export default function YearData(props) {
   const contentdiv = useRef();
   // const [ifData, setiFData] = useState(0);
 
-  useEffect(() => {
-    // let sum = 0;
-    // props.senddata.forEach((ele1) => {
-    //   return ele1.PostgradPlaced + sum;
-    // })
-    // setiFData(sum);
-  }, []);
   // console.log('Data being passed to chart:', props.senddata);
   // console.log(props.senddata[0].PostgradPlaced);
   return (
@@ -40,7 +33,7 @@ export default function YearData(props) {
           <div className="p-parent">
 
             {/* Bar Chart to display the placement records of Under graduate students  */}
-            <ResponsiveContainer height={300} width="100%">
+            <ResponsiveContainer height={350} className="responsive-chart">
               <BarChart
                 data={props.senddata}
                 margin={{
@@ -61,7 +54,7 @@ export default function YearData(props) {
 
             {/* Bar Chart to display the placement records of Post graduate students  */}
             {
-              (<ResponsiveContainer height={300} width="100%">
+              (<ResponsiveContainer height={350} className="responsive-chart">
                 <BarChart
                   data={props.senddata}
                   margin={{

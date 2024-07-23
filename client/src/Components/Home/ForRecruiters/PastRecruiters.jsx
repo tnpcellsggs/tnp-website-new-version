@@ -1,4 +1,4 @@
-import React, { useRef,useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Tilt } from 'react-tilt';
 import { useLayoutEffect } from 'react';
@@ -29,6 +29,7 @@ const PastRecruitersCards = (props) => {
 
 
       </Tilt>
+
     </>
   )
 }
@@ -40,7 +41,7 @@ const PastRecruiters = () => {
       const boxes = gsap.utils.toArray('.past_rec_divs');
       boxes.forEach((box, index) => {
 
-        console.log(index);
+        // console.log(index);
         gsap.from(box, {
           y: 300,
           opacity: 0,
@@ -63,8 +64,8 @@ const PastRecruiters = () => {
 
   useEffect(() => {
     document.title = "Past Reruiters | SGGS Training & Placement";
-    window.scrollTo(0,0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

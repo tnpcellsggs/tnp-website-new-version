@@ -3,6 +3,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { AdminContext } from "../../../App";
 import PGraph from "./PGraph";
 import PList from "./PList";
+
+// import Demo from "./Demo";
 // import { yearwiseSummary } from "./PData";
 
 // import Graph from "../Graph";
@@ -22,8 +24,8 @@ const PTable = () => {
 
   return (
     <div className="p-table">
-      <table>
-      <caption className="caption-top">
+      <table className="text-center mx-auto w-[80vw] box-border lg:text-[20px] sm:text-[20px] text-[9px]">
+      <caption className="caption-top text-[16px] sm:text-[20px]">
         Year Wise Placement Record
       </caption>
         <thead>
@@ -31,6 +33,7 @@ const PTable = () => {
             <th>Year</th>
             <th>BTech on roll</th>
             <th>BTech placed</th>
+            <th>Total Offers</th>
             <th>Average Package (LPA)</th>
             <th>Package Range (LPA)</th>
           </tr>
@@ -53,6 +56,7 @@ const PTable = () => {
                 <td>{item.Year}</td>
                 <td>{item.BTechOnRoll}</td>
                 <td>{item.BTechPlaced}</td>
+                <td>{item.TotalOffers==0?"--":item.TotalOffers}</td>
                 <td>{item.AveragePackage}</td>
                 <td>{item.PackageRange}</td>
               </tr>
@@ -76,8 +80,11 @@ export default function Placements() {
       <PGraph />
       <PTable />
       <PList />
+   
       {/* <Graph /> */}
       {/* <Recruiters /> */}
+      {/* <Demo /> */}
+
     </>
   );
 }

@@ -41,7 +41,7 @@ app.use("/admin/placements/", Placements);
 app.use("/sendFile", JAF);
 app.use("/newsUpdates", News);
 
-const PORT = process.env.PORT || 4019;
+const PORT = process.env.PORT || 3010;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`,`http://localhost:${PORT}`);
 });

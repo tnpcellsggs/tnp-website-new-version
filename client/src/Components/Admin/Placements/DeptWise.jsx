@@ -92,34 +92,34 @@ export const DeptWise = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit the Record</Modal.Title></Modal.Header>
-                <Form.Text className="container text-muted">
+                <Form.Text className=" text-muted">
                     Previous Records are given in light text
                 </Form.Text>
                 <Modal.Body>
                     <Form>
 
-                        <Form.Group className="container my-3 mb-3" controlId="Year">
+                        <Form.Group className="my-3 mb-3 " controlId="Year">
                             <Form.Label>Year</Form.Label>
                             <Form.Control className="inpts" type="text" placeholder={`${recordData.Year}`} onChange={onChange} name="Year" />
                         </Form.Group>
 
-                        <Form.Group className="container my-3 mb-3" controlId="Department">
+                        <Form.Group className="my-3 mb-3 " controlId="Department">
                             <Form.Label>Department</Form.Label>
                             <Form.Control className="inpts" type="text" onChange={onChange} placeholder={`${recordData.Department}`} name="Department" />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="UndergradTotal">
+                        <Form.Group className="my-3 mb-3 " controlId="UndergradTotal">
                             <Form.Label>Undergrad Total</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.UndergradTotal}`} name="UndergradTotal" />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="UndergradPlaced">
+                        <Form.Group className="my-3 mb-3 " controlId="UndergradPlaced">
                             <Form.Label>Undergrad Placed</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.UndergradPlaced}`} name="UndergradPlaced" />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="PostgradTotal">
+                        <Form.Group className="my-3 mb-3 " controlId="PostgradTotal">
                             <Form.Label>Postgrad Total</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.PostgradTotal}`} name="PostgradTotal" />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="PostgradPlaced">
+                        <Form.Group className="my-3 mb-3 " controlId="PostgradPlaced">
                             <Form.Label>Postgrad Placed</Form.Label>
                             <Form.Control className="inpts" type="number" onChange={onChange} placeholder={`${recordData.PostgradPlaced}`} name="PostgradPlaced" />
                         </Form.Group>
@@ -136,56 +136,55 @@ export const DeptWise = () => {
                 </Modal.Footer>
             </Modal>
 
-            <div className="container">
-                <Button ref={btnRef} Button variant="dark" className='container my-3 justify-content-center md-3' onClick={refreshPage}>
+            <div className="p-3 w-[90%] mx-auto">
+                <Button ref={btnRef} Button variant="dark" className='w-full my-3 justify-content-center md-3' onClick={refreshPage}>
                     Refresh
                 </Button>
                 {
                     deptData.map((data, index) => {
                         return (
-                            <>
-                                <Table striped bordered hover className='container table my-3 caption-top' responsive="lg" size="sm" key={index}>
-                                    <caption style={{ textAlign: "center", fontSize: "22px", color: "black", fontWeight: "bold" }}>{"20" + data["_id"].substring(1, 3) + "-" + data["_id"].substring(3)}</caption>
-                                    <thead>
-                                        <tr style={{ textAlign: "center" }}>
-                                            <th>Department</th>
-                                            <th>Undergrad Total</th>
-                                            <th>Undergrad Placed</th>
-                                            <th>Postgrad Total</th>
-                                            <th>Postgrad Placed</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            data["departments"].map((innerData, index) => {
-                                                return (
-                                                    <>
-                                                        <tr key={index}>
-                                                            <td>{innerData["Department"]}</td>
-                                                            <td>{innerData["UndergradTotal"]}</td>
-                                                            <td>{innerData["UndergradPlaced"]}</td>
-                                                            <td>{innerData["PostgradTotal"]}</td>
-                                                            <td>{innerData["PostgradPlaced"]}</td>
-                                                            <td><FontAwesomeIcon id={data.Year} className='icons' onClick={() => {
-                                                                launch.current.click();
-                                                                setRecordData(innerData);
-                                                                setID({ _id: innerData._id });
-                                                            }} icon={faPenToSquare} /></td>
-                                                            <td><FontAwesomeIcon className='icons' onClick={() => {
-                                                                deleteDeptRecord({ Year: innerData["Year"], Department: innerData["Department"] });
-                                                                refreshPage();
-                                                            }} id={data.Year} icon={faTrash} /></td>
 
-                                                        </tr>
-                                                    </>
-                                                );
-                                            })
-                                        }
-                                    </tbody>
-                                </Table>
-                            </>)
+                            <Table striped bordered hover className='table my-3 caption-top' responsive="lg" size="sm" key={index + data["_id"] + Math.random()}>
+                                <caption style={{ textAlign: "center", fontSize: "22px", color: "black", fontWeight: "bold" }}>{"20" + data["_id"].substring(1, 3) + "-" + data["_id"].substring(3)}</caption>
+                                <thead>
+                                    <tr style={{ textAlign: "center", fontSize:"20px" }}>
+                                        <th>Department</th>
+                                        <th>Undergrad Total</th>
+                                        <th>Undergrad Placed</th>
+                                        <th>Postgrad Total</th>
+                                        <th>Postgrad Placed</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        data["departments"].map((innerData, index) => {
+                                            return (
+
+                                                <tr key={index + innerData["Department"] + Math.random()} style={{ textAlign: "center", fontSize: "18px"}}>
+                                                    <td>{innerData["Department"]}</td>
+                                                    <td>{innerData["UndergradTotal"]}</td>
+                                                    <td>{innerData["UndergradPlaced"]}</td>
+                                                    <td>{innerData["PostgradTotal"]}</td>
+                                                    <td>{innerData["PostgradPlaced"]}</td>
+                                                    <td><FontAwesomeIcon id={data.Year} className='icons' onClick={() => {
+                                                        launch.current.click();
+                                                        setRecordData(innerData);
+                                                        setID({ _id: innerData._id });
+                                                    }} icon={faPenToSquare} /></td>
+                                                    <td><FontAwesomeIcon className='icons' onClick={() => {
+                                                        deleteDeptRecord({ Year: innerData["Year"], Department: innerData["Department"] });
+                                                        refreshPage();
+                                                    }} id={data.Year} icon={faTrash} /></td>
+
+                                                </tr>
+
+                                            );
+                                        })
+                                    }
+                                </tbody>
+                            </Table>)
                     })
                 }
             </div>
@@ -193,34 +192,34 @@ export const DeptWise = () => {
             {/* Form to add records */}
             <Form Form >
                 <hr />
-                <h2 className="container my-3">Add Department Wise Records Here</h2>
-                <Form.Group className="container my-3 mb-3" controlId="Year">
+                <h2 className="my-3 ">Add Department Wise Records Here</h2>
+                <Form.Group className="my-3 mb-3 " controlId="Year">
                     <Form.Label>Year</Form.Label>
                     <Form.Control className="inpts" type="text" placeholder="e.g y2324" onChange={onChange} name="Year" />
                 </Form.Group>
 
-                <Form.Group className="container my-3 mb-3" controlId="Department">
+                <Form.Group className="my-3 mb-3 " controlId="Department">
                     <Form.Label>Department</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="e.g CSE" name="Department" />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="UndergradTotal">
+                <Form.Group className="my-3 mb-3 " controlId="UndergradTotal">
                     <Form.Label>Undergrad Total</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 123" name="UndergradTotal" />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="UndergradPlaced">
+                <Form.Group className="my-3 mb-3 " controlId="UndergradPlaced">
                     <Form.Label>Undergrad Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 41" name="UndergradPlaced" />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="PostgradTotal">
+                <Form.Group className="my-3 mb-3 " controlId="PostgradTotal">
                     <Form.Label>Postgrad Total</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 158" name="PostgradTotal" />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="PostgradPlaced">
+                <Form.Group className="my-3 mb-3 " controlId="PostgradPlaced">
                     <Form.Label>Postgrad Placed</Form.Label>
                     <Form.Control className="inpts" type="number" onChange={onChange} placeholder="e.g 63" name="PostgradPlaced" />
                 </Form.Group>
 
-                <Form.Group className="container my-3 mb-3" controlId="Submit">
+                <Form.Group className="my-3 mb-3 " controlId="Submit">
                     <Button onClick={addARecord} className='b-end-btn-blue' variant="primary text-center" type="submit">
                         Add Data
                     </Button>

@@ -9,7 +9,7 @@ const News = require("./routes/newsRoute");
 
 const app = express();
 dotenv.config();
-const port = 4019;
+const port = process.env.PORT;
 const mongoURI1 = `mongodb://127.0.0.1/placements`;
 
 app.use(cors());

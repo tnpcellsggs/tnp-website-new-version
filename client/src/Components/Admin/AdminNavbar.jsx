@@ -11,7 +11,7 @@ export default function AdminNavbar() {
   const navigate = useNavigate();
   const handleLogout = useCallback(() => {
     setIsAdminLoggedIn(false);
-    navigate("/", { replace: true });
+    navigate("/admin/signin", { replace: true });
   }, [navigate,setIsAdminLoggedIn]);
   return (
     <>

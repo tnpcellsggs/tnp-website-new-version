@@ -32,16 +32,15 @@ const TeamCards = (props) => {
                         members.map((people, index) => {
                             const { name, imageLink, phoneNo, emailId, linkedinId, title } = people;
                             return (
-                                <>
-                                    <div className='sm:w-[345px] w-[90%] my-4 nav-light-shadows rounded-2xl our_team_divs' key={index}>
-                                        <div options={{
-                                            max: 45,
-                                            scale: 1,
-                                            speed: 450
-                                        }}
-                                            className='flex flex-col items-center justify-center h-full rounded-2xl'
-                                        >
-                                            <div css={css`
+                                <div className='sm:w-[345px] w-[90%] my-4 nav-light-shadows rounded-2xl our_team_divs' key={index + Math.random()}>
+                                    <div options={{
+                                        max: 45,
+                                        scale: 1,
+                                        speed: 450
+                                    }}
+                                        className='flex flex-col items-center justify-center h-full rounded-2xl'
+                                    >
+                                        <div css={css`
                                                 position: relative;
                                                 width: 100%;
                                                 height: 230px;
@@ -61,32 +60,32 @@ const TeamCards = (props) => {
                                                     transition: 0.5s;
                                             `}
 
-                                                // background-image: url(${imageLink});
-                                                //  filter: blur(25px);
+                                            // background-image: url(${imageLink});
+                                            //  filter: blur(25px);
 
-                                                className="flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"
-                                            >
-                                                {/* div for intro  */}
-                                                {/* <IconDiamond className=" flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"> */}
-                                                <img src={imageLink} alt={name} className="w-[40%] rounded-full text-center absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
-                                                <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center ">
-                                                    <h3 className='w-full mx-4 text-xl font-bold text-center text-black'>{name}</h3>
-                                                    <p className="text-center text-gray-600">{title}</p>
-                                                </div>
-                                                {/* </IconDiamond> */}
+                                            className="flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"
+                                        >
+                                            {/* div for intro  */}
+                                            {/* <IconDiamond className=" flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"> */}
+                                            <img src={imageLink} alt={name} className="w-[40%] rounded-full text-center absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
+                                            <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center ">
+                                                <h3 className='w-full mx-4 text-xl font-bold text-center text-black'>{name}</h3>
+                                                <p className="text-center text-gray-600">{title}</p>
                                             </div>
+                                            {/* </IconDiamond> */}
+                                        </div>
 
-                                            {/* div for contacts */}
-                                            <div className="flex items-center justify-center w-full h-[50%] bg-[#eff6ff]">
-                                                <div className="flex-col items-center justify-center">
-                                                    <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:${emailId}`} >{emailId} | <FontAwesomeIcon icon={faEnvelope} /></a></p>
-                                                    <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:${phoneNo}`}>{phoneNo} | <FontAwesomeIcon icon={faPhone} /></a></p>
-                                                    <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={linkedinId}>Linkedin | <FontAwesomeIcon icon={faLinkedinIn} /></a></p>
-                                                </div>
+                                        {/* div for contacts */}
+                                        <div className="flex items-center justify-center w-full h-[50%] bg-[#eff6ff]">
+                                            <div className="flex-col items-center justify-center">
+                                                <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:${emailId}`} >{emailId} | <FontAwesomeIcon icon={faEnvelope} /></a></p>
+                                                <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:${phoneNo}`}>{phoneNo} | <FontAwesomeIcon icon={faPhone} /></a></p>
+                                                <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={linkedinId}>Linkedin | <FontAwesomeIcon icon={faLinkedinIn} /></a></p>
                                             </div>
                                         </div>
                                     </div>
-                                </>
+                                </div>
+
                             )
                         })
                     }
@@ -201,7 +200,7 @@ export const OurTeam = () => {
 
             {/* Our Team */}
             <div ref={comp}>
-                {team_23_24.map((items, index) => { return (<TeamCards key={`${index}` + items.post} index={index} item={items} />) })}
+                {team_23_24.map((items, index) => { return (<TeamCards key={`${index + Math.random()}` + items.post} index={index} item={items} />) })}
             </div>
 
 

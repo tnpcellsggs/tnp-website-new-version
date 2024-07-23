@@ -17,8 +17,8 @@ export const CompanyInterest = () => {
     HRmail: '',
     specifications: '',
   });
-  // const host = 'http://localhost:4019';
-  const host = process.env.REACT_APP_REQURL;
+  const host = 'http://localhost:4019';
+  // const host = process.env.REACT_APP_REQURL;
 
   const getAlert = (message) => {
     document.getElementById('alertHeading').innerHTML = message;

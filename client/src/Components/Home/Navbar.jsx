@@ -77,11 +77,10 @@ const Drops = (props) => {
         {
           links.map((item, index) => {
             return (
-              <>
-                <div key={index} className="flex flex-col items-center justify-center ">
-                  <NavDropdown.Item as={Link} to={item.link} className='md:text-[12px] lg:text-base'>{item.name === '' ? '' : item.name}</NavDropdown.Item>
-                </div>
-              </>
+              <div key={index + item.link + Math.random()} className="flex flex-col items-center justify-center ">
+                <NavDropdown.Item as={Link} to={item.link} className='md:text-[12px] lg:text-base'>{item.name === '' ? '' : item.name}</NavDropdown.Item>
+              </div>
+
             )
           })
         }
@@ -114,11 +113,10 @@ const InnerDropDowns = (props) => {
           {
             props.navDrops.links.map((items, index) => {
               return (
-                <>
-                  <div key={index} className="my-1 border-2 hover:bg-blue-300">
-                    <MobileNavigation to_={items.link} bdr={false} title={items.name} getTouch={props.getTouch} />
-                  </div>
-                </>
+                <div key={index + items.link + Math.random()} className="my-1 border-2 hover:bg-blue-300">
+                  <MobileNavigation to_={items.link} bdr={false} title={items.name} getTouch={props.getTouch} />
+                </div>
+
               )
             })
           }
@@ -150,17 +148,17 @@ const InnerDropDowns = (props) => {
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const getTouch = () => {
-      setToggle(!toggle);
-      getProgress();
+    setToggle(!toggle);
+    getProgress();
   }
 
   const rootEle = useContext(AdminContext)
   const { setProgress } = rootEle;
   const getProgress = () => {
     setProgress(100);
-    setTimeout(()=>{
+    setTimeout(() => {
       setProgress(0);
-    },800);
+    }, 800);
   }
   return (
     <>

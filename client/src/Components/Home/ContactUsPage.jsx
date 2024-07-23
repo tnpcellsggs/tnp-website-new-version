@@ -222,7 +222,7 @@ export const ContactUsPage = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8859874908458!2d77.292024!3d19.112657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29f7545a76b3%3A0x44c589a50ec5980e!2sS%20G%20G%20S%20College%20Vishnupuri!5e0!3m2!1sen!2sin!4v1698244204796!5m2!1sen!2sin"
           width="600"
           height="450"
-          style={{ border: '0' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
           className="absolute h-[100%] w-[100%] m-auto nav-light-shadows"
         ></iframe>
       </div>

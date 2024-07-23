@@ -4,17 +4,22 @@
   "private": true,
   "dependencies": {
     "@emotion/css": "^11.11.2",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.4",
     "@emotion/style": "^0.8.0",
+    "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/material": "^5.15.15",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@mui/x-charts": "^7.2.0",
     "@react-pdf/renderer": "^3.1.14",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "d3": "^7.9.0",
     "dotenv": "^16.0.1",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
@@ -41,10 +46,12 @@
     "recharts": "^2.1.13",
     "source-map-loader": "^4.0.1",
     "stream-http": "^3.2.0",
+    "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4",
     "webpack": "^5.74.0"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
@@ -67,8 +74,6 @@
     "eject:yarn": "yarn eject",
     "dev": "react-scripts start"
   },
-
-
   "eslintConfig": {
     "extends": [
       "react-app",

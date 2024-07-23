@@ -116,12 +116,12 @@ export default function EventsList() {
           <tbody>
             <tr>
               {tableHeaders.map((i) => {
-                return <th>{i}</th>;
+                return <th key={i+Math.random()}>{i}</th>;
               })}
             </tr>
             {eventsList.map((i) => {
               return (
-                <tr>
+                <tr key={i+Math.random()}>
                   <td>{i.eventName}</td>
                   <td>{i.eventType}</td>
                   <td>

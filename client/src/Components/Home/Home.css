@@ -1,3 +1,8 @@
+/* import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css'; */
+
 .homepage-headings {
   margin: 20px;
   /* margin-left: 40px; */
@@ -805,8 +810,8 @@ $card-size: 23rem; */
 
 
 .p-table {
-  max-width: 100%;
-  overflow-x: hidden;
+  /* max-width: 100%; */
+  /* overflow-x: hidden; */
   display: flex;
   margin: 20px;
 }
@@ -817,11 +822,15 @@ $card-size: 23rem; */
   }
 }
 
-.p-table table {
+/* .p-table table {
   text-align: center;
   margin: 0 auto;
   font-size: 20px;
-}
+  min-width: 600px; Set a minimum width for the table
+  width: 80vw; Ensure the table uses the full width of its container
+  box-sizing: border-box;
+  
+} */
 
 .p-table th,
 td {
@@ -841,10 +850,22 @@ td {
   font-family: var(--anek);
 }
 
+@media only screen and (max-width: 767px) {
+  .p-table table {
+    /* font-size: 16px; */
+    width: auto; /* Ensure the table can shrink if necessary */
+  }
+  
+  .p-table th,
+  .p-table td {
+    padding: 4px 8px;
+  }
+}
+
 .p-collapsible {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 95vw;
+  width: 80vw;
 }
 
 .p-collapsible button {
@@ -865,19 +886,33 @@ td {
 
 .p-content {
   overflow: hidden;
-  transition: height 0.5s;
+  transition: height 0.6s;
 }
 
-.p-content .p-parent {
+.p-content  {
   border: 5px solid var(--primary-blue);
   border-top: unset;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-@media only screen and (min-width: 768px) {
-  .p-collapsible {
-    width: 50vw;
+.p-parent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .responsive-chart {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-chart {
+    width: 800px !important;
   }
 }
 
@@ -1773,7 +1808,7 @@ td {
 .caption-top {
   caption-side: top;
   font-family: var(--rlwy);
-  font-size: 1.75rem;
+  /* font-size: 1.75rem; */
   text-align: center;
   color: #272727;
 }

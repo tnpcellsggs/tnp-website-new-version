@@ -5,9 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
-
 function EPast(props) {
+  let string;
+  try{
+    string = props.imageLink.split('.com/uc')
+    string = string[0] + '.com/thumbnail' + string[1] + '&sz=w1000'
+    // console.log(props.imageLink)
+  }
+  catch(err){
 
+  }
+
+  console.log(props.imageLink);
   return (
     <>
       <div className="w-[90%] mx-auto h-[1px] bg-gray-300"></div>
@@ -20,8 +29,8 @@ function EPast(props) {
           {/* left for image */}
           <div className="h-full w-full sm:w-[40%] flex items-center ">
             <a href={props.videoLink} target='_blank'>
-              <img src={props.imageLink} alt={props.name} className="w-full h-auto max-h-full auto" />
               {/* <img src='https://th.bing.com/th/id/R.06d12fb83f5b23a7aa0b6a6b7c72f132?rik=NhlshKX6Rm%2fLfw&riu=http%3a%2f%2fwww.cameraegg.org%2fwp-content%2fuploads%2f2015%2f03%2fNikon-D5500-sample-images-2.jpg&ehk=8pJQWxg7OPyS%2fqUkwK4oROW5LajqA4NgCbbLWeCRo7g%3d&risl=&pid=ImgRaw&r=0' alt={props.name} className="h-auto max-h-full" /> */}
+              <img src={string} alt={props.name} className="w-full h-auto max-h-full auto" />
             </a>
           </div>
 
@@ -37,7 +46,7 @@ function EPast(props) {
             </div>
 
             <a href={props.videoLink} target='_blank'>
-              <div className="p-1 m-1 font-bold text-center border-2 border-black hover:cursor-pointer bg-[#fdba74] rounded-xl w-[80%] md:w-[30%] sm:w-[30%] sm:m-4 mx-auto">
+              <div className="p-1 m-1 font-bold text-center text-white border-1 border-black hover:cursor-pointer bg-[#207be2] w-[80%] md:w-[30%] sm:w-[30%] sm:m-4">
                 Watch Now <FontAwesomeIcon icon={faPlay} />
               </div>
             </a>
@@ -66,7 +75,7 @@ function Events() {
         );
         let templist = res.data;
         templist.sort((a, b) => b.eventDate.localeCompare(a.eventDate));
-        setEventsList(templist.slice(0, 5));
+        setEventsList(templist.slice(0, 10));
         setIsLoading(false);
         // console.log(templist)
       } catch (err) {

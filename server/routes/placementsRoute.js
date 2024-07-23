@@ -16,6 +16,7 @@ router.post("/yearWise/create", async (request, response) => {
             MTechOnRoll: request.body.MTechOnRoll,
             MTechPlaced: request.body.MTechPlaced,
             TotalPlaced: request.body.TotalPlaced,
+            TotalOffers: request.body.TotalOffers,
             AveragePackage: request.body.AveragePackage,
             PackageRange: request.body.PackageRange,
         });
@@ -58,7 +59,7 @@ router.delete("/yearWise/delete", async (request, response) => {
     }
 });
 
-// ROUTE 4: Placements Year Wise -> GET request "admin/placements/yearWise/edit"
+// ROUTE 4: Placements Year Wise -> PUT request "admin/placements/yearWise/edit"
 router.put("/yearWise/edit", async (request, response) => {
     try {
         // creating a new document for every year record
@@ -70,6 +71,7 @@ router.put("/yearWise/edit", async (request, response) => {
             MTechOnRoll: request.body.Response[1].MTechOnRoll,
             MTechPlaced: request.body.Response[1].MTechPlaced,
             TotalPlaced: request.body.Response[1].TotalPlaced,
+            TotalOffers: request.body.Response[1].TotalOffers,
             AveragePackage: request.body.Response[1].AveragePackage,
             PackageRange: request.body.Response[1].PackageRange
         }
@@ -105,6 +107,7 @@ router.post("/graph/create", async (request, response) => {
             Year: request.body.Year,
             UnderGraduate: request.body.UnderGraduate,
             PostGraduate: request.body.PostGraduate,
+            TotalOffers: request.body.TotalOffers,
             Total: request.body.Total
         }
 
@@ -140,7 +143,8 @@ router.put("/graph/editRecord", async (request, response) => {
             Year: request.body.Response[1].Year,
             UnderGraduate: request.body.Response[1].UnderGraduate,
             PostGraduate: request.body.Response[1].PostGraduate,
-            Total: request.body.Response[1].Total
+            TotalOffers: request.body.Response[1].TotalOffers,
+            Total: request.body.Response[1].Total,
         }
         let record = await GraphData.find({ Year: year });
         if (record.length === 0) {

@@ -16,6 +16,7 @@ function App() {
   const root = useRef();
 
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  // const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(true);
   // 1) YearWise Context APIs
   const [yearData, setYearData] = useState([]);
 

@@ -1,6 +1,7 @@
 // Database URL
 const host = process.env.REACT_APP_REQURL;
 const host2 = process.env.REACT_APP_REQURL;
+// const host = 'http://localhost:4019';
 // const host2 = 'http://localhost:4019';
 // 1) YearWise Context APIs
 
@@ -24,6 +25,7 @@ const getYearWiseAlldetails = async () => {
             MTechOnRoll: item.MTechOnRoll,
             MTechPlaced: item.MTechPlaced,
             TotalPlaced: item.TotalPlaced,
+            TotalOffers: item.TotalOffers,
             AveragePackage: item.AveragePackage,
             PackageRange: item.PackageRange,
         }
@@ -47,6 +49,7 @@ const createYearWiseRecord = async (userInp) => {
             "MTechOnRoll": Number.parseInt(userInp.MTechOnRoll),
             "MTechPlaced": Number.parseInt(userInp.MTechPlaced),
             "TotalPlaced": Number.parseInt(userInp.TotalPlaced),
+            "TotalOffers": Number.parseInt(userInp.TotalOffers),
             "AveragePackage": userInp.AveragePackage,
             "PackageRange": userInp.PackageRange
         })
@@ -79,6 +82,7 @@ const editYearWiseRecord = async (prevYear, userInp) => {
                     "MTechOnRoll": userInp.MTechOnRoll,
                     "MTechPlaced": userInp.MTechPlaced,
                     "TotalPlaced": userInp.TotalPlaced,
+                    "TotalOffers": userInp.TotalOffers,
                     "AveragePackage": userInp.AveragePackage,
                     "PackageRange": userInp.PackageRange
                 }
@@ -131,6 +135,7 @@ const getGraphAlldetails = async () => {
             "year": item.Year,
             "Under Graduate": item.UnderGraduate,
             "Post Graduate": item.PostGraduate,
+            "TotalOffers": item.TotalOffers,
             "Total": item.Total,
             dataKey: index,
         }
@@ -153,6 +158,7 @@ const createGraphRecord = async (userInp) => {
             "Year": userInp.Year,
             "UnderGraduate": Number.parseInt(userInp.UnderGraduate),
             "PostGraduate": Number.parseInt(userInp.PostGraduate),
+            "TotalOffers": Number.parseInt(userInp.TotalOffers),
             "Total": Number.parseInt(userInp.Total)
         })
     });
@@ -179,6 +185,7 @@ const editGraphRecord = async (PrevYear, userInp) => {
                     "Year": userInp.Year,
                     "UnderGraduate": userInp.UnderGraduate,
                     "PostGraduate": userInp.PostGraduate,
+                    "TotalOffers": userInp.TotalOffers,
                     "Total": userInp.Total
                 }
             ]

@@ -15,6 +15,10 @@ const GraphDataSchema = mongoose.Schema(
             type: Number,
             required: true
         },
+        TotalOffers: {
+            type: Number,
+            required: true
+        },
         Total: {
             type: Number,
             required: true

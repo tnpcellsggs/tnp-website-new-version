@@ -689,7 +689,8 @@ const specialFacilities = [
 const past_recuriters_list = [
     {
         title: 'Accenture',
-        imageLink: Accenture
+        imageLink: Accenture,
+        webite:''
     },
     {
         title: 'Adani Group',
@@ -1478,7 +1479,7 @@ const team_21_22 = [
         ]
     },
     {
-        post: 'Departmental Coordinator',
+        post: 'Departmental Coordinator & Alumni Relations',
         members: [
             {
                 name: 'Hemant Sajjan',
@@ -1738,7 +1739,7 @@ const team_22_23 = [
         ]
     },
     {
-        post: 'Departmental Coordinator',
+        post: 'Departmental Coordinator & Alumni Relations',
         members: [
             {
                 name: 'Yash Kondewar',
@@ -1982,7 +1983,7 @@ const team_23_24 = [
         ]
     },
     {
-        post: 'Departmental Coordinator',
+        post: 'Departmental Coordinator & Alumni Relations',
         members: [
             {
                 name: 'Sakshi Kalyankar',
@@ -2194,7 +2195,7 @@ const teamHierarchy = [
         ]
     },
     {
-        title: 'DEPARTMENTAL COORDINATOR',
+        title: 'DEPARTMENTAL COORDINATOR & ALUMNI RELATIONS' ,
         imgLink1: DC1,
         imgLink2: DC1,
         content: [

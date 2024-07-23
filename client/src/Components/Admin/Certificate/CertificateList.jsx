@@ -24,7 +24,7 @@ export default function CertificateList() {
         );
         setCertlist(res.data);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchCertList();
@@ -41,7 +41,7 @@ export default function CertificateList() {
       );
       res.status === 200 && setIsListRefreshing(true);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -60,7 +60,7 @@ export default function CertificateList() {
               </tr>
             {certlist.map((i) => {
               return (
-                <tr key={i._id}>
+                <tr key={i._id+Math.random(0)}>
                   <td>{i._id}</td>
                   <td>{i.recipent}</td>
                   <td>

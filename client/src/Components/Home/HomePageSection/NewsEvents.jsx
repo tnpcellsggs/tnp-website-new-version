@@ -51,27 +51,26 @@ const NewsSection = () => {
             <div className="news-items" >
               {
                 newsUpdates.reverse().map((data, index) => {
-                  console.log(data.ImageLink);
+                  // console.log(data.ImageLink);
                   // newsUpdates.reverse().map((data, index) => {
                   return (
-                    <>
-                      <div key={index} className="relative gallery-image">
-                        <div className="gallery-image__img">
-                          <div className=" fill-dimensions" >
-                            <a href={data.ImagLink} className="hover:cursor-pointer" target='_blank'>
-                              <ul key={index} >
-                                <li className=""><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
-                                <li className="text-center">{data.Description}</li>
-                                <li className="text-center">{data.Date}</li>
-                                {/* <li className="text-center">{data.news}</li>
+                    <div key={index + data.Date + Math.random()} className="relative gallery-image">
+                      <div className="gallery-image__img">
+                        <div className=" fill-dimensions" >
+                          <a href={data.ImagLink} className="hover:cursor-pointer" target='_blank'>
+                            <ul key={index} >
+                              <li className=""><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
+                              <li className="text-center">{data.Description}</li>
+                              <li className="text-center">{data.Date}</li>
+                              {/* <li className="text-center">{data.news}</li>
                               <li className="text-center">{data.dates}</li> */}
-                              </ul>
-                            </a>
+                            </ul>
+                          </a>
 
-                          </div>
                         </div>
                       </div>
-                    </>
+                    </div>
+
                   );
                 })
               }
@@ -85,24 +84,23 @@ const NewsSection = () => {
                 newsUpdates.map((data, index) => {
                   // newsUpdates.reverse().map((data, index) => {
                   return (
-                    <>
-                      <div key={index} className="relative gallery-image">
-                        <div className="gallery-image__img">
-                          <div className="fill-dimensions" >
-                          <a href={data.ImagLink} className="hover:cursor-pointer" target='_blank'>
-                              <ul key={index} >
-                                <li className=""><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
-                                <li className="text-center">{data.Description}</li>
-                                <li className="text-center">{data.Date}</li>
-                                {/* <li className="text-center">{data.news}</li>
-                              <li className="text-center">{data.dates}</li> */}
-                              </ul>
-                            </a>
 
-                          </div>
+                    <div key={index + Math.random() + data.Date} className="relative gallery-image">
+                      <div className="gallery-image__img">
+                        <div className="fill-dimensions" >
+                          <a href={data.ImagLink} className="hover:cursor-pointer" target='_blank'>
+                            <ul key={index} >
+                              <li className=""><h3 className="text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl">{data.Title}</h3></li>
+                              <li className="text-center">{data.Description}</li>
+                              <li className="text-center">{data.Date}</li>
+                              {/* <li className="text-center">{data.news}</li>
+                              <li className="text-center">{data.dates}</li> */}
+                            </ul>
+                          </a>
                         </div>
                       </div>
-                    </>
+                    </div>
+
                   );
                 })
               }
@@ -135,7 +133,7 @@ const EventsSection = () => {
         setEventsList(templist.slice(0, 4));
         setIsLoading(false);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         setIsLoading(false);
       }
     };

@@ -8,7 +8,7 @@ const mime = require('mime-types');
 const path = require('path');
 require('dotenv').config();
 
-// storage to store the uploaded files locally to send after the request is fullfilled
+// disk storage of server to store the uploaded files locally to send after the request is fullfilled and deletes file after request is fulfilled
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     // cb(null, './tmp/');
@@ -85,9 +85,9 @@ router.post('/uploaded', upload.array('file'), async (req, res) => {
 
     // mail objects
     const mailOptions = {
-      // to: 'shivharehariom68@gmail.com',
+      to: 'shivharehariom68@gmail.com',
       from: `Website Redirected <2021bit046@sggs.ac.in>`,
-      to: 'tnpcell@sggs.ac.in',
+      // to: 'tnpcell@sggs.ac.in',
       subject: emailSub,
       text: `This mail is redirected from <2021bit046@sggs.ac.in>\n\nFrom: ${emailFrom}\n\n\nMessage: ${emailSpecifications}\n\n\nPlease find the attachment`,
       attachments: filesAttatched,
@@ -156,11 +156,85 @@ router.post('/filled', upload.none(), async (req, res) => {
 
     const mailOptions = {
       // from: '2021bit046@sggs.ac.in',
-      // to: 'shivharehariom68@gmail.com',
       from: `Website Redirected <2021bit046@sggs.ac.in>`,
-      to: 'tnpcell@sggs.ac.in',
+      to: 'shivharehariom68@gmail.com',
+      // to: 'tnpcell@sggs.ac.in',
       subject: 'JAF For Recruitment',
-      text: `This mail is redirected from <2021bit046@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.anyMessage}\n\nJAF:\nAbout The Organisation:\n\nName of Organisation: ${jafFormData.nameOrg}\nPostal Address: ${jafFormData.postalAdd}\nWebsite Link(optional): ${jafFormData.websiteLink}\n\nJob Profile:\n\nJob Designation: ${jafFormData.jobDesig}\nJob Description: ${jafFormData.jobDesc}\nJob Location: ${jafFormData.jobLoc}\n\nType Of Organisation:\n${jafFormData.typeOfOrg}\n${jafFormData.typeOfOrgArea}\n\nIndustry Sector:\n${jafFormData.industrySector}\n${jafFormData.industrySectorArea}\n\nContact Details:\n\nHR Head:Name:${jafFormData.HRname}\nEmail:${jafFormData.HRemail}\nPhone:${jafFormData.HRnumber}\nMobile:${jafFormData.HRphone}\n\nFirst Person Contact:Name:${jafFormData.fstname}\nEmail:${jafFormData.fstemail}\nPhone:${jafFormData.fstnumber}\nMobile:${jafFormData.fstphone}\n\nSecond Person Contact:Name:${jafFormData.secname}\nEmail:${jafFormData.secemail}\nPhone:${jafFormData.secnumber}\nMobile:${jafFormData.secphone}\n\nSalary Break Up:\n\nCTC: ${jafFormData.ctc}\nStipend: ${jafFormData.stipend}\nBonus/Perks/Incentives: ${jafFormData.bonus}\n\nEligibility Criteria:\nCGPA: ${jafFormData.cgpa}\nXII %: ${jafFormData.secondaryEdu}\nX %: ${jafFormData.primaryEdu}\n\nSelection Process:\n${jafFormData.personalInterview}\n${jafFormData.selectionCriteria}\n\nRounds:${jafFormData.rounds}\nOffers:${jafFormData.offers}\nPeriod:${jafFormData.period}\n\nLogistics Requirements:\nBTech:\n${jafFormData.btechBranches}\n\nMTech:\n${jafFormData.mtechBranches}\n\n`,
+      // text: `This mail is redirected from <2021bit046@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.anyMessage}\n\nJAF:\nAbout The Organisation:\n\nName of Organisation: ${jafFormData.nameOrg}\nPostal Address: ${jafFormData.postalAdd}\nWebsite Link(optional): ${jafFormData.websiteLink}\n\nJob Profile:\n\nJob Designation: ${jafFormData.jobDesig}\nJob Description: ${jafFormData.jobDesc}\nJob Location: ${jafFormData.jobLoc}\n\nType Of Organisation:\n${jafFormData.typeOfOrg}\n${jafFormData.typeOfOrgArea}\n\nIndustry Sector:\n${jafFormData.industrySector}\n${jafFormData.industrySectorArea}\n\nContact Details:\n\nHR Head:Name:${jafFormData.HRname}\nEmail:${jafFormData.HRemail}\nPhone:${jafFormData.HRnumber}\nMobile:${jafFormData.HRphone}\n\nFirst Person Contact:Name:${jafFormData.fstname}\nEmail:${jafFormData.fstemail}\nPhone:${jafFormData.fstnumber}\nMobile:${jafFormData.fstphone}\n\nSecond Person Contact:Name:${jafFormData.secname}\nEmail:${jafFormData.secemail}\nPhone:${jafFormData.secnumber}\nMobile:${jafFormData.secphone}\n\nSalary Break Up:\n\nCTC: ${jafFormData.ctc}\nStipend: ${jafFormData.stipend}\nBonus/Perks/Incentives: ${jafFormData.bonus}\n\nEligibility Criteria:\nCGPA: ${jafFormData.cgpa}\nXII %: ${jafFormData.secondaryEdu}\nX %: ${jafFormData.primaryEdu}\n\nSelection Process:\n${jafFormData.personalInterview}\n${jafFormData.selectionCriteria}\n\nRounds:${jafFormData.rounds}\nOffers:${jafFormData.offers}\nPeriod:${jafFormData.period}\n\nLogistics Requirements:\nBTech:\n${jafFormData.btechBranches}\n\nMTech:\n${jafFormData.mtechBranches}\n\n`,
+      html: `<div style="color: #f8f8f2; background-color: #272822; font-family: 'Droid Sans Mono', 'monospace', monospace; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+      <div><strong><span style="color: #f8f8f2;">This mail is redirected from &lt;</span><span style="color: #f92672;">2021bit046@sggs.ac.in</span><span style="color: #f8f8f2;">&gt;</span></strong></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> From: ${jafFormData.ThisisFrom}</span></strong></div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Message:</span></strong></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.anyMessage}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> JAF:</span></strong></div>
+      <div><strong><span style="color: #f8f8f2;"> About The Organisation:</span></strong></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> Name of Organisation<strong>:</strong> ${jafFormData.nameOrg}</span></div>
+      <div><span style="color: #f8f8f2;"> Postal Address: ${jafFormData.postalAdd}</span></div>
+      <div><span style="color: #f8f8f2;"> Website Link(optional): ${jafFormData.websiteLink}</span></div>
+      <div><strong>&nbsp;</strong></div>
+      <div><strong><span style="color: #f8f8f2;"> Job Profile:</span></strong></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> Job Designation: ${jafFormData.jobDesig}</span></div>
+      <div><span style="color: #f8f8f2;"> Job Description: ${jafFormData.jobDesc}</span></div>
+      <div><span style="color: #f8f8f2;"> Job Location: ${jafFormData.jobLoc}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Type Of Organisation:</span></strong></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.typeOfOrg}</span></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.typeOfOrgArea}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Industry Sector:</span></strong></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.industrySector}</span></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.industrySectorArea}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Contact Details:</span></strong></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> HR Head:Name:${jafFormData.HRname}</span></div>
+      <div><span style="color: #f8f8f2;"> Email:${jafFormData.HRemail}</span></div>
+      <div><span style="color: #f8f8f2;"> Phone:${jafFormData.HRnumber}</span></div>
+      <div><span style="color: #f8f8f2;"> Mobile:${jafFormData.HRphone}</span></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> First Person Contact:Name:${jafFormData.fstname}</span></div>
+      <div><span style="color: #f8f8f2;"> Email:${jafFormData.fstemail}</span></div>
+      <div><span style="color: #f8f8f2;"> Phone:${jafFormData.fstnumber}</span></div>
+      <div><span style="color: #f8f8f2;"> Mobile:${jafFormData.fstphone}</span></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> Second Person Contact:Name:${jafFormData.secname}</span></div>
+      <div><span style="color: #f8f8f2;"> Email:${jafFormData.secemail}</span></div>
+      <div><span style="color: #f8f8f2;"> Phone:${jafFormData.secnumber}</span></div>
+      <div><span style="color: #f8f8f2;"> Mobile:${jafFormData.secphone}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Salary Break Up:</span></strong></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> CTC: ${jafFormData.ctc}</span></div>
+      <div><span style="color: #f8f8f2;"> Stipend: ${jafFormData.stipend}</span></div>
+      <div><span style="color: #f8f8f2;"> Bonus/Perks/Incentives: ${jafFormData.bonus}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Eligibility Criteria:</span></strong></div>
+      <div><span style="color: #f8f8f2;"> CGPA: ${jafFormData.cgpa}</span></div>
+      <div><span style="color: #f8f8f2;"> XII %: ${jafFormData.secondaryEdu}</span></div>
+      <div><span style="color: #f8f8f2;"> X %: ${jafFormData.primaryEdu}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Selection Process:</span></strong></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.personalInterview}</span></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.selectionCriteria}</span></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> Rounds:${jafFormData.rounds}</span></div>
+      <div><span style="color: #f8f8f2;"> Offers:${jafFormData.offers}</span></div>
+      <div><span style="color: #f8f8f2;"> Period:${jafFormData.period}</span></div>
+      <div>&nbsp;</div>
+      <div><strong><span style="color: #f8f8f2;"> Logistics Requirements:</span></strong></div>
+      <div><span style="color: #f8f8f2;"> BTech:</span></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.btechBranches}</span></div>
+      <div>&nbsp;</div>
+      <div><span style="color: #f8f8f2;"> MTech:</span></div>
+      <div><span style="color: #f8f8f2;"> ${jafFormData.mtechBranches}</span></div>
+      </div>`
     }
 
     await new Promise((resolve, reject) => {
@@ -221,11 +295,32 @@ router.post('/interestForm', upload.none(), async (req, res) => {
     });
 
     const mailOptions = {
-      // to: 'shivharehariom68@gmail.com',
+      to: 'shivharehariom68@gmail.com',
       from: `Website Redirected <2021bit046@sggs.ac.in>`,
-      to: 'tnpcell@sggs.ac.in',
+      // to: 'tnpcell@sggs.ac.in',
       subject: 'Company Interest Form',
-      text: `This mail is redirected from <2021bit046@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.specifications}\n\nCompany Details:\n\nCompany Name: ${jafFormData.companyName}\nOfficial Email-Id: ${jafFormData.companyEmail}\nCompany's Website Link(optional): ${jafFormData.websiteLink}\n\nContact Information:\n\nHR Mobile No: ${jafFormData.HRmobNo}\nAlternate Contact No: ${jafFormData.HRalterateNo}\nHR Mail ID: ${jafFormData.HRmail}\n\n`,
+      // text: `This mail is redirected from <2021bit046@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.specifications}\n\nCompany Details:\n\nCompany Name: ${jafFormData.companyName}\nOfficial Email-Id: ${jafFormData.companyEmail}\nCompany's Website Link(optional): ${jafFormData.websiteLink}\n\nContact Information:\n\nHR Mobile No: ${jafFormData.HRmobNo}\nAlternate Contact No: ${jafFormData.HRalterateNo}\nHR Mail ID: ${jafFormData.HRmail}\n\n`,
+      html: `
+      <div style="color: #f8f8f2;background-color: #272822;font-size: 14px;">
+          <span style="color: #f8f8f2;"><strong>This mail is redirected from &lt;</strong></span>
+          <span style="color: #f92672;"><strong>2021bit046@sggs.ac.in</strong></span><span
+              style="color: #f8f8f2;"><strong>&gt;</strong></span><br><span style="color: #f8f8f2;">&nbsp; &nbsp;
+              <strong>From</strong>: ${jafFormData.ThisisFrom}</span><br><span style="color: #f8f8f2;">&nbsp; &nbsp;
+              <strong></strong><span class="fr-clone" data-id="0" data-type="true"
+                  style="display: none; line-height: 0;"></span><strong>Message:</strong><span class="fr-clone"
+                  data-id="0" data-type="false" style="display: none; line-height: 0;"></span></span><span
+              style="color: #f8f8f2;">&nbsp; &nbsp; ${jafFormData.specifications}</span><br><span
+              style="color: #f8f8f2;">&nbsp; &nbsp; <strong>Company Details:</strong></span><br><span
+              style="color: #f8f8f2;">&nbsp; &nbsp; <strong>Company Name</strong>:
+              ${jafFormData.companyName}</span><span style="color: #f8f8f2;">&nbsp; &nbsp; Official Email-Id:
+              ${jafFormData.companyEmail}</span><span style="color: #f8f8f2;">&nbsp; &nbsp; <strong>Company&apos;s
+                  Website Link(optional):</strong> ${jafFormData.websiteLink}</span><br><span
+              style="color: #f8f8f2;">&nbsp; &nbsp; <strong>Contact
+                  Informatio</strong><strong>n</strong>:</span><br><span style="color: #f8f8f2;">&nbsp; <strong>&nbsp;
+                  HR Mobile No:</strong> ${jafFormData.HRmobNo}</span><span style="color: #f8f8f2;">&nbsp; &nbsp;
+              Alternate Contact No: ${jafFormData.HRalterateNo}</span><span style="color: #f8f8f2;">&nbsp; &nbsp; HR
+              Mail ID: ${jafFormData.HRmail}</span><br><br>
+      </div>`
     }
     await new Promise((resolve, reject) => {
       // verify connection configuration

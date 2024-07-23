@@ -27,7 +27,7 @@ export default function VerifyCertificate() {
         setUcode(res.data.ucode);
         setUid(res.data.uid);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     const regexp = /^[0-9a-fA-F]+$/;

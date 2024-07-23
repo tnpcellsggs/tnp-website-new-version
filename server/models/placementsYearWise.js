@@ -28,6 +28,10 @@ const PlacementsYearWiseSchema = mongoose.Schema(
             type: Number,
             required:true
         },
+        TotalOffers: {
+            type: Number,
+            required:true
+        },
         AveragePackage: {
             type: String,
             required:true

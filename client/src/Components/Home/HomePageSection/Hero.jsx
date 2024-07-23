@@ -111,11 +111,11 @@ const Hero = () => {
               <h3 className="m-1 text-sm sm:text-[12px]">Placement Stats 23-24</h3>
               <img src={Stats} alt='stats' className="w-[20%]" />
               {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
-                console.log(item.PackageRange)
+                // console.log(item.PackageRange)
 
                 return (
                   <ul key={item.Year} className="p-1 mt-2 space-y-2 list-disc ">
-                    <li className="text-xs">Total Offers: 150+</li>
+                    <li className="text-xs">Total Offers: {item.TotalOffers}+</li>
                     <li className="text-xs">Top Package: {item.PackageRange}</li>
                     <li className="text-xs">Average: {item.AveragePackage}</li>
                   </ul>

@@ -8,6 +8,7 @@ import {YearWise} from "./Placements/YearWise";
 import {GraphRecords} from "./Placements/GraphRecords";
 import {DeptWise} from "./Placements/DeptWise";
 import {News} from "./Placements/News";
+import tnpLogo from '../../img/TNP LOGO.png';
 
 import { AdminContext } from "../../App";
 
@@ -30,13 +31,15 @@ export default function AdminRouter() {
         <Route path="/newsSection" element={<News />} />
       </Routes>
       <div className="copyright">
-        copyright @2021 SGGSIE&T. All Rights Reserved.
+        copyright @2023 SGGSIE&T. All Rights Reserved.
       </div>
     </>
   ) : (
-    <>
-      <p>Access Denied</p>
-      <Link to="/">Go back home.</Link>
-    </>
+    <div className="w-[90%] mx-auto text-center mt-8" >
+      <img src={tnpLogo} alt="tnp_logo" className="mx-auto" />
+      <p className="m-4 text-xl font-bold text-center ">Logged Out</p>
+      <p className="m-4 text-2xl font-bold text-center text-black "><Link className="hover:text-blue-800" to="/">Click here to go back to HomePage</Link></p>
+      <p><Link className="font-bold text-blue-700" to="/admin/signin">Or Sign In</Link></p>
+    </div>
   );
 }

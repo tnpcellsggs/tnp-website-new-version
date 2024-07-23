@@ -17,11 +17,10 @@ const CompanySlider = () => {
                         {
                             past_recuriters_list.map((items, index) => {
                                 return (
-                                    <>
-                                        <div className='flex items-center justify-center h-full mx-4 w-28' key={index}>
-                                            <img src={items.imageLink} alt={items.title} className='w-[100%] h-full object-cover' />
-                                        </div>
-                                    </>
+                                    <div className='flex items-center justify-center h-full mx-4 w-28' key={index + items.title+Math.random()}>
+                                        <img src={items.imageLink} alt={items.title} className='w-[100%] h-full object-cover' />
+                                    </div>
+
                                 )
                             })
                         }

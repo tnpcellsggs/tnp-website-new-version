@@ -88,25 +88,25 @@ export const News = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit the Record</Modal.Title></Modal.Header>
-                <Form.Text className="container text-muted">
+                <Form.Text className=" text-muted">
                     Previous Records are given in light text
                 </Form.Text>
                 <Modal.Body>
                     <Form>
-                        <Form.Group className="container my-3 mb-3" controlId="Year">
+                        <Form.Group className="my-3 mb-3 " controlId="Year">
                             <Form.Label>Title</Form.Label>
                             <Form.Control className="inpts" type="text" placeholder={`${recordData.Title}`} onChange={onChange} name="Title" />
                         </Form.Group>
 
-                        <Form.Group className="container my-3 mb-3" controlId="Description">
+                        <Form.Group className="my-3 mb-3 " controlId="Description">
                             <Form.Label>Description</Form.Label>
                             <Form.Control className="inpts" type="text" onChange={onChange} placeholder={`${recordData.Description}`} name="Description" />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="Date">
+                        <Form.Group className="my-3 mb-3 " controlId="Date">
                             <Form.Label>Date</Form.Label>
                             <Form.Control className="inpts" type="text" onChange={onChange} placeholder={`${recordData.Date}`} name="Date" />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="ImageLink">
+                        <Form.Group className="my-3 mb-3 " controlId="ImageLink">
                             <Form.Label>Image Link</Form.Label>
                             <Form.Control className="inpts" type="text" onChange={onChange} placeholder={`${recordData.ImageLink}`} name="ImageLink" />
                         </Form.Group>
@@ -124,7 +124,7 @@ export const News = () => {
 
 
             {/* Table which will be having all the data about the year wisw placement records */}
-            <Table striped bordered hover className='container my-3' responsive="lg" size="sm">
+            <Table striped bordered hover className='w-[90%] mx-auto mt-4' responsive="lg" size="sm">
                 <thead>
                     <tr style={{ textAlign: "center" }}>
                         {/* <th>Sr No.</th> */}
@@ -140,30 +140,30 @@ export const News = () => {
                     {
                         newsUpdates.reverse().map((data, index) => {
                             return (
-                                <>
-                                    <tr key={index}>
-                                        <td>{data.Title}</td>
-                                        <td>{data.Description}</td>
-                                        <td>{data.Date}</td>
-                                        <td>{data.ImageLink}</td>
-                                        <td><FontAwesomeIcon id={data.Title} className='icons' onClick={() => {
-                                            launch.current.click();
-                                            setRecordData(data);
-                                            setID(data.ID);
-                                        }} icon={faPenToSquare} /></td>
-                                        <td><FontAwesomeIcon className='icons' onClick={() => {
-                                            deleteNews({ ID:data.ID });
-                                            refreshPage();
-                                        }} id={data.Title} icon={faTrash} /></td>
-                                    </tr>
-                                </>
+
+                                <tr key={index + data.Date + Math.random()}>
+                                    <td>{data.Title}</td>
+                                    <td>{data.Description}</td>
+                                    <td>{data.Date}</td>
+                                    <td>{data.ImageLink}</td>
+                                    <td><FontAwesomeIcon id={data.Title} className='icons' onClick={() => {
+                                        launch.current.click();
+                                        setRecordData(data);
+                                        setID(data.ID);
+                                    }} icon={faPenToSquare} /></td>
+                                    <td><FontAwesomeIcon className='icons' onClick={() => {
+                                        deleteNews({ ID: data.ID });
+                                        refreshPage();
+                                    }} id={data.Title} icon={faTrash} /></td>
+                                </tr>
+
                             );
                         })
 
                     }
                 </tbody>
-                <div className="container">
-                    <Button ref={btnRef} Button variant="dark" className='container my-3 justify-content-center md-3' onClick={refreshPage}>
+                <div className="">
+                    <Button ref={btnRef} Button variant="dark" className='my-3 justify-content-center md-3' onClick={refreshPage}>
                         Refresh
                     </Button>
                 </div>
@@ -172,26 +172,26 @@ export const News = () => {
             {/* Form to add records */}
             <Form className='w-[90%] mx-auto' >
                 <hr />
-                <h2 className="container my-3">Add News or Updates Here</h2>
-                <Form.Group className="container my-3 mb-3" controlId="Year">
+                <h2 className="my-3 ">Add News or Updates Here</h2>
+                <Form.Group className="my-3 mb-3 " controlId="Year">
                     <Form.Label>Title</Form.Label>
                     <Form.Control className="inpts" type="text" placeholder="Campus Drive" onChange={onChange} name="Title" />
                 </Form.Group>
 
-                <Form.Group className="container my-3 mb-3" controlId="Description">
+                <Form.Group className="my-3 mb-3 " controlId="Description">
                     <Form.Label>Description</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="Today there is a Campus Drive" name="Description" />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="Date">
+                <Form.Group className="my-3 mb-3 " controlId="Date">
                     <Form.Label>Date</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="01/11/2023" name="Date" />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="ImageLink">
+                <Form.Group className="my-3 mb-3 " controlId="ImageLink">
                     <Form.Label>Imp Link(if any)</Form.Label>
                     <Form.Control className="inpts" type="text" onChange={onChange} placeholder="//drive.image/link" name="ImageLink" />
                 </Form.Group>
 
-                <Form.Group className="container my-3 mb-3" controlId="Submit">
+                <Form.Group className="my-3 mb-3 " controlId="Submit">
                     <Button onClick={addARecord} className='b-end-btn-blue' variant="primary text-center" type="submit">
                         Add
                     </Button>

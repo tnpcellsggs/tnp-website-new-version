@@ -49,7 +49,7 @@ const Homepage = () => {
           `${process.env.REACT_APP_REQURL}/admin/events/getall/`
         );
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchEventList();
@@ -59,7 +59,6 @@ const Homepage = () => {
     <>
       {/* 1) Hero section */}
       <Hero />
-
       {/* 2) Registrations */}
       {/* <Registration /> */}
 

@@ -37,7 +37,7 @@ const DepartmentCards = (props) => {
         <div className={`flex justify-center flex-col w-full h-full items-center`}>
           <h3 className='text-2xl font-bold text-center '><a className='text-center text-black' rel="noreferrer" target='_blank' href={link}>{name}</a></h3>
           {/* <img src={imageLink} alt="" className="w-[40%] rounded-full sm:w-[20%] m-4"/> */}
-          <img src={imageLink} alt="department" className="w-[40%] rounded-xl w-[80%] mt-4 ml-4 m-r mb-1" />
+          <img src={imageLink} alt="department" className="rounded-xl w-[80%] mt-4 ml-4 m-r mb-1" />
           <p className="text-[18px] font-bold text-center">HOD: {head}</p>
         </div>
 
@@ -89,3 +89,4 @@ const Departments = () => {
 }
 
 export default SectionWrapper(Departments, "");
+

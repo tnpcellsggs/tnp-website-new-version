@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Each year will hold the record of placements department wise
 const NewsUpdates = mongoose.Schema({
     Title: {
         type: String,

@@ -68,7 +68,7 @@ const SpecialFacilities = () => {
       const boxes = gsap.utils.toArray('.gsap-divs');
       boxes.forEach((box, index) => {
 
-        console.log(index);
+        // console.log(index);
         gsap.from(box, {
           x: `${index % 2 === 0 ? 300 : -300}`,
           opacity: 0,

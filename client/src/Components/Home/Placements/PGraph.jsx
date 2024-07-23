@@ -4,8 +4,11 @@ import { AdminContext } from "../../../App";
 import { useEffect } from "react";
 import { Container } from "react-bootstrap";
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { BarChart } from '@mui/x-charts/BarChart';
+import { axisClasses } from '@mui/x-charts';
 
+// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import {ResponsiveContainer} from "recharts";
 // const data = [
 //   {
 //     "year": "AY 14/15",
@@ -69,6 +72,57 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 //   }
 // ];
 
+
+function BarChartGraph(props) {
+  const chartSetting = {
+    sx: {
+      [`.${axisClasses.left} .${axisClasses.label}`]: {
+        transform: 'translate(-10px, 0)',
+      },
+    },
+  };
+
+  const  tickPlacement = 'middle', tickLabelPlacement = 'middle'
+  const valueFormatter = (value) => `${value}`;
+  return (
+    <BarChart
+      dataset={props.data}
+      xAxis={[
+        {
+          id: 'barCategories',
+          dataKey: 'year',
+          scaleType: 'band',
+          categoryGapRatio: 0.2,
+          barGapRatio: 0.1,
+          label: 'Placement Years',
+          tickPlacement,
+          tickLabelPlacement
+        },
+      ]}
+
+      yAxis={[
+        {
+          label: 'Number Of Students Placed',
+        },
+      ]}
+
+      series={[
+        { dataKey: 'Post Graduate', label: 'Post Graduate', valueFormatter, },
+        { dataKey: 'Under Graduate', label: 'Under Graduate', valueFormatter },
+        { dataKey: 'Total', label: 'Total', valueFormatter },
+        // { dataKey: 'TotalOffers', label: 'Total Offers', valueFormatter },
+      ]}
+      // width={1200}
+      // height={500}
+      // layout="horizontal"
+      grid={{ vertical: true }}
+
+      {...chartSetting}
+    />
+  );
+}
+
+
 export default function PGraph() {
 
   // using context api to save all the states & use it all over the app
@@ -78,17 +132,26 @@ export default function PGraph() {
   const { getGraphAlldetails } = graphContext;
 
   useEffect(() => {
-    getGraphAlldetails().then((data) => setTempGraphData(data));
+    getGraphAlldetails().then((data) => {
+      let info = [];
+      let k=0;
+      for(let i=data.length-1;i>=(data.length-7);i--){
+        info.push(data[data.length-7+k]);
+        k++;
+      }
+      setTempGraphData(info);
+    });
   }, []);
+
 
 
   return (
     <>
       <Container style={{ textAlign: "center" }} className="pl-graph" fluid>
         <div className="p-graph-container">
-          <ResponsiveContainer width="100%" height={250}>
-            <LineChart width={500} height={300} data={graphTempData}>
-              {/* <LineChart width={500} height={300} data={data}> */}
+          <ResponsiveContainer width="100%" height={550}>
+            {/* <LineChart width={500} height={300} data={data}> */}
+            {/* <LineChart width={500} height={300} data={graphTempData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="year" />
               <YAxis />
@@ -97,7 +160,9 @@ export default function PGraph() {
               <Line type="linear" dataKey="Under Graduate" stroke="#8884d8" />
               <Line type="linear" dataKey="Post Graduate" stroke="#82ca9d" />
               <Line type="linear" dataKey="Total" stroke="#f29961" />
-            </LineChart>
+            </LineChart> */}
+
+            <BarChartGraph data={graphTempData} />
           </ResponsiveContainer>
         </div>
       </Container>

@@ -39,30 +39,31 @@ function AdminSignin() {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_REQURL}/admin/signin`,
+        // `http://localhost:4019/admin/signin`,
         {
           username,
           password,
         }
       );
-      console.log("logged in");
+      // console.log("logged in");
 
       setUsername("");
       setPassword("");
       setIsAdminLoggedIn(true);
 
-      res.status(200);
+      // res.statusCode(200);
     } catch (err) {
       console.log(err);
-      switch (err.response.status) {
-        case 404:
-          setErrorMsg("User not found. Please enter a valid username.");
-          break;
-        case 401:
-          setErrorMsg("Incorrect Password.");
-          break;
-        default:
-          setErrorMsg("Some error occured. Please try again later.");
-      }
+      // switch (err.response.status) {
+      //   case 404:
+      //     setErrorMsg("User not found. Please enter a valid username.");
+      //     break;
+      //   case 401:
+      //     setErrorMsg("Incorrect Password.");
+      //     break;
+      //   default:
+      //     setErrorMsg("Some error occured. Please try again later.");
+      // }
     }
   };
 
@@ -136,7 +137,7 @@ function AdminSignin() {
           </div>
         </div>
       )}
-      <div className="container text-center" >
+      <div className="text-center" >
         <Link to="/" ><button className="p-1 font-bold border-2 border-black rounded-xl">Back to Home</button></Link>
       </div>
     </>

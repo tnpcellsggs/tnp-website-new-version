@@ -29,6 +29,7 @@ export const GraphRecords = () => {
         Year: "",
         UnderGraduate: 0,
         PostGraduate: 0,
+        TotalOffers: 0,
         Total: 0,
     });
 
@@ -80,25 +81,29 @@ export const GraphRecords = () => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit the Record</Modal.Title></Modal.Header>
-                <Form.Text className="container text-muted">
+                <Form.Text className=" text-muted">
                     Previous Records are given in light text
                 </Form.Text>
                 <Modal.Body>
                     <Form>
-                        <Form.Group className="container my-3 mb-3" controlId="Year">
+                        <Form.Group className="my-3 mb-3 " controlId="Year">
                             <Form.Label>Year</Form.Label>
                             <Form.Control className="inpts" type="text" placeholder={graphData.Year} onChange={onChange} name={'Year'} />
                         </Form.Group>
 
-                        <Form.Group className="container my-3 mb-3" controlId="UnderGraduate">
+                        <Form.Group className="my-3 mb-3 " controlId="UnderGraduate">
                             <Form.Label>Under Graduate</Form.Label>
                             <Form.Control className="inpts" type="number" placeholder={graphData.UnderGraduate} onChange={onChange} name={'UnderGraduate'} />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="PostGraduate">
+                        <Form.Group className="my-3 mb-3 " controlId="PostGraduate">
                             <Form.Label>Post Graduate</Form.Label>
                             <Form.Control className="inpts" type="number" placeholder={graphData.PostGraduate} onChange={onChange} name={"PostGraduate"} />
                         </Form.Group>
-                        <Form.Group className="container my-3 mb-3" controlId="Total">
+                        <Form.Group className="my-3 mb-3 " controlId="Total">
+                            <Form.Label>Total Offes</Form.Label>
+                            <Form.Control className="inpts" type="number" placeholder={graphData.TotalOffers} onChange={onChange} name={"TotalOffers"} />
+                        </Form.Group>
+                        <Form.Group className="my-3 mb-3 " controlId="Total">
                             <Form.Label>Total</Form.Label>
                             <Form.Control className="inpts" type="number" placeholder={graphData.Total} onChange={onChange} name={"Total"} />
                         </Form.Group>
@@ -115,13 +120,14 @@ export const GraphRecords = () => {
             </Modal>
 
 
-            <Table striped bordered hover className='container' responsive="lg" size="sm">
+            <Table striped bordered hover className='p-4 m-4 w-[90%] mx-auto' responsive="lg" size="sm">
                 <thead>
                     <tr style={{ textAlign: "center" }}>
                         {/* <th>Sr No.</th> */}
                         <th >Year</th>
                         <th>Under Graduate</th>
                         <th>Post Graduate</th>
+                        <th>Total Offers</th>
                         <th>Total</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -129,65 +135,71 @@ export const GraphRecords = () => {
                 </thead>
                 <tbody>
                     {
-                        graphTempData.reverse().map((data,index) => {
+                        graphTempData.reverse().map((data, index) => {
                             return (
-                                <>
-                                    <tr key={index}>
-                                        <td>{data["year"]}</td>
-                                        <td>{data["Under Graduate"]}</td>
-                                        <td>{data["Post Graduate"]}</td>
-                                        <td>{data["Total"]}</td>
-                                        <td><FontAwesomeIcon className='icons' icon={faPenToSquare} onClick={() => {
-                                            launch.current.click();
-                                            setGraphData({
-                                                Year: data["year"],
-                                                UnderGraduate: data["Under Graduate"],
-                                                PostGraduate: data["Post Graduate"],
-                                                Total: data["Total"]
-                                            });
-                                            setPrevYear(data['year']);
-                                        }} /></td>
-                                        <td><FontAwesomeIcon className='icons' icon={faTrash} onClick={() => {
-                                            // console.log(data['year']);
-                                            deleteGraphRecord(data['year']);
-                                            // console.log(data);
-                                            refreshPage();
-                                        }} /></td>
 
-                                    </tr>
-                                </>
+                                <tr key={index + data["year"] + Math.random()}>
+                                    <td>{data["year"]}</td>
+                                    <td>{data["Under Graduate"]}</td>
+                                    <td>{data["Post Graduate"]}</td>
+                                    <td>{data["TotalOffers"]}</td>
+                                    <td>{data["Total"]}</td>
+                                    <td><FontAwesomeIcon className='icons' icon={faPenToSquare} onClick={() => {
+                                        launch.current.click();
+                                        setGraphData({
+                                            Year: data["year"],
+                                            UnderGraduate: data["Under Graduate"],
+                                            PostGraduate: data["Post Graduate"],
+                                            Total: data["TotalOffers"],
+                                            Total: data["Total"]
+                                        });
+                                        setPrevYear(data['year']);
+                                    }} /></td>
+                                    <td><FontAwesomeIcon className='icons' icon={faTrash} onClick={() => {
+                                        // console.log(data['year']);
+                                        deleteGraphRecord(data['year']);
+                                        // console.log(data);
+                                        refreshPage();
+                                    }} /></td>
+
+                                </tr>
+
                             );
                         })
                     }
                 </tbody>
-                <Button ref={btnRef} Button variant="dark" className='container my-3 justify-content-center md-3' onClick={refreshPage}>
+                <Button ref={btnRef} Button variant="dark" className='w-full my-3 justify-content-center md-3' onClick={refreshPage}>
                     Refresh
                 </Button>
             </Table>
 
             {/* form to add a nwe record */}
-            <Form>
+            <Form className='w-[90%] mx-auto'>
                 <hr />
-                <h2 className="container my-3">Add Records for Graph Here</h2>
-                <Form.Group className="container my-3 mb-3" controlId="Year">
+                <h2 className="my-3 ">Add Records for Graph Here</h2>
+                <Form.Group className="my-3 mb-3 " controlId="Year">
                     <Form.Label>Year</Form.Label>
                     <Form.Control className="inpts" type="text" placeholder="e.g AY 23-24" onChange={onChange} name={'Year'} />
                 </Form.Group>
 
-                <Form.Group className="container my-3 mb-3" controlId="UnderGraduate">
+                <Form.Group className="my-3 mb-3 " controlId="UnderGraduate">
                     <Form.Label>Under Graduate</Form.Label>
                     <Form.Control className="inpts" type="number" placeholder="e.g 412" onChange={onChange} name={'UnderGraduate'} />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="PostGraduate">
+                <Form.Group className="my-3 mb-3 " controlId="PostGraduate">
                     <Form.Label>Post Graduate</Form.Label>
                     <Form.Control className="inpts" type="number" placeholder="e.g 123" onChange={onChange} name={"PostGraduate"} />
                 </Form.Group>
-                <Form.Group className="container my-3 mb-3" controlId="Total">
+                <Form.Group className="my-3 mb-3 " controlId="Total">
+                    <Form.Label>Total Offers</Form.Label>
+                    <Form.Control className="inpts" type="number" placeholder="e.g 283+" onChange={onChange} name={"TotalOffers"} />
+                </Form.Group>
+                <Form.Group className="my-3 mb-3 " controlId="Total">
                     <Form.Label>Total</Form.Label>
                     <Form.Control className="inpts" type="number" placeholder="e.g 535" onChange={onChange} name={"Total"} />
                 </Form.Group>
 
-                <Form.Group className="container my-3 mb-3" controlId="Year">
+                <Form.Group className="my-3 mb-3 " controlId="Year">
                     <Button variant="primary text-center" className='b-end-btn-blue' type="submit" onClick={addARecord}>
                         Add
                     </Button>

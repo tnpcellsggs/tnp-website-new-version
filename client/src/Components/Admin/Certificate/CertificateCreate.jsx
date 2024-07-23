@@ -49,7 +49,7 @@ export default function CertificateCreate() {
         `Status ${res.status}, certificate added successfully. Link is http://sggssplacements.in/verifycert/${res.data._id}/`
       );
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setResponseStatus(`Error! Response status ${err.response.status}`);
     }
   };
