@@ -7,14 +7,14 @@ import { css } from '@emotion/react';
 import { motion } from "framer-motion";
 import { useLayoutEffect } from 'react';
 import { fadeIn } from '../../utils/motion';
-import { team_23_24 } from '../../constants/index';
+import { team_24_25 } from '../../constants/index';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import HatkarSir from "../../img/HatkarSir.jpg";
-import IGavakhore from "../../img/ishwar-sir.jpg";
+import IGavakhore from "../../img/DirectoR1.jpeg";
 import Secretary from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.webp";
 
 gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
@@ -135,9 +135,36 @@ export const OurTeam = () => {
             >
                 <div className="relative w-full mx-auto bg-blue-50 h-5/6">
                     {/* top div */}
-                    <h2 className="pt-4 text-3xl text-center text-black">TPO Head & Assistant</h2>
+                    <h2 className="pt-4 text-3xl text-center text-black">Director & TPO Head</h2>
                     <div className="flex flex-col w-[90%] justify-evenly items-center mx-auto mb-4 mt-4 sm:flex-row ">
+                        <div className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl'>
+                            <div options={{
+                                max: 45,
+                                scale: 1,
+                                speed: 450
+                            }}
+                                className='flex flex-col items-center justify-center rounded-2xl h-96'
+                            >
+                                {/* div for intro  */}
 
+                                <div className="absolute flex-col items-center justify-center w-[50%] h-[100%] bg-img-blured-assis rounded-t-2xl" >
+                                    <img src={IGavakhore} alt="HatkarSir" className="w-[40%] rounded-full text-center z-10 absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
+                                    <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center">
+                                        <h3 className='mx-2 text-2xl font-bold text-black'>Dr. M.B.Kokare</h3>
+                                        <p className="text-gray-600">Director</p>
+                                    </div>
+                                </div>
+
+                                {/* div for contacts */}
+                                <div className="flex items-center justify-center w-full h-[40%]">
+                                    <div className="flex-col items-center justify-center">
+                                        <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:director@sggs.ac.in`} >director@sggs.ac.in | <FontAwesomeIcon icon={faEnvelope} /></a></p>
+
+                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91 9421474393`}>+91 9421474393 | <FontAwesomeIcon icon={faPhone} /></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl our_team_divs'>
                             <div options={{
                                 max: 45,
@@ -166,41 +193,14 @@ export const OurTeam = () => {
                             </div>
                         </div>
 
-                        <div className='sm:w-[345px] w-[80%] my-4 nav-light-shadows rounded-2xl'>
-                            <div options={{
-                                max: 45,
-                                scale: 1,
-                                speed: 450
-                            }}
-                                className='flex flex-col items-center justify-center rounded-2xl h-96'
-                            >
-                                {/* div for intro  */}
-
-                                <div className="absolute flex-col items-center justify-center w-[50%] h-[100%] bg-img-blured-assis rounded-t-2xl" >
-                                    <img src={IGavakhore} alt="HatkarSir" className="w-[40%] rounded-full text-center z-10 absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
-                                    <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center">
-                                        <h3 className='mx-2 text-2xl font-bold text-black'>Mr.Ishwar Gavakhore</h3>
-                                        <p className="text-gray-600">Assistant Training & Placement Office</p>
-                                    </div>
-                                </div>
-
-                                {/* div for contacts */}
-                                <div className="flex items-center justify-center w-full h-[40%]">
-                                    <div className="flex-col items-center justify-center">
-                                        <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tnpcell@sggs.ac.in`} >tnpcell@sggs.ac.in | <FontAwesomeIcon icon={faEnvelope} /></a></p>
-
-                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91 75078 77206`}>+91 75078 77206 | <FontAwesomeIcon icon={faPhone} /></a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </motion.div>
 
             {/* Our Team */}
             <div ref={comp}>
-                {team_23_24.map((items, index) => { return (<TeamCards key={`${index + Math.random()}` + items.post} index={index} item={items} />) })}
+                {team_24_25.map((items, index) => { return (<TeamCards key={`${index + Math.random()}` + items.post} index={index} item={items} />) })}
             </div>
 
 

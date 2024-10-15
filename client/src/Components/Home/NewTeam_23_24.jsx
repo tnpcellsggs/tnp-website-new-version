@@ -5,7 +5,7 @@
 // // import RNJoshi from "../../img/rnjoshi-sir.png";
 // // import MBKokare from "../../img/kokare-sir.jpeg";
 // import HatkarSir from "../../img/HatkarSir.jpg";
-// import IGavakhore from "../../img/ishwar-sir.jpg";
+// import IGavakhore from "../../img/DirectoR1.jpeg";
 // import TNPLogo from "../../img/TNP LOGO.png";
 
 // import SharvariS from "../../img/team2023_2024/_2SHARVARI-MILIND-SALODKAR.jpg";

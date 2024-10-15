@@ -39,7 +39,7 @@ function AdminSignin() {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_REQURL}/admin/signin`,
-        // `http://localhost:4019/admin/signin`,
+        // `https://tnp-website-server.vercel.app/admin/signin`,
         {
           username,
           password,

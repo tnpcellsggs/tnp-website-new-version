@@ -7,6 +7,8 @@ import AdminRouter from "./Components/Admin/AdminRouter";
 // import Signup from "./Components/Signup/Signup";
 import VerifyCertificate from "./Components/Admin/Certificate/VerifyCertificate";
 import {  getYearWiseAlldetails, createYearWiseRecord, editYearWiseRecord, deleteYearWiseRecord,  getDeptAlldetails, createDeptRecord, editDeptRecord, deleteDeptRecord, getGraphAlldetails, createGraphRecord, editGraphRecord, deleteGraphRecord,createNews,getAllNews,editNews,deleteNews } from "./constants/backendData";
+import TeamForm from "./Components/Teamform";
+import UserForm from "./Components/Teamform";
 
 // context apis
 export const AdminContext = React.createContext(false);
@@ -39,6 +41,7 @@ function App() {
             <Route path="/admin/console/*" element={<AdminRouter />} />
             {/*<Route path="/user/:action" element={<Signup />} />*/}
             <Route path="/verifycert/:uniqueid" element={<VerifyCertificate />} />
+            <Route path="/teams" element={<UserForm />} />
           </Routes>
         </AdminContext.Provider>
       </div>

@@ -32,7 +32,7 @@ function EventsAdd() {
     }
 
     try {
-      // let res = await axios.post(`http://localhost:4019/admin/events/create`, eventData);
+      // let res = await axios.post(`https://tnp-website-server.vercel.app/admin/events/create`, eventData);
       let res = await axios.post(`${process.env.REACT_APP_REQURL}/admin/events/create`, eventData);
       window.alert("Event Added.");
       let ele = document.getElementsByClassName("inpts");

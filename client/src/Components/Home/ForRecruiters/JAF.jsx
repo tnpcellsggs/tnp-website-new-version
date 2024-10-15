@@ -53,7 +53,7 @@ const JAF = () => {
   });
 
   const [file, setFile] = useState(null);
-  const host = 'http://localhost:4019';
+  const host = 'https://tnp-website-server.vercel.app';
   // const host = process.env.REACT_APP_REQURL;
 
   const Submit = async (event) => {

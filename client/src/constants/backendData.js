@@ -1,8 +1,8 @@
 // Database URL
 const host = process.env.REACT_APP_REQURL;
 const host2 = process.env.REACT_APP_REQURL;
-// const host = 'http://localhost:4019';
-// const host2 = 'http://localhost:4019';
+// const host = 'https://tnp-website-server.vercel.app';
+// const host2 = 'https://tnp-website-server.vercel.app';
 // 1) YearWise Context APIs
 
 // fetch all the records from database
