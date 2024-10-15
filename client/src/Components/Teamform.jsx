@@ -46,7 +46,7 @@ const UserForm = () => {
             console.log('User Data:', userData);
 
             try {
-                const response = await axios.post('https://tnp-website-server.vercel.app/teamform/add', userData, {
+                const response = await axios.post('https://tnp-website-new-version-5i79.onrender.com/teamform/add', userData, {
                     headers: { 'Content-Type': 'application/json' },
                 });
                 alert('User data and image submitted successfully!');

@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
+const https = require("https"); // Use https for self-ping
 const Placements = require("./routes/placementsRoute");
 const eventRoute = require("./routes/eventroute");
 const JAF = require("./routes/jaf");
@@ -13,13 +14,9 @@ dotenv.config();
 const port = process.env.PORT;
 const cloudinary = require('cloudinary').v2;
 
-
 // Set a limit of 10mb for incoming JSON requests
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
-
-// ... your routes and other middleware
-
 
 // Configure Cloudinary
 cloudinary.config({
@@ -27,7 +24,6 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
-// const mongoURI1 = `mongodb://127.0.0.1/placements`;
 
 app.use(cors());
 
@@ -44,9 +40,16 @@ app.use("/sendFile", JAF);
 app.use("/newsUpdates", News);
 app.use("/teamform", Teams);
 
-// const PORT = process.env.PORT || 8000;
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port} http://localhost:${port}`);
+
+  // Self-ping every 10 seconds to prevent the server from sleeping
+  setInterval(() => {
+    https.get(`https://tnp-website-new-version-5i79.onrender.com`, (res) => {
+      console.log(`Pinged server - Status Code: ${res.statusCode}`);
+    }).on('error', (err) => {
+      console.error(`Error pinging server: ${err.message}`);
+    });
+  }, 1000*6*10); // 10 seconds
 });
-
-

@@ -53,7 +53,7 @@ const JAF = () => {
   });
 
   const [file, setFile] = useState(null);
-  const host = 'https://tnp-website-server.vercel.app';
+  const host = 'https://tnp-website-new-version-5i79.onrender.com';
   // const host = process.env.REACT_APP_REQURL;
 
   const Submit = async (event) => {

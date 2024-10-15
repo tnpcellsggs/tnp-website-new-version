@@ -36,7 +36,7 @@ export default function EventsList() {
         // let res = await axios.get(
         //   `${process.env.REACT_APP_REQURL}/admin/events/getall/`
         // );
-        let res = await axios.get(`https://tnp-website-server.vercel.app/admin/events/getall`);
+        let res = await axios.get(`https://tnp-website-new-version-5i79.onrender.com/admin/events/getall`);
         setEventsList(res.data);
       } catch (err) {
         // console.log(err);
@@ -61,7 +61,7 @@ export default function EventsList() {
   useEffect(() => {
     const fetchEventList = async () => {
       try {
-        // let res = await axios.get(`https://tnp-website-server.vercel.app/admin/events/getall`);
+        // let res = await axios.get(`https://tnp-website-new-version-5i79.onrender.com/admin/events/getall`);
         let res = await axios.get(`${process.env.REACT_APP_REQURL}/admin/events/getall`);
         setEventsList(res.data);
         // console.log(res.data);
@@ -82,7 +82,7 @@ export default function EventsList() {
         data: {
           event:event
         }});
-      // let res = await axios.delete(`https://tnp-website-server.vercel.app/admin/events/delete`,{
+      // let res = await axios.delete(`https://tnp-website-new-version-5i79.onrender.com/admin/events/delete`,{
       //   headers: {
       //     "Content-Type": "application/json"
       //   },
@@ -98,7 +98,7 @@ export default function EventsList() {
   const handleEventEdit = async () => {
     try {
       setShow(false);
-      // let res = await axios.put(`https://tnp-website-server.vercel.app/admin/events/editEvent`, eventData);
+      // let res = await axios.put(`https://tnp-website-new-version-5i79.onrender.com/admin/events/editEvent`, eventData);
       let res = await axios.put(`${process.env.REACT_APP_REQURL}/admin/events/editEvent`, eventData);
       res.status === 200 && setIsListRefreshing(true);
     } catch (err) {
