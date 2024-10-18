@@ -31,6 +31,8 @@ const TeamCards = (props) => {
                     {
                         members.map((people, index) => {
                             const { name, imageLink, phoneNo, emailId, linkedinId, title } = people;
+                            let string = imageLink.split('.com/uc')
+              string = string[0] + '.com/thumbnail' + string[1] + '&sz=w1000'
                             return (
                                 <div className='sm:w-[345px] w-[90%] my-4 nav-light-shadows rounded-2xl our_team_divs' key={index + Math.random()}>
                                     <div options={{
@@ -67,7 +69,7 @@ const TeamCards = (props) => {
                                         >
                                             {/* div for intro  */}
                                             {/* <IconDiamond className=" flex-col items-center justify-center w-[50%] h-[100%] rounded-t-2xl"> */}
-                                            <img src={imageLink} alt={name} className="w-[40%] rounded-full text-center absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
+                                            <img src={imageLink} alt={name} className=" rounded-full text-center absolute mx-auto nav-darker-shadows top-[22px] left-[29%] object-cover w-[150px] h-[150px]" />
                                             <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center ">
                                                 <h3 className='w-full mx-4 text-xl font-bold text-center text-black'>{name}</h3>
                                                 <p className="text-center text-gray-600">{title}</p>

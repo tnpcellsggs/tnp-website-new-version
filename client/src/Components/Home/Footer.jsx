@@ -121,7 +121,7 @@ export default function Footer() {
                 >
                   <div className="mt-2 mb-2">
                     TPO Dean IL:
-                    <a href="tel:7588428778" className="inline-block">&nbsp;+91 75884 28778</a>
+                    <a href="tel:7588428778" className="inline-block">&nbsp;+91 94218 68526</a>
                     <br />
                     TPO Assistant:
                     <a href="tel:7507877206" className="inline-block">&nbsp;+91 75078 77206</a>
@@ -143,6 +143,9 @@ export default function Footer() {
                     <a href="mailto:tpo@sggs.ac.in">tpo@sggs.ac.in</a>
                     <br />
                     <a href="mailto:tnpcell@sggs.ac.in">tnpcell@sggs.ac.in</a>
+                    
+                    <br />
+                    <a href="mailto:tnpcell@sggs.ac.in">tnpsecretary@sggs.ac.in</a>
                   </div>
                 </div>
               </div>
@@ -151,7 +154,7 @@ export default function Footer() {
         </Row>
 
         <div className="copyright">
-          Copyright @2023 SGGSIE&T. All Rights Reserved.<br />
+          Copyright @2024-25 SGGSIE&T. All Rights Reserved.<br />
           Developed By Technical Team | T&P Cell
         </div>
       </Container>

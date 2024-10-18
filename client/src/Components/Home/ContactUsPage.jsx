@@ -120,6 +120,7 @@ export const ContactUsPage = () => {
                         <h4>TPO & Dean </h4>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`mailto:tpo@sggs.ac.in`}>tpo@sggs.ac.in</a></p>
                         <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tnpcell@sggs.ac.in`} >tnpcell@sggs.ac.in</a></p>
+                        <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tnpsecretary@sggs.ac.in`} >tnpsecretary@sggs.ac.in</a></p>
                       </div>
                       {/* <div>
                         <h4>Placement Co-ordinators:</h4>

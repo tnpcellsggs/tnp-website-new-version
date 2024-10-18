@@ -41,7 +41,7 @@ function App() {
             <Route path="/admin/console/*" element={<AdminRouter />} />
             {/*<Route path="/user/:action" element={<Signup />} />*/}
             <Route path="/verifycert/:uniqueid" element={<VerifyCertificate />} />
-            <Route path="/teams" element={<UserForm />} />
+            {/* <Route path="/teams" element={<UserForm />} /> */}
           </Routes>
         </AdminContext.Provider>
       </div>
