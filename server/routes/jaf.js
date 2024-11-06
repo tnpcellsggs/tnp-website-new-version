@@ -88,7 +88,7 @@ router.post('/uploaded', upload.array('file'), async (req, res) => {
 
       from: `Website Redirected <${emailFrom}>`,
       // to: 'tnpcell@sggs.ac.in',
-      to: "2021bit046@sggs.ac.in",
+      to: "2022bel013@sggs.ac.in",
       subject: emailSub,
       text: `This mail is redirected from <tnpcellsggs@sggs.ac.in>\n\nFrom: ${emailFrom}\n\n\nMessage: ${emailSpecifications}\n\n\nPlease find the attachment`,
       attachments: filesAttatched,
@@ -160,7 +160,7 @@ router.post('/filled', upload.none(), async (req, res) => {
       from: `Website Redirected <${jafFormData.ThisisFrom}>`,
 
       // to: 'tnpcell@sggs.ac.in',
-      to: "2021bit046@sggs.ac.in",
+      to: "2022bel013@sggs.ac.in",
       subject: 'JAF For Recruitment',
       // text: `This mail is redirected from <tnpcellsggs@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.anyMessage}\n\nJAF:\nAbout The Organisation:\n\nName of Organisation: ${jafFormData.nameOrg}\nPostal Address: ${jafFormData.postalAdd}\nWebsite Link(optional): ${jafFormData.websiteLink}\n\nJob Profile:\n\nJob Designation: ${jafFormData.jobDesig}\nJob Description: ${jafFormData.jobDesc}\nJob Location: ${jafFormData.jobLoc}\n\nType Of Organisation:\n${jafFormData.typeOfOrg}\n${jafFormData.typeOfOrgArea}\n\nIndustry Sector:\n${jafFormData.industrySector}\n${jafFormData.industrySectorArea}\n\nContact Details:\n\nHR Head:Name:${jafFormData.HRname}\nEmail:${jafFormData.HRemail}\nPhone:${jafFormData.HRnumber}\nMobile:${jafFormData.HRphone}\n\nFirst Person Contact:Name:${jafFormData.fstname}\nEmail:${jafFormData.fstemail}\nPhone:${jafFormData.fstnumber}\nMobile:${jafFormData.fstphone}\n\nSecond Person Contact:Name:${jafFormData.secname}\nEmail:${jafFormData.secemail}\nPhone:${jafFormData.secnumber}\nMobile:${jafFormData.secphone}\n\nSalary Break Up:\n\nCTC: ${jafFormData.ctc}\nStipend: ${jafFormData.stipend}\nBonus/Perks/Incentives: ${jafFormData.bonus}\n\nEligibility Criteria:\nCGPA: ${jafFormData.cgpa}\nXII %: ${jafFormData.secondaryEdu}\nX %: ${jafFormData.primaryEdu}\n\nSelection Process:\n${jafFormData.personalInterview}\n${jafFormData.selectionCriteria}\n\nRounds:${jafFormData.rounds}\nOffers:${jafFormData.offers}\nPeriod:${jafFormData.period}\n\nLogistics Requirements:\nBTech:\n${jafFormData.btechBranches}\n\nMTech:\n${jafFormData.mtechBranches}\n\n`,
       html: `<!DOCTYPE html>
@@ -369,7 +369,7 @@ router.post('/interestForm', upload.none(), async (req, res) => {
 
       from: `Website Redirected <${jafFormData.ThisisFrom}>`,
       // to: 'tnpcell@sggs.ac.in',
-      to: "tnpcell@sggs.ac.in","tnpsecretary@sggs.ac.in",
+      to: "tnpcell@sggs.ac.in",
       subject: 'Company Interest Form',
       // text: `This mail is redirected from <tnpcellsggs@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.specifications}\n\nCompany Details:\n\nCompany Name: ${jafFormData.companyName}\nOfficial Email-Id: ${jafFormData.companyEmail}\nCompany's Website Link(optional): ${jafFormData.websiteLink}\n\nContact Information:\n\nHR Mobile No: ${jafFormData.HRmobNo}\nAlternate Contact No: ${jafFormData.HRalterateNo}\nHR Mail ID: ${jafFormData.HRmail}\n\n`,
       html: `
