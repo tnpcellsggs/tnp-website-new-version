@@ -2025,7 +2025,7 @@ const team_24_25 = [
                 name: 'Param Bhatkar',
                 title: 'Training & Placement Secretary',
                 imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729011909/l07ls96n6pso96j2eov5.png',
-                phoneNo: +91-8767359567,
+                phoneNo: 8767359567,
                 emailId: '2022bel019@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/in/param-bhatkar-171061250'
             },
@@ -2068,7 +2068,7 @@ const team_24_25 = [
                 name: 'Darshan Hiware ',
                 title: 'DBMS Executive',
                 imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729011959/kvbgguyrgtd2gwtndywi.jpg',
-                phoneNo: 7249823905,
+                phoneNo: 9529696883,
                 emailId: '2022bch008@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/authwall?trkInfo=AQF8DYCglgQMtgAAAZJxg7Uw75LRBmdSGLZZZMnEZ7pKknB5aLyRO8-aHHKuNGhLWYIwFMt3QUcrZknZDgjShtHfsyQo3eXVU0oHtQ4JCpMhbM2s0BHNXlVMikPwITY_LdSzDrk=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdarshan-hiware-226252259%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app'
             },
@@ -2089,7 +2089,7 @@ const team_24_25 = [
                 name: 'Amey Medewar',
                 title: 'Placement Drive Executive',
                 imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729012009/oy8oi1bhb3cv9w4jbihu.jpg',
-                phoneNo: 7249823905,
+                phoneNo: 8530626210,
                 emailId: '2022bit153@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/in/amey-medewar-a4639625b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
             },

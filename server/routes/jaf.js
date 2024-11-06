@@ -369,7 +369,7 @@ router.post('/interestForm', upload.none(), async (req, res) => {
 
       from: `Website Redirected <${jafFormData.ThisisFrom}>`,
       // to: 'tnpcell@sggs.ac.in',
-      to: "2021bit046@sggs.ac.in",
+      to: "tnpcell@sggs.ac.in","tnpsecretary@sggs.ac.in",
       subject: 'Company Interest Form',
       // text: `This mail is redirected from <tnpcellsggs@sggs.ac.in>\n\nFrom: ${jafFormData.ThisisFrom}\n\n\nMessage:\n${jafFormData.specifications}\n\nCompany Details:\n\nCompany Name: ${jafFormData.companyName}\nOfficial Email-Id: ${jafFormData.companyEmail}\nCompany's Website Link(optional): ${jafFormData.websiteLink}\n\nContact Information:\n\nHR Mobile No: ${jafFormData.HRmobNo}\nAlternate Contact No: ${jafFormData.HRalterateNo}\nHR Mail ID: ${jafFormData.HRmail}\n\n`,
       html: `

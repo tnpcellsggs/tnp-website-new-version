@@ -83,8 +83,8 @@ const Hero = () => {
                 <h3 className="m-2 md:text-xl lg:text-2xl sm:text-2xl">See Flyer & Brochures Of Our Institute</h3>
               </div>
               <div className="flex flex-col items-center justify-start p-2 m-2">
-                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/15KfUk60qOmEl8BYD3BN1u9q8QXyXx_Se/view?usp=drivesdk' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Placement Brochure</p></a>
-                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1Zk4T5Bw7Y8TC5bX43BwRH6hP6PB7fG3F/view?usp=drivesdk' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">SGGSIE&T TPO Flyer</p></a>
+                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1-j-niIi5FWiNyGn1x3yH_DHg71bsEg1r/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Placement Brochure</p></a>
+                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">SGGSIE&T TPO Flyer</p></a>
               </div>
             </div>
           </div>
@@ -146,8 +146,8 @@ const Hero = () => {
               <h3 className="m-2 text-2xl">See Flyer & Brochures of Our Institute</h3>
             </div>
             <div className="flex flex-col items-center justify-start p-2 m-2">
-              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/15KfUk60qOmEl8BYD3BN1u9q8QXyXx_Se/view?usp=drivesdk' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Placement Brochure</p></a>
-              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1Zk4T5Bw7Y8TC5bX43BwRH6hP6PB7fG3F/view?usp=drivesdk' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">SGGSIE&T TPO Flyer</p></a>
+              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1-j-niIi5FWiNyGn1x3yH_DHg71bsEg1r/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Placement Brochure</p></a>
+              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">SGGSIE&T TPO Flyer</p></a>
             </div>
           </div>
         </div>
