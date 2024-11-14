@@ -8,7 +8,7 @@ const Registration = () => {
         <>
             <div className="p-1 m-2 text-center nav-light-shadows reg_updates">
                 {/* <LightBox /> */}
-                <marquee scrollamount="5" width="80"><span>&lt;</span><span>&lt;</span><span>&lt;</span><span>&lt;</span><span>&lt;</span></marquee><a target='_blank' className='m-2' href="https://docs.google.com/forms/d/e/1FAIpQLSeKrOanttdGyuL6oNAKYLEv7RmHa8Dytuam12Q5UkBzICm_uw/viewform?pli=1"><h1 className="inline-block text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl md:text-base lg:text-2xl">Training and Placement Cell Interview Applications Are Open (Click Here To Register)</h1></a><marquee scrollamount="5" direction="right" width="80"><span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span></marquee>
+                <marquee scrollamount="5" width="80"><span>&lt;</span><span>&lt;</span><span>&lt;</span><span>&lt;</span><span>&lt;</span></marquee><a target='_blank' className='m-2' href="https://docs.google.com/forms/d/e/1FAIpQLSePl9iL0ijx91X-Pn5xAPp79U6zM-dmdzicp851navevbctXw/viewform?usp=sf_link"><h1 className="inline-block text-base font-bold text-center text-red-700 hover:text-red-700 hover:underline sm:text-xl md:text-base lg:text-2xl">Training and Placement Cell Interview Applications Are Open (Click Here To Register)</h1></a><marquee scrollamount="5" direction="right" width="80"><span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span></marquee>
             </div>
         </>
     )

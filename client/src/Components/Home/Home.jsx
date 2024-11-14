@@ -60,7 +60,7 @@ const Homepage = () => {
       {/* 1) Hero section */}
       <Hero />
       {/* 2) Registrations */}
-      {/* <Registration /> */}
+      <Registration />
 
       {/* 2) News and Events */}
       <NewsEvents />

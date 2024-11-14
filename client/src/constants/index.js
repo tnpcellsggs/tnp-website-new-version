@@ -2026,7 +2026,7 @@ const team_24_25 = [
                 title: 'Training & Placement Secretary',
                 imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729011909/l07ls96n6pso96j2eov5.png',
                 phoneNo: 8767359567,
-                emailId: '2022bel019@sggs.ac.in',
+                emailId: '2022bel018@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/in/param-bhatkar-171061250'
             },
             {
