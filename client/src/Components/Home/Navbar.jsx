@@ -304,7 +304,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center" onClick={getProgress}>
-              <img src={SGGSLogo} alt="SGGS Logo" className="h-8 w-auto" />
+              <a href="https://sggs.ac.in/"> <img src={SGGSLogo} alt="SGGS Logo" className="h-8 w-auto" /></a>
               <img src={TNPLogo} alt="TNP Logo" className="h-8 w-auto ml-2" />
               <span className="ml-2 text-sm sm:text-base lg:text-lg font-semibold text-gray-900 hidden sm:inline-block">
                 SHRI GURU GOBIND SINGHJI INSTITUTE
