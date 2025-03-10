@@ -475,7 +475,7 @@ const recruitment_procedures_list = [
 const navDrops = [
     {
         title: "Why SGGSIE&T?",
-        links: [{ link: 'special_facilities', name: 'Special Facilities' }, { link: 'departments', name: 'Our Departments' }]
+        links: [{ link: 'special_facilities', name: 'Special Facilities' }, { link: 'departments', name: 'Our Departments' }, { link: 'cut-off', name: 'Last Year Cut-Off' }] 
         // , { link: 'researches', name: 'Researches' }]
     },
     {

@@ -35,6 +35,7 @@ import OldTeamTab from "../Home/OldTeams/oldTeamsTab"; //old team
 import { CompanyInterest, Researches } from "../../constants/Comps";
 
 import TeamHierarchy from "./WhyUS/TeamHierarchy";
+import CutOff from "./CutOff";
 
 const scrollBehavior = { top: "0", left: "0", behavior: "smooth" };
 
@@ -144,6 +145,7 @@ export default function Home() {
         <Route path="/jaf_recuriment" element={<JAF />} />
         <Route path="/jaf_internship" element={<Blank />} />
         <Route path="/studentSection" element={<Blank />} />
+        <Route path="/cut-off" element= {<CutOff />} />
         <Route path="/ourTeam" element={<OurTeam />} />
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/prevteam" element={<OldTeamTab />} />

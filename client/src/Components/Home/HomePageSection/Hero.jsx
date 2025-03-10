@@ -101,14 +101,14 @@ const Hero = () => {
               <h3 className="m-1 text-sm sm:text-[12px]">Summary(Last Year)</h3>
               <img src={Summary} alt='summary' className="w-[20%]" />
               <ul className="p-1 mt-2 space-y-2 list-disc">
-                <li className="text-xs">Total Offers: 480+</li>
+                <li className="text-xs">Total Offers: +</li>
                 <li className="text-xs">Top Package: 60 LPA</li>
                 <li className="text-xs">Average: 6.2 LPA</li>
               </ul>
             </div>
 
             <div className="flex flex-col items-center justify-center w-full h-full m-2 ">
-              <h3 className="m-1 text-sm sm:text-[12px]">Placement Stats 23-24</h3>
+              <h3 className="m-1 text-sm sm:text-[12px]">Placement Stats 24-25</h3>
               <img src={Stats} alt='stats' className="w-[20%]" />
               {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
                 // console.log(item.PackageRange)
