@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Maximize, Minimize, ZoomIn, ZoomOut, RotateCw } from 'lucide-react';
+import { Download, Maximize, Minimize, ZoomIn, ZoomOut, RotateCw, Home } from 'lucide-react';
 
 function CutOff() {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -67,35 +67,35 @@ function CutOff() {
   }, [isFullscreen]);
 
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center text-white p-4">
-      <div className={`bg-gray-800 rounded-lg shadow-xl ${isFullscreen ? 'fixed inset-0 z-50 flex flex-col' : 'max-w-3xl w-full'}`}>
-        <header className="flex items-center justify-between p-4 border-b border-gray-700">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
+      <div className={`bg-white rounded-lg shadow-lg ${isFullscreen ? 'fixed inset-0 z-50 flex flex-col' : 'max-w-4xl w-full'}`}>
+        <header className="flex items-center justify-between p-5 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-lg">
           <div>
-            <h1 className="text-xl font-bold">{imageData.name}</h1>
-            <p className="text-gray-400 text-sm">Uploaded: {imageData.uploadDate}</p>
+            <h1 className="text-2xl font-bold text-blue-800">{imageData.name}</h1>
+            <p className="text-blue-600 text-sm font-medium">Uploaded: {imageData.uploadDate}</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <button
               onClick={handleDownload}
-              className="flex items-center gap-1 bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-sm"
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full text-sm text-white font-medium transition-all duration-200 transform hover:scale-105 shadow"
             >
               <Download size={16} />
-              <span>Save</span>
+              <span>Save Image</span>
             </button>
             <button
               onClick={toggleFullscreen}
-              className="flex items-center gap-1 bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded text-sm"
+              className="flex items-center gap-2 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 transform hover:scale-105"
             >
               {isFullscreen ? <Minimize size={16} /> : <Maximize size={16} />}
-              <span>{isFullscreen ? 'Exit' : 'Fullscreen'}</span>
+              <span>{isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}</span>
             </button>
           </div>
         </header>
         
-        <div className="flex-1 overflow-auto relative p-4 flex items-center justify-center">
+        <div className="flex-1 overflow-auto relative p-6 flex items-center justify-center bg-white">
           {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-800">
-              <div className="w-10 h-10 border-t-2 border-blue-500 border-solid rounded-full animate-spin"></div>
+            <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 backdrop-blur-sm">
+              <div className="w-16 h-16 border-4 border-t-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
             </div>
           )}
           <div className="overflow-auto max-w-full max-h-full">
@@ -104,28 +104,50 @@ function CutOff() {
               alt={imageData.name}
               style={{
                 transform: `rotate(${rotation}deg) scale(${zoomLevel/100})`,
-                transition: "transform 0.2s ease"
+                transition: "transform 0.3s ease"
               }}
-              className="max-w-full object-contain"
+              className="max-w-full object-contain rounded-md shadow-md"
               onLoad={handleImageLoad}
             />
           </div>
         </div>
         
-        <div className="p-4 border-t border-gray-700 flex justify-center">
-          <div className="flex items-center gap-3">
-            <button onClick={zoomIn} className="p-2 bg-gray-700 hover:bg-gray-600 rounded" aria-label="Zoom in">
+        <div className="p-5 border-t border-gray-100 flex justify-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-b-lg">
+          <div className="flex items-center gap-4 p-2 bg-white rounded-full shadow-md">
+            <button 
+              onClick={zoomIn} 
+              className="p-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-full transition-colors duration-200" 
+              aria-label="Zoom in"
+              title="Zoom In"
+            >
               <ZoomIn size={20} />
             </button>
-            <span className="text-sm">{zoomLevel}%</span>
-            <button onClick={zoomOut} className="p-2 bg-gray-700 hover:bg-gray-600 rounded" aria-label="Zoom out">
+            <span className="text-blue-800 font-medium px-2">{zoomLevel}%</span>
+            <button 
+              onClick={zoomOut} 
+              className="p-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-full transition-colors duration-200" 
+              aria-label="Zoom out"
+              title="Zoom Out"
+            >
               <ZoomOut size={20} />
             </button>
-            <button onClick={rotate} className="p-2 bg-gray-700 hover:bg-gray-600 rounded ml-2" aria-label="Rotate">
+            <div className="h-8 w-px bg-gray-200 mx-1"></div>
+            <button 
+              onClick={rotate} 
+              className="p-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-full transition-colors duration-200" 
+              aria-label="Rotate"
+              title="Rotate 90°"
+            >
               <RotateCw size={20} />
             </button>
-            <button onClick={resetView} className="ml-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm">
-              Reset
+            <div className="h-8 w-px bg-gray-200 mx-1"></div>
+            <button 
+              onClick={resetView} 
+              className="flex items-center gap-2 px-4 py-2 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 rounded-full font-medium transition-colors duration-200"
+              title="Reset View"
+            >
+              <Home size={16} />
+              <span>Reset</span>
             </button>
           </div>
         </div>
@@ -134,4 +156,4 @@ function CutOff() {
   );
 }
 
-export default CutOff;  
+export default CutOff;
