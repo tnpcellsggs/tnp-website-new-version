@@ -294,7 +294,7 @@ const departmentDetails = [
     {
         icon: civil,
         imageLink: CIVIL,
-        head: 'Dr.P.B.Ullagaddi',
+        head: 'Dr. C. B. Bhagat',
         link: 'https://www.sggs.ac.in/home/page/department-of-civil-engineering',
         name: 'Civil Engineering',
         dates: '',
@@ -364,7 +364,7 @@ const departmentDetails = [
     {
         icon: instrumentation,
         imageLink: ISNTRU,
-        head: 'Dr. R. V. Sarwadnya',
+        head: 'Dr. Mrs. V. R. Thool',
         link: 'https://www.sggs.ac.in/home/page/instrumentation-engineering',
         name: 'Instrumentation Engineering',
         dates: '',
@@ -378,7 +378,7 @@ const departmentDetails = [
     {
         icon: mech,
         imageLink: MECH,
-        head: 'Dr. R. D. Jilte (Ph.D.)',
+        head: 'Dr. Sourabh Jogee',
         link: 'https://www.sggs.ac.in/home/page/mechanical-engineering',
         name: 'Mechanical Engineering',
         dates: '',
@@ -392,7 +392,7 @@ const departmentDetails = [
     {
         icon: production,
         imageLink: PROD,
-        head: 'Dr.L.N.Wankhade',
+        head: 'Dr.P. R. Kubade',
         link: 'https://www.sggs.ac.in/home/page/department-of-production-engineering',
         name: 'Production Engineering',
         dates: '',
@@ -406,7 +406,7 @@ const departmentDetails = [
     {
         icon: textile,
         imageLink: TEXT,
-        head: 'Dr. R.N. Joshi',
+        head: 'Dr.P. A. Khude',
         link: 'https://www.sggs.ac.in/home/page/department-of-textile-technology-',
         name: 'Textile Technology',
         dates: '',
@@ -490,13 +490,24 @@ const navDrops = [
 
 
 const imageSlider = [
+     {
+        title: 'Placed At X1Studio',
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753512145/Screenshot_2025-07-24_201054_tqffoq.png'
+    },
     {
         title: 'Placed At Algoquant',
         imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729258408/p9tdowpvhoz3u1lrbtm5.png'
     },
+    {title: 'Placed At Trident Group',
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753512501/Screenshot_2025-07-26_121720_bzmi0g.png'
+    },
     {
         title: 'Placed At Sarvaha',
         imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729258426/exrgny1qinckbpqfyzdh.png'
+    },
+    {
+        title: 'Placed At Raja Software Labs',
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753512703/Screenshot_2025-07-26_122115_ixrfp5.png'
     },
     {
         title: 'Placed At Zoho',

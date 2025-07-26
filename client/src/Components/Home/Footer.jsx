@@ -59,7 +59,7 @@ export default function Footer() {
                 <FontAwesomeIcon color="#ff0000" icon={faYoutube} />
               </a>
               <a
-                href="https://www.linkedin.com/in/sggs-tnpcell/"
+                href="https://www.linkedin.com/company/placementcell-sggsiet/posts/?feedView=all"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -124,7 +124,7 @@ export default function Footer() {
                     <a href="tel:7588428778" className="inline-block">&nbsp;+91 94218 68526</a>
                     <br />
                     TPO Assistant:
-                    <a href="tel:7507877206" className="inline-block">&nbsp;+91 75078 77206</a>
+                    <a href="tel:7507877206" className="inline-block">&nbsp;+91 9373997817</a>
                   </div>
                 </div>
               </div>
