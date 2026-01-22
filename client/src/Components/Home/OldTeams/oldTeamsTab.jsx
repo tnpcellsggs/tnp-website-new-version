@@ -3,12 +3,16 @@ import React, { useEffect, useState } from "react";
 import Team2122 from "./Team2122";
 import Team2223 from "./Team22_23";
 import Team2324 from "./Team2324";
+import Team2425 from "./Team2425";
 
 function OldTeams() {
   const [teamYear, setTeamYear] = useState("2122");
 
   const yearSwitch = (year) => {
     switch (year) {
+      case "2425":
+        return <Team2425 runs={1000} />;
+
       case "2324":
         return <Team2324 runs={1000} />;
 
@@ -61,6 +65,14 @@ function OldTeams() {
               className="p-2 m-4 font-bold rounded-2xl nav-medium-light-shadows hover:bg-blue-400"
             >
               AY 23-24
+            </button>
+            <button
+              onClick={() => {
+                setTeamYear("2425");
+              }}
+              className="p-2 m-4 font-bold rounded-2xl nav-medium-light-shadows hover:bg-blue-400"
+            >
+              AY 24-25
             </button>
           </div>
         </div>

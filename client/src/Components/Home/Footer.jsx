@@ -121,7 +121,7 @@ export default function Footer() {
                 >
                   <div className="mt-2 mb-2">
                     TPO Dean IL:
-                    <a href="tel:7588428778" className="inline-block">&nbsp;+91 94218 68526</a>
+                    <a href="tel:7588428778" className="inline-block">&nbsp;+91 9823208720</a>
                     <br />
                     TPO Assistant:
                     <a href="tel:7507877206" className="inline-block">&nbsp;+91 9373997817</a>
@@ -154,7 +154,7 @@ export default function Footer() {
         </Row>
 
         <div className="copyright">
-          Copyright @2024-25 SGGSIE&T. All Rights Reserved.<br />
+          Copyright @2025-26 SGGSIE&T. All Rights Reserved.<br />
           Developed By Technical Team | T&P Cell
         </div>
       </Container>

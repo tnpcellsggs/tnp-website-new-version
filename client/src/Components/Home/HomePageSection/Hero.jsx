@@ -83,7 +83,7 @@ const Hero = () => {
                 <h3 className="m-2 md:text-xl lg:text-2xl sm:text-2xl">See Flyer & Brochures Of Our Institute</h3>
               </div>
               <div className="flex flex-col items-center justify-start p-2 m-2">
-                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1-j-niIi5FWiNyGn1x3yH_DHg71bsEg1r/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Placement Brochure</p></a>
+                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1D4EMmV2FgA1rFwRR7O0H9cc10ArttnCK/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Placement Brochure</p></a>
                 <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">SGGSIE&T TPO Flyer</p></a>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Hero = () => {
             <div className="flex flex-col items-center justify-center w-full h-full m-2 ">
               <h3 className="m-1 text-sm sm:text-[12px]">Placement Status 25-26</h3>
               <img src={Stats} alt='stats' className="w-[20%]" />
-              {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
+              {/* {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
                 // console.log(item.PackageRange)
 
                 return (
@@ -119,8 +119,8 @@ const Hero = () => {
                     <li className="text-xs">Top Package: {item.PackageRange}</li>
                     <li className="text-xs">Average: {item.AveragePackage}</li>
                   </ul>
-                );
-              })}
+                ); */}
+              {/* })} */}
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ const Hero = () => {
               <h3 className="m-2 text-2xl">See Flyer & Brochures of Our Institute</h3>
             </div>
             <div className="flex flex-col items-center justify-start p-2 m-2">
-              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1-j-niIi5FWiNyGn1x3yH_DHg71bsEg1r/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Placement Brochure</p></a>
+              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1wBrfNgAy2M7AeJt8NhKC_pkZCUsSzXb0/view?usp=drive_link' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Placement Brochure</p></a>
               <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">SGGSIE&T TPO Flyer</p></a>
             </div>
           </div>

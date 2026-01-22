@@ -157,7 +157,7 @@ export const ContactUsPage = () => {
                       </div>
                       <div>
                         <h4>TPO Dean:</h4>
-                        <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91 94218 68526`} >+919421868526</a></p>
+                        <p className="p-2 m-2 border-2 border-blue-400 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`tel:+91 94218 68526`} >+919823208720</a></p>
                       </div>
                       {/* <div>
                         <h4>TPO Assistant:</h4>

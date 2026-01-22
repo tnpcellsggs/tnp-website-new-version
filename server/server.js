@@ -14,6 +14,14 @@ dotenv.config();
 const port = process.env.PORT;
 const cloudinary = require('cloudinary').v2;
 
+const adminRoute = require("./routes/adminroute");
+// ...existing code...
+app.use("/admin/signin/", adminRoute);
+// ...existing code...
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
 // Set a limit of 10mb for incoming JSON requests
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));

@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../../../Higher_Order_Components/SectionWrapper";
-import HatkarSir from "../../../img/_hatkarsir_.jpg";
-// import HatkarSir from "../../../img/HatkarSir.jpg";
+// import HatkarSir from "../../../img/_hatkarsir_.jpg";
+import HatkarSir from "../../../img/HatkarSir.jpg";
 import { fadeIn } from '../../../utils/motion';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {
@@ -37,7 +37,7 @@ const Tpo = () => {
                     <div className="flex flex-col items-center justify-center sm:flex-row-reverse">
                         <div className="sm:w-[30%] w-[70%] md:w-[35%] lg:w-[30%] text-center flex flex-col justify-center items-center">
                             <img src={HatkarSir} alt="tpo" className="sm:w-[75%] h-[70%] mb-2 rounded-xl " />
-                            <p className="mb-2 text-xl font-bold text-center">Prof. S. S. Hatkar</p>
+                            <p className="mb-2 text-xl font-bold text-center">Dr.Sandeep B. Mundhe</p>
                         </div>
 
                         <div className="p-1 align-top sm:p-2.5 mx-1 sm:mx-2 text-lg text-justify font-normal w-[86%] sm:w-[60%]">

@@ -310,7 +310,7 @@ const departmentDetails = [
         imageLink: CSE,
         link: 'https://www.sggs.ac.in/home/page/department-of-computer-science-and-engineering',
         name: 'Computer Science And Engineering',
-        head: 'Mrs. S.M.Bansode',
+        head: 'Dr.J.M.Waghmare',
         dates: '1986',
         info: [
             'Established in 1986, the department has groomed many professionals.',
@@ -350,7 +350,7 @@ const departmentDetails = [
     {
         icon: it,
         imageLink: IT,
-        head: 'Dr. G.K. Pakle (Ph.D.)',
+        head: 'Dr. C.P.Navdeti',
         link: 'https://www.sggs.ac.in/home/page/information-technology',
         name: 'Information Technology',
         dates: '',
@@ -364,7 +364,7 @@ const departmentDetails = [
     {
         icon: instrumentation,
         imageLink: ISNTRU,
-        head: 'Dr. Mrs. V. R. Thool',
+        head: 'Dr. Mrs. R.V.Sarwadnya',
         link: 'https://www.sggs.ac.in/home/page/instrumentation-engineering',
         name: 'Instrumentation Engineering',
         dates: '',
@@ -492,14 +492,14 @@ const navDrops = [
 const imageSlider = [
      {
         title: 'Placed At X1Studio',
-        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753512145/Screenshot_2025-07-24_201054_tqffoq.png'
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753856134/27_dpmk7m.png'
     },
     {
         title: 'Placed At Algoquant',
-        imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729258408/p9tdowpvhoz3u1lrbtm5.png'
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753857944/Untitled_design_jkvwrj.png'
     },
     {title: 'Placed At Trident Group',
-        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753512501/Screenshot_2025-07-26_121720_bzmi0g.png'
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753975327/12_ei8agn.png'
     },
     {
         title: 'Placed At Sarvaha',
@@ -507,7 +507,7 @@ const imageSlider = [
     },
     {
         title: 'Placed At Raja Software Labs',
-        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753512703/Screenshot_2025-07-26_122115_ixrfp5.png'
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758008326/raja_software_labs_hhwzcp.png'
     },
     {
         title: 'Placed At Zoho',
@@ -2266,6 +2266,270 @@ const team_24_25 = [
     },
 ]
 
+const team_25_26 = [
+    {
+        post: 'Training & Placement Secretaries',
+        members: [
+            {
+                name: 'Rahul Atram',
+                title: 'Training & Placement Secretary',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758869562/rahul_czts9z.jpg',
+                phoneNo:  7028001126,
+                emailId: '2023bcs115@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/rahul-atram-3aa7022a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Shravani Khaparkhuntikar ',
+                title: 'Training & Placement Secretary',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757927613/Shravani.jpg_i9vloa.jpg',
+                phoneNo: 7249405205,
+                emailId: '2023bin022@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/shravani-mule-30861528b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            }
+        ]
+    },
+    {
+        post: 'HR Executives',
+        members: [
+            {
+                name: 'Kashaf Shaikh ',
+                title: 'HR Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757928459/kashaf.jpg_doctmf.jpg',
+                phoneNo: 9699848847,
+                emailId: 'srinidhiandure@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/kashaf1175'
+            },
+
+            {
+                name: ' Himanshu Dighade',
+                title: 'HR Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757948810/himanshu_bjqlks.jpg',
+                phoneNo: 7840990466,
+                emailId: 'himanshudighade369@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/himanshu-dighade-42199527a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            
+        ]
+    },
+    {
+        post: 'DBMS Executives',
+        members: [
+            {
+                name: 'Durga Khire',
+                title: 'DBMS Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757956818/durga_it90eg.jpg',
+                phoneNo: 9322910543,
+                emailId: '2023bcs010@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/durga-khire-735852306'
+            },
+            {
+                name: 'Sakshi Kardile',
+                title: 'DBMS Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757928911/sakshi_b5xwau.jpg',
+                phoneNo: 9834585987,
+                emailId: '2023bin014@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/sakshi-kardile-39a871292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Payal Gadhe',
+                title: 'DBMS Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757956678/payal_v7i1nt.jpg',
+                phoneNo: 9075280984,
+                emailId: '2023bin035@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/payal-gadhe-137238297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            }
+        ]
+    },
+    {
+        post: 'Placement Drive Executives',
+        members: [
+            {
+                name: 'Sumit Chopkar',
+                title: 'Placement Drive Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757929238/sumit_tq2sra.jpg',
+                phoneNo: 7028554157,
+                emailId: 'sumitchopkar828@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/sumit-chopkar-867b1a293'
+            },
+            {
+                name: 'Rutuja Patil ',
+                title: 'Placement Drive Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757957824/rutuja_f8f9tp.jpg',
+                phoneNo: 9373953684,
+                emailId: '2023bin029@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/rutuja-madhukar-patil-886a672a2'
+            },
+            {
+                name: 'Anshu Nagnurwar ',
+                title: 'Placement Drive Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757930552/anshu_nn32yu.jpg',
+                phoneNo: 7744829218,
+                emailId: 'anshunagnurwar@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/anshu-nagnurwar-078802291'
+            }
+        ]
+    },
+    {
+        post: 'Website & Media Executives',
+        members: [
+            {
+                name: 'Saloni Sancheti',
+                title: 'Website Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757948633/saloni_ts7pcn.jpg',
+                phoneNo: 9763478367,
+                emailId: 'salonisancheti0707@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/saloni-sancheti-b536832b5'
+            },
+            {
+                name: 'Himani Chaudhari ',
+                title: 'Media Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757929599/himani_mckipu.jpg',
+                phoneNo: 9422364978,
+                emailId: 'himanichaudhari56@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/himani-c-78946b282'
+            },
+    
+        ]
+    },
+    {
+        post: 'Content Creation Executives',
+        members: [
+            {
+                name: 'Shrutika Bhumbre ',
+                title: 'Content Creation Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757929720/shrutika_ypamh4.jpg',
+                phoneNo: 8208309685,
+                emailId: '2023BIN007@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/shrutika-bhumbre-3697b42a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Rupali Yelne',
+                title: 'Content Creation Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757930720/rupali_hyz3gn.jpg',
+                phoneNo: 7972748235,
+                emailId: '2024bcs510@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/rupali-yelne?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            }
+        ]
+    },
+    {
+        post: 'Workshop & Internship Executives',
+        members: [
+            {
+                name: 'Chandrashekhar Patil',
+                title: 'Workshop & Internship Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758023267/chandu_vgmd0p.jpg',
+                phoneNo: 6302494449,
+                emailId: '2023bcs085@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/chandrashekhar-patil-820786288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Srushti Shivanwar ',
+                title: 'Workshop & Internship Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757930296/shrushti_lnhlxh.jpg',
+                phoneNo: 8767388022,
+                emailId: '2024bcs514@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/srushti-shivanwar-069046343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Aryan Sakhare',
+                title: 'Workshop & Internship Executive',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758008688/aryan_o2qgeo.jpg',
+                phoneNo: 9579850969,
+                emailId: 'sakhareary12@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/aryansakhare/'
+            }
+        ]
+    },
+    {
+        post: 'Departmental Coordinator & Alumni Relations',
+        members: [
+            {
+                name: 'Bhavesh Farkade ',
+                title: '(CHEMICAL)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758024346/bhavesh_liz6kz.jpg',
+                phoneNo: 9834190126,
+                emailId: '2023bch008@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/bhavesh-dinesh-farkade-4637322a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Prathmesh Javlage',
+                title:'(CIVIL)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757943322/prathmesh_qlyrkg.jpg',
+                phoneNo: 8669409603,
+                emailId: '2023bce006@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/prathmesh-jawalge-079572288/'
+            },
+            {
+                name: 'Ritesh Jadhav',
+                title: '(CSE)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758023294/ritesh_xfidaw.jpg',
+                phoneNo: 8669772298,
+                emailId: '2023bcs077@sggs.ac.in',
+                linkedinId: 'blank'
+            },
+           
+           
+            {
+                name: 'Vitthal Rautwar',
+                title: '(EXTC)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757930901/vitthal_lcu698.jpg',
+                phoneNo: 9579836280,
+                emailId: '2023bec602@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/vitthal-rautwar-20394331b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BuUQg8VnQSNq2rlmt%2BGWk8A%3D%3D'
+            },
+            {
+                name: 'Dhanashri Goche ',
+                title: '(ELECTRICAL)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757942631/Dhanashri_npnnqs.jpg',
+                phoneNo: 8767617046,
+                emailId: '2023bel012@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/dhanashri-goche-45685228b'
+            },
+            {
+                name: 'Manas Aware',
+                title: '(IT)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757945714/manas_f6xkfv.jpg',
+                phoneNo: 8446371715,
+                emailId: 'awaremanas3002@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/manas-aware-987658230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Kedar Kolharikar',
+                title: '(INSTRUMENTATION)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1758008549/kedar_mtox47.jpg',
+                phoneNo: 7385592891,
+                emailId: '2023bin001@sggs.ac.in',
+                linkedinId: 'http://www.linkedin.com/in/kedar-kolharikar-a4725b288'
+            },
+            {
+                name: 'Akshada Tiwari ',
+                title: '(MECHANICAL)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757946042/Akashada_bgwvev.jpg',
+                phoneNo: 9175136269,
+                emailId: 'akshada.0803@gmail.com',
+                linkedinId: 'https://www.linkedin.com/in/akshada-tiwari-b09ab9288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            },
+            {
+                name: 'Sanket Kshirsagar',
+                title: '(PRODUCTION)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757944093/sanket_edtiwk.jpg',
+                phoneNo: 7559136502,
+                emailId: '2023bpr053@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/sanket-kshirsagar-7b34832b1'
+            },
+            {
+                name: 'Meghana Polpelliwar',
+                title: '(TEXTILE)',
+                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757958710/meghana_jhohmb.jpg',
+                phoneNo: 9834794735,
+                emailId: '2023btt025@sggs.ac.in',
+                linkedinId: 'https://www.linkedin.com/in/meghana884?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+            }
+        ]
+    },
+]
+
 // Temporary News Details
 const news_list = [
     {
@@ -2420,4 +2684,4 @@ const hierarchyImages=[
     }
 ]
 
-export { departmentDetails, navDrops, imageSlider, specialFacilities, recruitment_procedures_list, past_recuriters_list, team_23_24,team_24_25, news_list, team_21_22, team_22_23, teamHierarchy, hierarchyImages };
+export { departmentDetails, navDrops, imageSlider, specialFacilities, recruitment_procedures_list, past_recuriters_list, team_23_24,team_24_25, news_list, team_21_22, team_22_23, teamHierarchy, hierarchyImages,team_25_26 };

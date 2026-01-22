@@ -39,7 +39,7 @@ function AdminSignin() {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_REQURL}/admin/signin`,
-        // `https://tnp-website-new-version-5i79.onrender.com/admin/signin`,
+        `https://tnp-website-new-version-5i79.onrender.com/admin/signin`,
         {
           username,
           password,

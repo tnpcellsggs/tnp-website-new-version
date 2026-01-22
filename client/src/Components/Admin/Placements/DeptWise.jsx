@@ -190,7 +190,7 @@ export const DeptWise = () => {
             </div>
 
             {/* Form to add records */}
-            <Form Form >
+            <Form >
                 <hr />
                 <h2 className="my-3 ">Add Department Wise Records Here</h2>
                 <Form.Group className="my-3 mb-3 " controlId="Year">

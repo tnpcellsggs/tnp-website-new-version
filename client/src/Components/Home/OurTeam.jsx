@@ -7,7 +7,7 @@ import { css } from '@emotion/react';
 import { motion } from "framer-motion";
 import { useLayoutEffect } from 'react';
 import { fadeIn } from '../../utils/motion';
-import { team_24_25 } from '../../constants/index';
+import { team_25_26 } from '../../constants/index';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -162,7 +162,7 @@ export const OurTeam = () => {
                                     <div className="flex-col items-center justify-center">
                                         <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:director@sggs.ac.in`} >director@sggs.ac.in | <FontAwesomeIcon icon={faEnvelope} /></a></p>
 
-                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91 9421474393`}>+91 9421474393 | <FontAwesomeIcon icon={faPhone} /></a></p>
+                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91 9823208720`}>+91 9823208720 | <FontAwesomeIcon icon={faPhone} /></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@ export const OurTeam = () => {
                                 <div className="absolute flex-col items-center justify-center w-[50%] h-[100%] bg-img-blured rounded-t-2xl" >
                                     <img src={HatkarSir} alt="HatkarSir" className="w-[40%] rounded-full text-center z-10 absolute mx-auto nav-darker-shadows top-[22px] left-[29%]" />
                                     <div className="absolute bottom-0 z-20 flex flex-col items-center justify-center w-full text-center">
-                                        <h3 className='mx-4 text-2xl font-bold text-black'>Prof. S.S.Hatkar</h3>
+                                        <h3 className='mx-4 text-2xl font-bold text-black'>Dr.S.B.Mundhe</h3>
                                         <p className="text-gray-600">Dean (Industry Liaison), I/C TPO</p>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@ export const OurTeam = () => {
                                 <div className="flex items-center justify-center w-full h-[40%]">
                                     <div className="flex-col items-center justify-center">
                                         <p className="w-full p-2 m-2 text-center border-2 hover:cursor-pointer hover:bg-blue-400 rounded-xl"><a href={`mailto:tpo@sggs.ac.in`} >tpo@sggs.ac.in | <FontAwesomeIcon icon={faEnvelope} /></a></p>
-                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91-2462-269182`}>+91 94218 68526 | <FontAwesomeIcon icon={faPhone} /></a></p>
+                                        <p className="w-full p-2 m-2 text-center border-2 hover:bg-blue-400 rounded-xl hover:cursor-pointer"><a href={`tel:+91-2462-269182`}>+91 9823208720 | <FontAwesomeIcon icon={faPhone} /></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@ export const OurTeam = () => {
 
             {/* Our Team */}
             <div ref={comp}>
-                {team_24_25.map((items, index) => { return (<TeamCards key={`${index + Math.random()}` + items.post} index={index} item={items} />) })}
+                {team_25_26.map((items, index) => { return (<TeamCards key={`${index + Math.random()}` + items.post} index={index} item={items} />) })}
             </div>
 
 
