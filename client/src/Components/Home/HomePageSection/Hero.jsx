@@ -110,7 +110,7 @@ const Hero = () => {
             <div className="flex flex-col items-center justify-center w-full h-full m-2 ">
               <h3 className="m-1 text-sm sm:text-[12px]">Placement Status 25-26</h3>
               <img src={Stats} alt='stats' className="w-[20%]" />
-              {/* {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
+              {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
                 // console.log(item.PackageRange)
 
                 return (
@@ -119,8 +119,8 @@ const Hero = () => {
                     <li className="text-xs">Top Package: {item.PackageRange}</li>
                     <li className="text-xs">Average: {item.AveragePackage}</li>
                   </ul>
-                ); */}
-              {/* })} */}
+                );
+              })}
             </div>
           </div>
         </div>

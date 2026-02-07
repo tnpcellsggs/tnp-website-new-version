@@ -62,7 +62,7 @@ const Director = () => {
                 achievements.
               </p>
               <p className="sm:p-2.5 p-1 mx-1 sm:mx-2 md:text-[12px] text-[12px] lg:text-[16px] text-justify font-normal w-[90%]  md:text-sm lg:text-lg">
-                I look forward to the placement season 2023-24 and wish the
+                I look forward to the placement season 2025-26 and wish the
                 students all the best.
               </p>
             </div>
