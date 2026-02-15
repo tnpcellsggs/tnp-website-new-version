@@ -131,17 +131,29 @@ export default function PGraph() {
 
   const { getGraphAlldetails } = graphContext;
 
+  // useEffect(() => {
+  //   getGraphAlldetails().then((data) => {
+  //     let info = [];
+  //     let k=0;
+  //     for(let i=data.length-1;i>=(data.length-7);i--){
+  //       info.push(data[data.length-7+k]);
+  //       k++;
+  //     }
+  //     setTempGraphData(info);
+  //   });
+  // }, []);
   useEffect(() => {
-    getGraphAlldetails().then((data) => {
-      let info = [];
-      let k=0;
-      for(let i=data.length-1;i>=(data.length-7);i--){
-        info.push(data[data.length-7+k]);
-        k++;
-      }
-      setTempGraphData(info);
-    });
-  }, []);
+  getGraphAlldetails().then((data) => {
+    if (!data || data.length === 0) {
+      setTempGraphData([]);
+      return;
+    }
+
+    const lastSeven = data.slice(-7); // safely get last 7 entries
+    setTempGraphData(lastSeven);
+  });
+}, []);
+
 
 
 
@@ -162,7 +174,13 @@ export default function PGraph() {
               <Line type="linear" dataKey="Total" stroke="#f29961" />
             </LineChart> */}
 
-            <BarChartGraph data={graphTempData} />
+            {/* <BarChartGraph data={graphTempData} /> */}
+            {graphTempData.length > 0 ? (
+  <BarChartGraph data={graphTempData} />
+) : (
+  <p>No placement data available</p>
+)}
+
           </ResponsiveContainer>
         </div>
       </Container>

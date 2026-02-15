@@ -115,9 +115,9 @@ const Hero = () => {
 
                 return (
                   <ul key={item.Year} className="p-1 mt-2 space-y-2 list-disc ">
-                    <li className="text-xs">Total Offers: {item.TotalOffers}+</li>
-                    <li className="text-xs">Top Package: {item.PackageRange}</li>
-                    <li className="text-xs">Average: {item.AveragePackage}</li>
+                    <li className="text-xs">Total Offers: 414+</li>
+                    <li className="text-xs">Top Package: 25 LPA</li>
+                    <li className="text-xs">Average: 4 LPA</li>
                   </ul>
                 );
               })}

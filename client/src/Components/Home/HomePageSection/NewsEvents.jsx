@@ -130,7 +130,7 @@ const EventsSection = () => {
         );
         let templist = res.data;
         templist.sort((a, b) => b.eventDate.localeCompare(a.eventDate));
-        setEventsList(templist.slice(0, 4));
+        setEventsList(templist.slice(0, 3));
         setIsLoading(false);
       } catch (err) {
         // console.log(err);

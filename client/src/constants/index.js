@@ -2088,15 +2088,6 @@ const team_24_25 = [
                 emailId: '2022bel023@sggs.ac.in',
                 linkedinId: 'https://www.linkedin.com/in/darshana-borekar-4ba2562ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
             },
-
-            {
-                name: 'Shreya Kale ',
-                title: 'HR Executive',
-                imageLink: 'https://res.cloudinary.com/dacyppskd/image/upload/v1729011101/drqv38ualvxukdgmigpq.jpg',
-                phoneNo: 9325074961,
-                emailId: '2022bec010@sggs.ac.in',
-                linkedinId: 'https://www.linkedin.com/in/shreya-kale-990082257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
-            }
         ]
     },
     {
@@ -2171,7 +2162,7 @@ const team_24_25 = [
         ]
     },
     {
-        post: 'Content Creation Executives',
+        post: 'Research & Content Creation Executives',
         members: [
             {
                 name: 'Astha Dhapodkar',
@@ -2326,15 +2317,6 @@ const team_25_26 = [
                 emailId: 'srinidhiandure@gmail.com',
                 linkedinId: 'https://www.linkedin.com/in/kashaf1175'
             },
-
-            {
-                name: ' Himanshu Dighade',
-                title: 'HR Executive',
-                imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1757948810/himanshu_bjqlks.jpg',
-                phoneNo: 7840990466,
-                emailId: 'himanshudighade369@gmail.com',
-                linkedinId: 'https://www.linkedin.com/in/himanshu-dighade-42199527a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
-            },
             
         ]
     },
@@ -2412,7 +2394,7 @@ const team_25_26 = [
         ]
     },
     {
-        post: 'Content Creation Executives',
+        post: 'Research & Content Creation Executives',
         members: [
             {
                 name: 'Shrutika Bhumbre ',

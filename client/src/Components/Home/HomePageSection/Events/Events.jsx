@@ -27,10 +27,18 @@ function EPast(props) {
       >
         <div className="w-[90%] mx-auto border-2 m-4 rounded-b-[22px] sm:rounded-r-[22px] flex flex-col sm:flex-row">
           {/* left for image */}
-          <div className="h-full w-full sm:w-[40%] flex items-center ">
+          {/* /*</div><div className="h-full w-full sm:w-[40%] flex items-center "> */}
+            <div className="h-full w-full sm:w-[40%] flex items-center justify-center">
+
             <a href={props.videoLink} target='_blank'>
               {/* <img src='https://th.bing.com/th/id/R.06d12fb83f5b23a7aa0b6a6b7c72f132?rik=NhlshKX6Rm%2fLfw&riu=http%3a%2f%2fwww.cameraegg.org%2fwp-content%2fuploads%2f2015%2f03%2fNikon-D5500-sample-images-2.jpg&ehk=8pJQWxg7OPyS%2fqUkwK4oROW5LajqA4NgCbbLWeCRo7g%3d&risl=&pid=ImgRaw&r=0' alt={props.name} className="h-auto max-h-full" /> */}
-              <img src={string} alt={props.name} className="w-full h-auto max-h-full auto" />
+
+              <img
+  src={string}
+  alt={props.name}
+  className="w-full h-[250px] object-cover rounded-t-[22px] sm:rounded-l-[22px]"
+/>
+
             </a>
           </div>
 

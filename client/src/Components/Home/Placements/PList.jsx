@@ -44,7 +44,7 @@ useEffect(() => {
       >
         <h3 className="text-3xl">
           Department Wise Yearly Placement Record{" "}
-          <span style={{ fontSize: "15px" }}>(Click to expand)</span>
+          {/* <span style={{ fontSize: "15px" }}>(Click to expand)</span> */}
         </h3>
         {
           deptData.map((data) => {
