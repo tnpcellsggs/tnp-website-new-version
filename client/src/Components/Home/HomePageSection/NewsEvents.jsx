@@ -141,30 +141,73 @@ const EventsSection = () => {
     // console.log(process.env.REACT_APP_REQURL)
   }, []);
   return (
-    <>
-      <div className="sm:w-[50%] w-full p-2 m-2 h-full ">
-        <div className="flex flex-col items-center justify-between sm:flex-row">
-          <h2 className="mx-2 text-2xl align-top"><FontAwesomeIcon icon={faCalendarDays} className="mx-2" />Events & Workshops</h2>
-          <p className='p-2 m-2 text-sm border-2 border-black rounded-xl hover:cursor-pointer'><Link to='/eventsPage' className='font-bold'>See All</Link></p>
-        </div>
-        {isLoading ? (<Loading size="80" width="10" speed="1" />) : (
-          <div className="flex-col items-center justify-center w-full h-full align-middle sm:h-80">
-            {
-              eventsList.map((items, index) => {
-                return (
-                  <div className='flex-col items-start justify-center m-4 sm:m-1' key={index}>
-                    <h3 className="">{items.eventName}</h3>
-                    <p className="">{items.eventOrg} <span className="font-bold text-red-700 hover:underline hover:text-red-700">Dt:{items.eventDate !== undefined ? items.eventDate.slice(0, 10) : ''}</span></p>
+    // <>
+    //   <div className="sm:w-[50%] w-full p-2 m-2 h-full ">
+    //     <div className="flex flex-col items-center justify-between sm:flex-row">
+    //       <h2 className="mx-2 text-2xl align-top"><FontAwesomeIcon icon={faCalendarDays} className="mx-2" />Events & Workshops</h2>
+    //       <p className='p-2 m-2 text-sm border-2 border-black rounded-xl hover:cursor-pointer'><Link to='/eventsPage' className='font-bold'>See All</Link></p>
+    //     </div>
+    //     {isLoading ? (<Loading size="80" width="10" speed="1" />) : (
+    //       <div className="flex-col items-center justify-center w-full h-full align-middle sm:h-80">
+    //         {
+    //           eventsList.map((items, index) => {
+    //             return (
+    //               <div className='flex-col items-start justify-center m-4 sm:m-1' key={index}>
+    //                 <h3 className="">{items.eventName}</h3>
+    //                 <p className="">{items.eventOrg} <span className="font-bold text-red-700 hover:underline hover:text-red-700">Dt:{items.eventDate !== undefined ? items.eventDate.slice(0, 10) : ''}</span></p>
 
-                    {/* <span><Link to='/studentSection' className='font-bold text-red-700 hover:underline hover:text-red-700'>(See Details)</Link></span>  */}
-                  </div>
-                )
-              })
-            }
-          </div>
-        )}
-      </div>
-    </>
+    //                 {/* <span><Link to='/studentSection' className='font-bold text-red-700 hover:underline hover:text-red-700'>(See Details)</Link></span>  */}
+    //               </div>
+    //             )
+    //           })
+    //         }
+    //       </div>
+    //     )}
+    //   </div>
+    // </>
+    <div className="w-full sm:w-1/2 p-4">
+
+  {/* Header */}
+  <div className="flex items-start justify-between gap-2 flex-wrap">
+    <h2 className="flex items-center text-lg sm:text-2xl font-semibold leading-snug">
+      <FontAwesomeIcon icon={faCalendarDays} className="mr-2" />
+      Events & Workshops
+    </h2>
+
+    <Link
+      to="/eventsPage"
+      className="px-3 py-1 text-sm font-bold border-2 border-black rounded-xl whitespace-nowrap"
+    >
+      See All
+    </Link>
+  </div>
+
+  {/* Content */}
+  {isLoading ? (
+    <Loading size="80" width="10" speed="1" />
+  ) : (
+    <div className="mt-4 space-y-5">
+      {eventsList.map((items, index) => (
+        <div key={index} className="break-words">
+
+          <h3 className="font-semibold text-base sm:text-lg leading-snug">
+            {items.eventName}
+          </h3>
+
+          <p className="mt-1 text-sm sm:text-base leading-relaxed text-gray-700">
+            {items.eventOrg}
+          </p>
+
+          <p className="mt-1 font-bold text-red-700 text-sm">
+            Dt: {items.eventDate?.slice(0, 10)}
+          </p>
+
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
   )
 }
 
