@@ -65,27 +65,34 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex-col items-center justify-center hidden w-full my-8 border-2 rounded-md sm:flex nav-light-shadows sm:flex-row " >
-            <div className="w-full sm:w-[50%] ">
-              <div className="m-3 sm:m-4">
-                <h3 className="m-2 md:text-xl lg:text-2xl sm:text-2xl">Recruiters</h3>
-                <h3 className="m-2 md:text-xl lg:text-2xl sm:text-2xl">Interested In Recruiting From SGGSIE&T</h3>
+          <div className="hidden w-full my-8 border-2 rounded-md sm:block nav-light-shadows" >
+            {/* Headers Section */}
+            <div className="grid grid-cols-2 h-full">
+              <div className="m-3 sm:m-4 min-h-[140px] md:min-h-[120px] lg:min-h-[110px] flex flex-col justify-center">
+                <h3 className="m-2 text-lg md:text-xl lg:text-2xl leading-tight">Recruiters</h3>
+                <h4 className="m-2 text-lg md:text-xl lg:text-2xl leading-tight">Interested In Recruiting From SGGSIE&T</h4>
               </div>
-              <div className="flex flex-col items-center justify-start p-2 m-2">
-                <Link to='/jaf_recuriment' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Job Announcement Form</p></Link>
-                <Link to='/contactus' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Contact Us</p></Link>
+              <div className="m-3 sm:m-4 min-h-[140px] md:min-h-[120px] lg:min-h-[110px] flex flex-col justify-center">
+                <h3 className="m-2 text-lg md:text-xl lg:text-2xl leading-tight">Our Brochures</h3>
+                <h3 className="m-2 text-lg md:text-xl lg:text-2xl leading-tight">See Flyer & Brochures Of Our Institute</h3>
               </div>
             </div>
-
-            <div className="w-full sm:w-[50%]">
-              <div className="m-3 sm:m-4">
-                <h3 className="m-2 md:text-xl lg:text-2xl sm:text-2xl">Our Brochures</h3>
-                <h3 className="m-2 md:text-xl lg:text-2xl sm:text-2xl">See Flyer & Brochures Of Our Institute</h3>
-              </div>
-              <div className="flex flex-col items-center justify-start p-2 m-2">
-                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1D4EMmV2FgA1rFwRR7O0H9cc10ArttnCK/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">Placement Brochure</p></a>
-                <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer md:text-base lg:text-xl">SGGSIE&T TPO Flyer</p></a>
-              </div>
+            {/* Buttons Grid - 2 rows x 2 columns */}
+            <div className="grid grid-cols-2 grid-rows-2 gap-3 p-4 mx-2">
+              {/* Row 1 */}
+              <Link to='/jaf_recuriment' className="font-bold">
+                <p className="py-3 px-2 text-sm md:text-base lg:text-lg text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">Job Announcement Form</p>
+              </Link>
+              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1D4EMmV2FgA1rFwRR7O0H9cc10ArttnCK/view?usp=sharing' className="font-bold">
+                <p className="py-3 px-2 text-sm md:text-base lg:text-lg text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">Placement Brochure</p>
+              </a>
+              {/* Row 2 */}
+              <Link to='/contactus' className="font-bold">
+                <p className="py-3 px-2 text-sm md:text-base lg:text-lg text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">Contact Us</p>
+              </Link>
+              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="font-bold">
+                <p className="py-3 px-2 text-sm md:text-base lg:text-lg text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">SGGSIE&T TPO Flyer</p>
+              </a>
             </div>
           </div>
         </div>
@@ -116,8 +123,8 @@ const Hero = () => {
                 return (
                   <ul key={item.Year} className="p-1 mt-2 space-y-2 list-disc ">
                     <li className="text-xs">Total Offers: 414+</li>
-                    <li className="text-xs">Top Package: 25 LPA</li>
-                    <li className="text-xs">Average: 4 LPA</li>
+                    <li className="text-xs">Top Package: 61 LPA</li>
+                    <li className="text-xs">Average: 5 LPA</li>
                   </ul>
                 );
               })}
@@ -128,27 +135,34 @@ const Hero = () => {
 
       {/* Section for Contact & Brochures for mobile view */}
       <div className="block m-2 sm:hidden">
-        <div className="flex flex-col items-center justify-center w-full my-8 border-2 rounded-md nav-light-shadows sm:flex-row">
-          <div className="w-full sm:w-[50%] ">
-            <div className="m-3 sm:m-4">
-              <h3 className="m-2 text-2xl">Recruiters</h3>
-              <h3 className="m-2 text-2xl">Interested in Recruiting from SGGSIE&T</h3>
+        <div className="w-full my-8 border-2 rounded-md nav-light-shadows">
+          {/* Headers Section - Mobile */}
+          <div className="grid grid-cols-2 h-full">
+            <div className="m-3 min-h-[120px] flex flex-col justify-center">
+              <h3 className="m-2 text-base leading-tight">Recruiters</h3>
+              <h4 className="m-2 text-base leading-tight">Interested in Recruiting from SGGSIE&T</h4>
             </div>
-            <div className="flex flex-col items-center justify-start p-2 m-2">
-              <Link to='/jaf_recuriment' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Job Announcement Form</p></Link>
-              <Link to='/contactus' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Contact Us</p></Link>
+            <div className="m-3 min-h-[120px] flex flex-col justify-center">
+              <h3 className="m-2 text-base leading-tight">Our Brochures</h3>
+              <h3 className="m-2 text-base leading-tight">See Flyer & Brochures of Our Institute</h3>
             </div>
           </div>
-
-          <div className="w-full sm:w-[50%]">
-            <div className="m-3 sm:m-4">
-              <h3 className="m-2 text-2xl">Our Brochures</h3>
-              <h3 className="m-2 text-2xl">See Flyer & Brochures of Our Institute</h3>
-            </div>
-            <div className="flex flex-col items-center justify-start p-2 m-2">
-              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1wBrfNgAy2M7AeJt8NhKC_pkZCUsSzXb0/view?usp=drive_link' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">Placement Brochure</p></a>
-              <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="w-full font-bold"><p className="p-2 mt-1 mb-1 text-xl text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer">SGGSIE&T TPO Flyer</p></a>
-            </div>
+          {/* Buttons Grid - Mobile 2 rows x 2 columns */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 p-4 mx-2">
+            {/* Row 1 */}
+            <Link to='/jaf_recuriment' className="font-bold">
+              <p className="py-3 px-2 text-sm text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">Job Announcement Form</p>
+            </Link>
+            <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1wBrfNgAy2M7AeJt8NhKC_pkZCUsSzXb0/view?usp=drive_link' className="font-bold">
+              <p className="py-3 px-2 text-sm text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">Placement Brochure</p>
+            </a>
+            {/* Row 2 */}
+            <Link to='/contactus' className="font-bold">
+              <p className="py-3 px-2 text-sm text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">Contact Us</p>
+            </Link>
+            <a target='_blank' rel="noreferrer" href='https://drive.google.com/file/d/1syO4OcmsHiDNOwZxo-6lQAiG18bzIkRd/view?usp=sharing' className="font-bold">
+              <p className="py-3 px-2 text-sm text-center text-black bg-orange-300 border-2 rounded-xl hover:cursor-pointer hover:bg-orange-400 transition-colors h-full flex items-center justify-center leading-tight">SGGSIE&T TPO Flyer</p>
+            </a>
           </div>
         </div>
       </div>

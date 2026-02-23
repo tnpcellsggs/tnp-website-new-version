@@ -142,19 +142,19 @@ const EventsSection = () => {
   }, []);
   return (
     <>
-      <div className="sm:w-[50%] w-full p-2 m-2 h-full ">
+      <div className="sm:w-[50%] w-full p-2 m-2 h-full overflow-hidden">
         <div className="flex flex-col items-center justify-between sm:flex-row">
-          <h2 className="mx-2 text-2xl align-top"><FontAwesomeIcon icon={faCalendarDays} className="mx-2" />Events & Workshops</h2>
-          <p className='p-2 m-2 text-sm border-2 border-black rounded-xl hover:cursor-pointer'><Link to='/eventsPage' className='font-bold'>See All</Link></p>
+          <h2 className="mx-2 text-lg sm:text-2xl align-top break-words"><FontAwesomeIcon icon={faCalendarDays} className="mx-2" />Events & Workshops</h2>
+          <p className='p-2 m-2 text-xs sm:text-sm border-2 border-black rounded-xl hover:cursor-pointer whitespace-nowrap'><Link to='/eventsPage' className='font-bold'>See All</Link></p>
         </div>
         {isLoading ? (<Loading size="80" width="10" speed="1" />) : (
-          <div className="flex-col items-center justify-center w-full h-full align-middle sm:h-80">
+          <div className="flex-col items-center justify-center w-full h-full align-middle sm:h-80 overflow-hidden">
             {
               eventsList.map((items, index) => {
                 return (
-                  <div className='flex-col items-start justify-center m-4 sm:m-1' key={index}>
-                    <h3 className="">{items.eventName}</h3>
-                    <p className="">{items.eventOrg} <span className="font-bold text-red-700 hover:underline hover:text-red-700">Dt:{items.eventDate !== undefined ? items.eventDate.slice(0, 10) : ''}</span></p>
+                  <div className='flex-col items-start justify-center m-2 sm:m-1 p-2 break-words' key={index}>
+                    <h3 className="text-sm sm:text-base font-semibold break-words overflow-wrap-anywhere">{items.eventName}</h3>
+                    <p className="text-xs sm:text-sm break-words overflow-wrap-anywhere">{items.eventOrg} <span className="font-bold text-red-700 hover:underline hover:text-red-700 whitespace-nowrap">Dt:{items.eventDate !== undefined ? items.eventDate.slice(0, 10) : ''}</span></p>
 
                     {/* <span><Link to='/studentSection' className='font-bold text-red-700 hover:underline hover:text-red-700'>(See Details)</Link></span>  */}
                   </div>
