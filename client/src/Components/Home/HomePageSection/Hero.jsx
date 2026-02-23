@@ -77,28 +77,28 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row mt-6 gap-6">
 
             <div className="flex flex-col items-center w-full">
-              <h3 className="text-sm sm:text-base font-semibold">
+              <h3 className="text-base sm:text-lg font-semibold">
                 Summary (Last Year)
               </h3>
               <img src={Summary} alt="summary" className="w-16 mt-2" />
-              <ul className="mt-3 space-y-2 list-disc text-xs">
+              <ul className="mt-3 space-y-2 list-disc text-sm">
                 <li>Total Offers: 450+</li>
                 <li>Top Package: 27 LPA</li>
                 <li>Average: 5 LPA</li>
               </ul>
             </div>
 
-            <div className="flex flex-col items-center justify-center w-full h-full m-2 ">
-              <h3 className="m-1 text-sm sm:text-[12px]">Placement Status 25-26</h3>
-              <img src={Stats} alt='stats' className="w-[20%]" />
+            <div className="flex flex-col items-center w-full">
+              <h3 className="text-base sm:text-lg font-semibold">Placement Status 25-26</h3>
+              <img src={Stats} alt='stats' className="w-16 mt-2" />
               {yearData.filter((item) => { return item["Year"] === '2023-24' }).map((item) => {
                 // console.log(item.PackageRange)
 
                 return (
-                  <ul key={item.Year} className="p-1 mt-2 space-y-2 list-disc ">
-                    <li className="text-xs">Total Offers: 414+</li>
-                    <li className="text-xs">Top Package: 61 LPA</li>
-                    <li className="text-xs">Average: 5 LPA</li>
+                  <ul key={item.Year} className="mt-3 space-y-2 list-disc text-sm">
+                    <li>Total Offers: 414+</li>
+                    <li>Top Package: 61 LPA</li>
+                    <li>Average: 5 LPA</li>
                   </ul>
                 );
               })}
