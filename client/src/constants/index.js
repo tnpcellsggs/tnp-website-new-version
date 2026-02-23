@@ -495,6 +495,10 @@ const imageSlider = [
         imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1771781167/sakshi_thakre_wscw4m.jpg'
     },
      {
+        title: 'Placed At ScheepswerfSLOB',
+        imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1771781167/sakshi_thakre_wscw4m.jpg'
+    },
+     {
         title: 'Placed At X1Studio',
         imageLink: 'https://res.cloudinary.com/tnpsggs/image/upload/v1753856134/27_dpmk7m.png'
     },
